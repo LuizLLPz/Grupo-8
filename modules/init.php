@@ -15,8 +15,10 @@
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         ],  
-    ];
+    ]; 
 
     $conn = Connection::connect($connect_details);
     $qb = new QueryBuilder($conn);
+    $query->execute();
+    $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
