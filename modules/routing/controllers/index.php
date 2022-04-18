@@ -1,4 +1,5 @@
 <?php 
+    $qb->selectV
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
     <title>Document</title>
 </head> 
 <body>
-    <form action="./modules/db/register.php" method="POST">
+    <form action="/api/register" method="POST">
         <input type="text" name="name" placeholder="Name">
         <input type="text" name="email" placeholder="Email">
         <input type="text" name="cpf" placeholder="CPF">

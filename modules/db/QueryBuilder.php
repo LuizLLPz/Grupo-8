@@ -4,7 +4,7 @@
         public function __construct($conn) {
             $this->conn = $conn;
         }
-        public function insert ($table, $data) {
+        public function insert($table, $data) {
             $query = $this->conn->prepare("INSERT INTO {$table} VALUES ('DEFAULT', :nome, :sobrenome, :email, :cpf, :password, :foto_perfil, DEFAULT)");
             $query->execute($data);
 

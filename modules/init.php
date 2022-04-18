@@ -17,6 +17,5 @@
         ],  
     ]; 
 
-    $conn = Connection::connect($connect_details);
-    $qb = new QueryBuilder($conn);
+    return new QueryBuilder(Connection::connect($connect_details));
 ?>
