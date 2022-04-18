@@ -4,6 +4,7 @@
     ini_set('display_startup_errors', 1);
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     require './modules/routing/routerPatterns.php';
+    require './modules/routing/apiPatterns.php';
     require($router->redirect($url, $_SERVER['REQUEST_METHOD']));
 ?>
 
