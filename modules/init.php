@@ -19,6 +19,6 @@
 
     $conn = Connection::connect($connect_details);
     $qb = new QueryBuilder($conn);
-    $usuarios = $qb->getClient()->prepare('SELECT * FROM usuarios')->execute()->fetchAll();
-    echo "<pre> ".var_dump($usuarios)." </pre>";
+    $query->execute();
+    $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
