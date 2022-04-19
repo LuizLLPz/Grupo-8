@@ -3,6 +3,10 @@
     require 'modules/db/QueryBuilder.php';
     $env = parse_ini_file('./.env');
     $host = $env['DB_HOST'];
+    define('CONTROLLERS_PATH', './modules/routing/controllers/');
+    define('PAGES_PATH', './client/pages/');
+    define('COMPONENTS_PATH', './client/components/');
+    
     $dbname = $env['DB_NAME'];
     $user = $env['DB_USER'];
     $password = $env['DB_PASSWORD'];
