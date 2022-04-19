@@ -12,5 +12,5 @@
         'foto_perfil' => '  '
     ];
     $qb->insert($table, $data);
-    echo '<a href="//">Voltar</a>';
+    echo '<a href="/">Voltar</a>';
 ?>
