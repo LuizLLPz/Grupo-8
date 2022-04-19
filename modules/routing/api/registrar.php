@@ -4,9 +4,9 @@
     ini_set('display_startup_errors', 1);
     $table = 'Usuario';
     $data = [
-        'id' => uniqid($_POST('name')),
-        'nome' => $_POST['name'],
-        'sobrenome' => '',
+        'id' => uniqid($_POST['nome']),
+        'nome' => $_POST['nome'],
+        'sobrenome' => $_POST['sobrenome'],
         'email' => $_POST['email'],
         'cpf' => $_POST['cpf'],
         'password' => password_hash($_POST['password'], PASSWORD_ARGON2I),
