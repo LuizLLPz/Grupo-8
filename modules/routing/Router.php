@@ -16,6 +16,10 @@ class Router {
         if (array_key_exists($url, $this->$method)) {
             return $this->$method[$url]();
         }
+        $context = [
+            'title' => '404 - Documento não encontrado!',
+        ];
+        require COMPONENTS_PATH.'head.php';
         return './client/pages/404.php';
     }
 }
