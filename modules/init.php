@@ -4,6 +4,7 @@
     $env = parse_ini_file('./.env');
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');
+    define('STYLES_PATH', './client/assets/css/');
     define('COMPONENTS_PATH', './client/components/');
 
     return new QueryBuilder(Connection::connect(

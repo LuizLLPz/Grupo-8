@@ -9,6 +9,7 @@
         'usuarios' =>  $qb->selectAll('Usuario'),
     ];
     require COMPONENTS_PATH . 'head.php';
+    require COMPONENTS_PATH . 'navbar.php';
     require PAGES_PATH . 'index.php';
 ?>
 
