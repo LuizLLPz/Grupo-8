@@ -14,7 +14,7 @@
 .navbar__link {
     margin: auto 0;
     font: 18px 'Noto Sans', sans-serif;
-    font-weight: 600;
+    font-weight: semibold;
     text-decoration: none;
     color: black;
 }

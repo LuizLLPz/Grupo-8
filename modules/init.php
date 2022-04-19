@@ -5,6 +5,8 @@
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');
     define('STYLES_PATH', './client/assets/css/');
+    define('IMAGES_PATH', './client/assets/images/');
+    define('SCRIPTS_PATH', './client/assets/js/');
     define('COMPONENTS_PATH', './client/components/');
 
     return new QueryBuilder(Connection::connect(
