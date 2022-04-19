@@ -6,8 +6,10 @@
 
 */
 
-$router = new Router();
 $router->get('/', function() {
-    return './modules/routing/controllers/index.php'; # É chamado o arquivo index.php ao acessar a rota / pelo método http GET
+    return  CONTROLLERS_PATH.'index.php'; # É chamado o arquivo index.php ao acessar a rota / pelo método http GET
+});
+$router->get('/registrar', function() {
+    return  CONTROLLERS_PATH.'registrar.php'; 
 });
 ?>
