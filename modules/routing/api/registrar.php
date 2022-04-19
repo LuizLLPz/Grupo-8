@@ -4,7 +4,7 @@
     ini_set('display_startup_errors', 1);
     $table = 'Usuario';
     $data = [
-        'id' => uniqid($_POST('name')),
+        'id' => uniqid($_POST['name']),
         'nome' => $_POST['name'],
         'sobrenome' => '',
         'email' => $_POST['email'],

@@ -1,0 +1,15 @@
+:root {
+    --btn_text_color: #E9E9E9;
+}
+.form{
+    margin: 0 auto;
+}
+.form__button {
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background-image: linear-gradient(to right, #762F65, #2B137A);
+    color: var(--btn_text_color);
+    font: 18px 'Noto Sans', sans-serif;
+}
