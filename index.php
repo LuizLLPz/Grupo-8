@@ -13,7 +13,7 @@
     ini_set('display_startup_errors', 1);
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $qb = require './modules/init.php';
-    require 'Router.php';
+    require './modules/routing/Router.php';
     require './modules/routing/routes.php';
     require './modules/routing/apiRoutes.php';
     require($router->redirect($url, $_SERVER['REQUEST_METHOD']));
