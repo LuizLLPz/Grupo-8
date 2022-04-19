@@ -1,0 +1,29 @@
+:root {
+    --nav_color: #E9E9E9;
+}
+
+.navbar {
+    display: flex;
+    background-color: var(--nav_color);
+    height: 77px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+
+.navbar__link {
+    margin: auto 0;
+    font: 18px 'Noto Sans', sans-serif;
+    font-weight: semibold;
+    text-decoration: none;
+    color: black;
+}
+.navbar__link:nth-child(1) {
+    margin-left: auto;
+}
+.navbar__link:not(:first-child) {
+    margin-left: 20px;
+}
+.navbar__link:last-child {
+    margin-right: 100px;
+}
