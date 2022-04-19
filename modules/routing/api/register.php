@@ -8,7 +8,7 @@
         'sobrenome' => '',
         'email' => $_POST['email'],
         'cpf' => $_POST['cpf'],
-        'senha' => $_POST['password'],
+        'password' => $_POST['password'],
         'foto_perfil' => '  '
     ];
     $qb->insert($table, $data);

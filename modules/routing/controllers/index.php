@@ -1,5 +1,5 @@
 <?php 
-    $qb->selectV
+    $usuarios = $qb->selectAll('Usuario');
 ?>
 
 <!DOCTYPE html>
@@ -18,13 +18,13 @@
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Enviar">
     </form>
-    <!-- <?php foreach ($usuarios as $usuario): ?>
+    <?php foreach ($usuarios as $usuario): ?>
         <h1>
             <?php echo $usuario['nome']; ?>
         </h1>
         <p>
             <?php echo $usuario['email']; ?>
         </p>
-    <?php endforeach; ?> -->
+    <?php endforeach; ?>
 </body>
 </html>
