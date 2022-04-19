@@ -6,3 +6,9 @@ body {
     margin: 0px;
     background-color: var(--main-color);
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
