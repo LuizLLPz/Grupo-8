@@ -12,6 +12,12 @@
         'password' => password_hash($_POST['password'], PASSWORD_ARGON2I),
         'foto_perfil' => '  '
     ];
-    $qb->insert($table, $data);
-    echo '<a href="/">Voltar</a>';
+    try {
+        $qb->insert($table, $data);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
 ?>
+    <h1>
+        Usuário cadastrado com sucesso!
+    </h1>
