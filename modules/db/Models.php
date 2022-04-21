@@ -7,11 +7,11 @@
         }
 
         public function selectAll($qb) {
-            $qb->selectAll($this-> tableName);
+            return $qb->selectAll($this-> tableName);
         }
 
         public function selectUnique($qb, $id) {
-            $qb->selectUnique($this->tableName, $id);
+            return $qb->selectUnique($this->tableName, $id);
         }
 
         public function insert($qb) {
