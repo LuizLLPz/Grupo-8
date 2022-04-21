@@ -1,6 +1,7 @@
 <?php
     require 'modules/db/Connection.php';
     require 'modules/db/QueryBuilder.php';
+    require 'modules/db/Models.php';
     $env = parse_ini_file('./.env');
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');

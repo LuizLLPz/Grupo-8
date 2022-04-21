@@ -1,8 +1,15 @@
 <style>
 <?php require STYLES_PATH . 'navbar.css'; ?>
 </style>
-<navbar class="navbar">
-    <a href="/" class="navbar__link">Página inicial</a>
-    <a href="/forum" class="navbar__link">Fórum</a>
-    <a href="/registrar" class="navbar__link">Registrar</a>
-</navbar>
+<header class="cabecalho">
+        <img src=<?=IMAGES_PATH.'logo.svg'?> alt="" class="cabecalho_logo">
+        <img src=<?=IMAGES_PATH.'home.svg'?> alt="Botão da home" class="cabecalho_icon-home" id="icon-home">
+        <div class="cabecalho_conteudo" id="cabecalho_conteudo">
+            <button class="cabecalho_btn">Colabore</button>
+            <ul class="cabecalho_itens">
+                <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="#">Home</a></li>
+                <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="#">Perfil</a></li>
+                <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="#">Fórum</a></li>
+            </ul>
+        </div>
+</header>

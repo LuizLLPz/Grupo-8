@@ -4,10 +4,13 @@
         - Esse controlador renderiza o componente head.php
         - Esse controlador renderiza a página index.php
     */
+    $usr = new Usuario(false);
     $context = [
         'title' => 'Página inicial - Update Donate',
-        'usuarios' =>  $qb->selectAll('Usuario'),
+        'usuarios' =>  $usr->selectAll($qb),
     ];
+    ?>
+    <?php
     require COMPONENTS_PATH . 'head.php';
     require COMPONENTS_PATH . 'navbar.php';
     require PAGES_PATH . 'index.php';
