@@ -1,7 +1,3 @@
-
-    <style>
-        <?php include STYLES_PATH . 'header.css'; ?>
-    </style>
-
-    <script src="<?= SCRIPTS_PATH. 'iconFunc.js'?>"></script>
+<script src="<?= SCRIPTS_PATH. 'iconFunc.js'?>"></script>
+    Teste
 </html>

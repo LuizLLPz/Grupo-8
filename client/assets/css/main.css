@@ -12,6 +12,9 @@ body {
     margin: 0px;
     background-color: var(--main-color);
 }
+header + * {
+    margin-top: 82px;
+}
 
 button{
     transition: 0.4s;
