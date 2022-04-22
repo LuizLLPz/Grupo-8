@@ -11,30 +11,30 @@
 }
 
 .form__heading {
-    font: 32px 'Noto Sans', sans-serif;
     font-weight: semibold;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form__input {
-    border: 1px solid black;
+.form__input[type = 'text'], .form__input[type = 'email'], .form__input[type = 'password']  {
+    border: none;
+    outline: 1px solid black;
     font: 16px 'Noto Sans', sans-serif;
     background-color: #E9E9E9;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 7px;
+    padding: 5px 0px;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
 
-.form__input:not(:first-child) {
-    margin-top: 20px;
-}
 
 .form__input:focus {
-    outline: 2px solid green;
+    outline: 1px solid #2B137A;
     border: none;
 }
 
-.form__button {
+/* .form__button {
     margin-top: 20px;
     border-radius: 10px;
     outline: none;
@@ -47,4 +47,4 @@
     background-image: linear-gradient(to right, #762F65 1%, #2B137A, #2B137A);
     color: var(--btn_text_color);
     font: 16px 'Noto Sans', sans-serif;
-}
+} */
