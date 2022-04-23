@@ -11,6 +11,7 @@
     define('SCRIPTS_PATH', './client/assets/js/');
     define('COMPONENTS_PATH', './client/components/');
 
+    
     return new QueryBuilder(Connection::connect(
     [
         'tipo' => "mysql:host={$env['DB_HOST']};",
