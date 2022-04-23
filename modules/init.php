@@ -9,7 +9,7 @@
         $env = [
             'DB_HOST' => 'localhost:3306',
             'DB_USER' => 'root',
-            'DB_PASS' => '',
+            'DB_PASSWORD' => '',
             'DB_NAME' => 'update_donate',
         ];
     }
