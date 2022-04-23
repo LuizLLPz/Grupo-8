@@ -3,6 +3,7 @@
     require 'modules/db/QueryBuilder.php';
     require 'modules/db/Models.php';
     $env = parse_ini_file('./.env');
+    session_start();
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');
     define('STYLES_PATH', './client/assets/css/');

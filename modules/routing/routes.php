@@ -14,7 +14,15 @@ $router->get('/forum', function() {
     return  CONTROLLERS_PATH.'forum.php';
 });
 
-$router->get('/registrar', function() {
-    return  CONTROLLERS_PATH.'registrar.php'; 
+$router->get('/cadastro', function() {
+    return  CONTROLLERS_PATH.'cadastro.php'; 
+});
+
+$router->get('/login', function() {
+    return  CONTROLLERS_PATH.'login.php'; 
+});
+
+$router->get('/perfil', function() {
+    return  CONTROLLERS_PATH.'perfil.php'; 
 });
 ?>

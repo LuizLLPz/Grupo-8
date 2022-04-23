@@ -4,7 +4,9 @@
     ini_set('display_startup_errors', 1);
     $usr = new Usuario();
     $usr->insert($qb);
+    $context = [
+        'title' => 'Página secundaria - Update Donate',
+        'usuarios' =>  $usr->selectAll($qb),
+    ];
+
 ?>
-    <h1>
-        Usuário cadastrado com sucesso!
-    </h1>

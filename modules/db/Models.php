@@ -10,8 +10,8 @@
             return $qb->selectAll($this-> tableName);
         }
 
-        public function selectUnique($qb, $id) {
-            return $qb->selectUnique($this->tableName, $id);
+        public function selectUnique($qb, $field, $value) {
+            return $qb->selectUnique($this->tableName, $field, $value);
         }
 
         public function insert($qb) {
