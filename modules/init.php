@@ -2,7 +2,17 @@
     require 'modules/db/Connection.php';
     require 'modules/db/QueryBuilder.php';
     require 'modules/db/Models.php';
-    $env = parse_ini_file('./.env');
+    $env = '';
+    if (file_exists('././env')) {
+        $env = parse_ini_file('./.env');
+    } else {
+        $env = [
+            'DB_HOST' => 'localhost:3306',
+            'DB_USER' => 'root',
+            'DB_PASS' => '',
+            'DB_NAME' => 'update_donate',
+        ];
+    }
     session_start();
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');
