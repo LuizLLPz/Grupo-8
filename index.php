@@ -1,3 +1,4 @@
+
 <?php
 
     /* Arquivo inicial do projeto PHP

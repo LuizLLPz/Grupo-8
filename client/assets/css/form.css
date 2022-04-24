@@ -2,6 +2,7 @@
     --btn_text_color: #E9E9E9;
 }
 .form{
+    
     display: flex;
     padding: 50px;
     flex-direction: column;
@@ -21,7 +22,7 @@
     outline: 1px solid black;
     font: 16px 'Noto Sans', sans-serif;
     background-color: #E9E9E9;
-    height: 40px;
+    height: 30px;
     border-radius: 7px;
     padding: 5px 0px;
     padding-left: 20px;

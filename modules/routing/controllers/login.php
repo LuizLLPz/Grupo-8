@@ -2,7 +2,11 @@
 $context = [
     'title' => 'Login - Update Donate',
 ];
-
-require COMPONENTS_PATH . 'head.php';
-require COMPONENTS_PATH . 'navbar.php';
-require PAGES_PATH . 'login.php';
+?>  <style>
+        <?php include STYLES_PATH.'form.css'; ?>
+    </style>
+<?php
+    require COMPONENTS_PATH . 'head.php';
+    require COMPONENTS_PATH . 'navbar.php';
+    require PAGES_PATH . 'login.php';
+?>
