@@ -1,3 +1,4 @@
+create database update_donate; 
 use update_donate;
 create table if not Exists Usuario (
     id varchar(100) primary key,

@@ -2,17 +2,17 @@
     require 'modules/db/Connection.php';
     require 'modules/db/QueryBuilder.php';
     require 'modules/db/Models.php';
-    $env = '';
-    if (file_exists('././env')) {
-        $env = parse_ini_file('./.env');
-    } else {
-        $env = [
-            'DB_HOST' => 'localhost:3306',
-            'DB_USER' => 'root',
-            'DB_PASSWORD' => '',
-            'DB_NAME' => 'update_donate',
-        ];
-    }
+    $env = /*''*/parse_ini_file('./.env') ;
+    // if (file_exists('././env')) {
+    //     $env = parse_ini_file('./.env');
+    // } else {
+    //     $env = [
+    //         'DB_HOST' => 'localhost:3306',
+    //         'DB_USER' => 'root',
+    //         'DB_PASSWORD' => '',
+    //         'DB_NAME' => 'update_donate',
+    //     ];
+    // }
     session_start();
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
     define('PAGES_PATH', './client/pages/');
@@ -20,6 +20,7 @@
     define('IMAGES_PATH', './client/assets/images/');
     define('SCRIPTS_PATH', './client/assets/js/');
     define('COMPONENTS_PATH', './client/components/');
+    define('BASE_URL', $env['BASE_URL']);
 
     
     return new QueryBuilder(Connection::connect(
