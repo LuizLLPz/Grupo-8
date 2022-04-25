@@ -1,3 +1,3 @@
-<script src="<?= SCRIPTS_PATH. 'iconFunc.js'?>"></script>
+<script src="<?php ?>"></script>
 
 </html>

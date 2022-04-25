@@ -1,4 +1,7 @@
 <?php require COMPONENTS_PATH . 'navbar.php'; ?>
+<script>
+    <?php include SCRIPTS_PATH . 'iconFunc.js'?>
+<script/>
 <style>
     <?php include STYLES_PATH.'main.css'; ?>
     <?php include STYLES_PATH.'404.css'; ?>
