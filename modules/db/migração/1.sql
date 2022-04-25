@@ -7,5 +7,6 @@ create table if not Exists Usuario (
     email varchar(320),
     cpf char(14),
     senha varchar(100),
-    fotoPerfil varchar(320)
+    fotoPerfil varchar(320),
+    tipo enum('Donatário', 'Doador') default 'Donatário'
 );

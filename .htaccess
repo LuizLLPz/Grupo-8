@@ -1,6 +1,5 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /projetoDisciplina/
-    RewriteRule (.!\.(gif|jpg|png|svg))$ index.php [END]
-    RewriteCond %{REQUEST_URI} !/client/assets/images/.*
+    RewriteRule ^(.*)$ index.php [END]
 </IfModule>

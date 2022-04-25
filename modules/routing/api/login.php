@@ -6,7 +6,7 @@
             $_SESSION['user'] = $usrResult;
             ?>
             <script>
-                window.location.href = '/grupo/perfil';
+                window.location.href = '/projetoDisciplina/perfil';
             </script>
             <?php
         } else {

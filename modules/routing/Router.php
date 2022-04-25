@@ -14,7 +14,6 @@ class Router {
 
     public function redirect($url, $method) {
         if (array_key_exists($url, $this->$method)) {
-
             return $this->$method[$url]();
         }
         $context = [

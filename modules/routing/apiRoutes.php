@@ -12,4 +12,8 @@ $router->post(BASE_URL.'api/registrar', function() {
 $router->post(BASE_URL.'api/login', function() {
     return './modules/routing/api/login.php';
 });
+
+$router->get(BASE_URL.'api/deslogar', function() {
+    return './modules/routing/api/deslogar.php';
+});
 ?>

@@ -1,4 +1,4 @@
-<script src=<?= SCRIPTS_PATH.'mascaraCPF.js'?>></script>
+
 </head>
 <body>
     <form action="api/registrar" method="POST" class="form">
