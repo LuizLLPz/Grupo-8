@@ -1,4 +1,4 @@
-@import url(../css/normalize.css);
+@import url(./client/assets/css/normalize.css);
 
 :root {
     --main-color: #CFCFCF;

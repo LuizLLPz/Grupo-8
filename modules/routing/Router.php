@@ -20,6 +20,6 @@ class Router {
             'title' => '404 - Documento não encontrado!',
         ];
         require COMPONENTS_PATH.'head.php';
-        return './client/pages/404.php';
+        return PAGES_PATH.'404.php';
     }
 }
