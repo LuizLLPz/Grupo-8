@@ -9,6 +9,11 @@
         require COMPONENTS_PATH . 'navbar.php';
         require PAGES_PATH . 'perfil.php';
     } else {
+        $context = [
+            'title' => '404 - Documento não encontrado!'
+        ];
+        require COMPONENTS_PATH . 'head.php';
+        require COMPONENTS_PATH . 'navbar.php';
         require PAGES_PATH. '404.php';
     }
 

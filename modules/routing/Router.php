@@ -19,7 +19,7 @@ class Router {
         $context = [
             'title' => '404 - Documento não encontrado!',
         ];
-        require COMPONENTS_PATH.'head.php';
+        require './client/components/head.php';
         return PAGES_PATH.'404.php';
     }
 }

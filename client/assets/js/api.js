@@ -5,5 +5,5 @@ function logout() {
             url: 'api/deslogar',
         }
     );
-    window.location.href = '/projetoDisciplina/'
+    window.location.href = '/grupo/'
 }
