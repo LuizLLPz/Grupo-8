@@ -6,4 +6,17 @@ function logout() {
         }
     );
     window.location.href = '/grupo/'
+
+}
+
+function setUser() {
+    $.ajax(
+        {
+            type: 'PATCH',
+            url: 'api/usuario',
+            success: function (data) {
+                $('#user').text(data.nome);
+            }
+        }
+    );
 }

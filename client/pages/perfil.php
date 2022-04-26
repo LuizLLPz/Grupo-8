@@ -19,3 +19,7 @@
 <button onclick="logout()">
     Deslogar!!!
 </button>
+
+<button onClick="setUser()">
+    Setar usuário
+</button>

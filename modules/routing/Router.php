@@ -3,6 +3,8 @@ class Router {
     public function __construct() {
         $this->GET = [];
         $this->POST = [];
+        $this->PATCH = [];
+        $this->DELETE = [];
     }
     public function get($route, $callback) {
         $this->GET[$route] = $callback;
@@ -10,6 +12,14 @@ class Router {
 
     public function post($route, $callback) {
         $this->POST[$route] = $callback;
+    }
+
+    public function patch($route, $callback) {
+        $this->PATCH[$route] = $callback;
+    }
+
+    public function delete($route, $callback) {
+        $this->DELETE[$route] = $callback;
     }
 
     public function redirect($url, $method) {
