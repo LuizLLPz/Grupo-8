@@ -1,7 +1,7 @@
 
 </head>
 <body>
-    <form action="api/registrar" method="POST" class="form">
+    <form action="./api/registrar" method="POST" class="form">
         <div class="center">
             <h1 class="form__heading">Cadastrar</h1>
         </div>

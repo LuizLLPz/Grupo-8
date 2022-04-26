@@ -6,23 +6,14 @@
 
 */
 
-$router->get(BASE_URL, function() {
-    return  CONTROLLERS_PATH.'index.php'; # É chamado o arquivo index.php ao acessar a rota / pelo método http GET
-});
+$router->get(BASE_URL, fn() => CONTROLLERS_PATH.'index.php'); # É chamado o arquivo index.php ao acessar a rota / pelo método http GET
 
-$router->get(BASE_URL.'forum', function() {
-    return  CONTROLLERS_PATH.'forum.php';
-});
+$router->get(BASE_URL.'forum', fn() => CONTROLLERS_PATH.'forum.php');
 
-$router->get(BASE_URL.'cadastro', function() {
-    return  CONTROLLERS_PATH.'cadastro.php'; 
-});
+$router->get(BASE_URL.'cadastro', fn() => CONTROLLERS_PATH.'cadastro.php');
 
-$router->get(BASE_URL.'login', function() {
-    return  CONTROLLERS_PATH.'login.php'; 
-});
+$router->get(BASE_URL.'login', fn() => CONTROLLERS_PATH.'login.php');
 
-$router->get(BASE_URL.'perfil', function() {
-    return  CONTROLLERS_PATH.'perfil.php'; 
-});
+$router->get(BASE_URL.'perfil', fn() => CONTROLLERS_PATH.'perfil.php');
+
 ?>

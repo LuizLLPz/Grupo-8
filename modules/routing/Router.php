@@ -14,11 +14,10 @@ class Router {
         $this->POST[$route] = $callback;
     }
 
-    public function patch($route, $callback) {
+    public function api ($route, $callback) {
+        $this->GET[$route] = $callback;
+        $this->POST[$route] = $callback;
         $this->PATCH[$route] = $callback;
-    }
-
-    public function delete($route, $callback) {
         $this->DELETE[$route] = $callback;
     }
 
