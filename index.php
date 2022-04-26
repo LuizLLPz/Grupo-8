@@ -21,3 +21,4 @@
     require($router->redirect($url, $_SERVER['REQUEST_METHOD']));
 ?>
 
+<script src='./client/assets/js/iconFunc.js' defer></script>

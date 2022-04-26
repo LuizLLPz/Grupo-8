@@ -1,4 +1,4 @@
-<?php # require COMPONENTS_PATH . 'navbar.php'; ?>
+<?php require COMPONENTS_PATH . 'navbar.php'; ?>
 <style>
     <?php include STYLES_PATH.'main.css'; ?>
     <?php include STYLES_PATH.'404.css'; ?>
