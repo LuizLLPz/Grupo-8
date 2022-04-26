@@ -8,5 +8,8 @@
         'title' => 'Página secundaria - Update Donate',
         'usuarios' =>  $usr->selectAll($qb),
     ];
+    echo "<script>
+            window.location = '/grupo/login';
+        </script>"
 
 ?>

@@ -32,7 +32,7 @@
                     'sobrenome' => $_POST['sobrenome'],
                     'email' => $_POST['email'],
                     'cpf' => $_POST['cpf'],
-                    'senha' => password_hash($_POST['senha'], PASSWORD_ARGON2I),
+                    'senha' => password_hash($_POST['senha'], PASSWORD_BCRYPT),
                     'foto_perfil' => '  '
                 ];
             }
