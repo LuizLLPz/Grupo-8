@@ -3,7 +3,7 @@
 <body>
     <form action="api/registrar" method="POST" class="form">
         <div class="center">
-            <h1 class="form__heading">Cadastrar</h1>
+            <h1 class="form__heading">Cadastro</h1>
         </div>
         <input type="text" name="nome" placeholder="Nome" required class="form__input">
         <input type="text" name="sobrenome" placeholder="Sobrenome" required class="form__input">
