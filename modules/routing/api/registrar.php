@@ -2,14 +2,17 @@
     //Show errors    
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
-    $usr = new Usuario();
-    $usr->insert($qb);
-    $context = [
-        'title' => 'Página secundaria - Update Donate',
-        'usuarios' =>  $usr->selectAll($qb),
-    ];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $usr = new Usuario();
+        $usr->insert($qb);
+    } else {
+        echo '403';
+    }
+    ob_flush(); 
+    flush();
+    usleep(15000000);
     echo "<script>
-            window.location = '/grupo/login';
-        </script>"
+             window.location = '/grupo/login';
+         </script>"
 
 ?>

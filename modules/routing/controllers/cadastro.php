@@ -1,6 +1,9 @@
 <?php
     $context = [
         'title' => 'Registrar - Update Donate',
+        'scripts' => [
+            SCRIPTS_PATH . 'mascaraCPF.js',
+        ]
     ];
 ?>  <style>
         <?php include STYLES_PATH.'form.css'; ?>

@@ -17,6 +17,7 @@
     session_start();
     
     define('CONTROLLERS_PATH', './modules/routing/controllers/');
+    define('API_CONTROLLERS_PATH', './modules/routing/api/');
     define('PAGES_PATH', './client/pages/');
     define('STYLES_PATH', './client/assets/css/');
     define('IMAGES_PATH', './client/assets/images/');
