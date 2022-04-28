@@ -32,6 +32,31 @@
     transition: 0.3s;
 }
 
+button, .form__button, .form__button[type='submit'], .cabecalho_btn {
+    transition: 0.4s;
+    width: 170px;
+    height: 36px;
+    color: #E9E9E9;
+    text-transform: uppercase;
+    font-weight: 550;
+    border: none;
+    background: linear-gradient(92.82deg, rgba(118, 47, 101, 0.9) -26.4%, #2B127A 31.85%, #2C3498 123.71%);
+    border-radius: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button:hover, .cabecalho_btn:hover,.form__button:hover {
+    box-shadow: none;
+    border: none;
+    transition: 1s;
+}
+
+.form__input[type = 'submit']{
+    outline: none;
+}
+
 
 .form__input:focus {
     border: 1px solid #2B137A;
@@ -70,5 +95,9 @@
     width: 80vw;
     max-width: 400px;
     visibility: hidden;
-    
+}
+
+.form_span {
+    margin: 5px 0px 10px 0px;
+
 }
