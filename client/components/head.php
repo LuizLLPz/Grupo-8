@@ -10,6 +10,11 @@
                 echo "<script src='$script'></script>";
             }
         }
+        if (array_key_exists('styles', $context)) {
+            foreach ($context['styles'] as $style) {
+                echo "<link rel='stylesheet' href='$style'>";
+            }
+        }
     ?>
     <style>
         <?php require STYLES_PATH . 'main.css'; ?>
