@@ -5,10 +5,33 @@
             $this->conn = $conn;
         }
         public function insert($table, $data) {
-            $query = $this->conn->prepare("INSERT INTO {$table} VALUES (:id, :nome, :sobrenome, :email, :cpf, :senha, :foto_perfil, DEFAULT)");
-            $query->execute($data);
+           $base = 'INSERT INTO '.$table.' (';
+           $keys = array_keys($data);
+           foreach ($keys as $key) {
+             if ($key != end($keys)) {
+                 $base .= $key.', ';
+             } else {
+                 $base .= $key.') VALUES (';
+             }
+           }
 
+           foreach($keys as $key) {
+               if ($data[$key] == 'DEFAULT') {
+                   $base.= 'DEFAULT';
+               } else {
+                   $base.=':'.$key;
+               }
+                if ($key != end($keys)) {
+                     $base.=', ';
+                } else {
+                     $base.=')';
+                }
+           }
+           $query = $this->conn->prepare($base);
+           $query->execute($data);
+           return $query->fetchAll(PDO::FETCH_ASSOC);
         }
+        
         public function selectAll($table) {
             $query = $this->conn->prepare("SELECT * FROM {$table}");
             $query->execute();

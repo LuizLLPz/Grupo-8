@@ -33,7 +33,7 @@
                     'email' => $_POST['email'],
                     'cpf' => $_POST['cpf'],
                     'senha' => password_hash($_POST['senha'], PASSWORD_BCRYPT),
-                    'foto_perfil' => '  '
+                    'fotoPerfil' => '  '
                 ];
             }
         }
