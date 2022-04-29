@@ -11,7 +11,7 @@ class Router {
     }
 
     public function post($route, $callback) {
-        $this->POST[$route] = $callback;
+      $this->POST[$route] = $callback;
     }
 
     public function api ($route, $callback) {
@@ -19,7 +19,7 @@ class Router {
         $this->POST[$route] = $callback;
         $this->PATCH[$route] = $callback;
         $this->DELETE[$route] = $callback;
-    }
+    }   
 
     public function redirect($url, $method) {
         if (array_key_exists($url, $this->$method)) {

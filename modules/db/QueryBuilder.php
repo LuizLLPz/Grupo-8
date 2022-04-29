@@ -6,7 +6,7 @@
         }
         public function insert($table, $data) {
            $base = 'INSERT INTO '.$table.' (';
-           $keys = array_keys($data);
+           $keys =  ($data);
            foreach ($keys as $key) {
              if ($key != end($keys)) {
                  $base .= $key.', ';
@@ -41,6 +41,12 @@
             $query = $this->conn->prepare("SELECT * FROM {$table} WHERE {$field} = :{$field}");
             $query->execute([$field => $value]);
             return $query->fetch(PDO::FETCH_ASSOC);
+        }
+
+        public function deleteUnique($table, $field, $value) {
+            $query = $this->conn->prepare("DELETE FROM {$table} WHERE {$field} = :{$field}");
+            $query->execute([$field => $value]);
+            return $query->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 ?>

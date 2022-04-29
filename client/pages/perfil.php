@@ -14,7 +14,9 @@
         <h3 class="perfil_email"><?= $context['user']['email']?></h3>
         <h3 class="perfil_status"><?= $context['user']['tipo']?></h3>
     </div>
-
+    <div onClick="iniciarModoEditar()">
+        Editar Perfil!
+    </div>
 </div>
 <button onclick="logout()">
     Deslogar!!!

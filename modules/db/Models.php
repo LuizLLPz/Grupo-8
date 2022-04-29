@@ -6,6 +6,10 @@
 
         }
 
+        public function insert($qb) {
+            $qb->insert($this->tableName, $this->data);
+        }
+
         public function selectAll($qb) {
             return $qb->selectAll($this-> tableName);
         }
@@ -14,9 +18,10 @@
             return $qb->selectUnique($this->tableName, $field, $value);
         }
 
-        public function insert($qb) {
-            $qb->insert($this->tableName, $this->data);
+        public function deleteUnique($qb, $field, $value) {
+            $qb->deleteUnique($this->tableName, $field, $value);
         }
+        
 
     }
 

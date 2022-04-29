@@ -37,8 +37,15 @@ button, .form__button:hover {
     transition: 1s;
 }
 
+
+/* Utility classes */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.hidden {
+    display: none;
 }

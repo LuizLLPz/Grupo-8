@@ -3,6 +3,13 @@
     if(array_key_exists('user', $_SESSION)) {
         $context = [
             'title' => "UPDATE - {$_SESSION['user']['nome']} {$_SESSION['user']['sobrenome']}",
+            'scripts' => [
+                SCRIPTS_PATH . 'perfil.js',
+                
+            ],
+            'styles' => [
+                STYLES_PATH . 'form.css',
+            ],
             'user' => $_SESSION['user']
         ];
         require COMPONENTS_PATH . 'head.php';

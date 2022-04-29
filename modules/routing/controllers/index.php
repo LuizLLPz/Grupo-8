@@ -8,6 +8,9 @@
     $context = [
         'title' => 'Página inicial - Update Donate',
         'usuarios' =>  $usr->selectAll($qb),
+        'styles' => [
+            'css/form.css',
+        ],
     ];
     ?>
     <?php
