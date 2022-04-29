@@ -78,7 +78,9 @@
 .cabecalho_btn  {
     margin: 10px;
     margin-bottom: 25px;
-    
+}
+.link_btn{
+   margin: 0px auto;
 }
 
 @media screen and (min-width: 1024px) {
