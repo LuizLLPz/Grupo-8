@@ -1,6 +1,7 @@
 <style>
     <?php 
-        include STYLES_PATH.'perfilSize.css'
+        include STYLES_PATH.'perfilSize.css';
+        include STYLES_PATH.'form.css';
     ?>
 </style>
 
