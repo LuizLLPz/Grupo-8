@@ -7,11 +7,11 @@
         <script src="./client/assets/js/api.js" defer></script>
         <script src="./client/assets/js/navbar.js" defer></script>
         <div class="cabecalho_conteudo" id="cabecalho_conteudo">
-            <button class="cabecalho_btn">Login</button>
+            <a href="./login" class="link_btn"><button class="cabecalho_btn">Login</button></a>
             <ul class="cabecalho_itens">
                 <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="./">Início</a></li>
                 <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="./forum">Fórum</a></li>
-                <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="./perfil">Doações</a></li>
+                <li class="cabecalho_itens-item"><a class="cabecalho_itens-link" href="./doacoes">Doações</a></li>
             </ul>
         </div>
 </header>
