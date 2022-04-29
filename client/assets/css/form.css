@@ -105,5 +105,9 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
 
 .form_span {
     margin: 5px 0px 10px 0px;
+    cursor: pointer;
+}
 
+.form_span:hover {
+    text-shadow: 2px 2px 2px #2B127A;
 }

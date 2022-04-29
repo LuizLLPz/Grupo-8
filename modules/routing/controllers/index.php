@@ -9,7 +9,7 @@
         'title' => 'Página inicial - Update Donate',
         'usuarios' =>  $usr->selectAll($qb),
         'styles' => [
-            'css/form.css',
+            STYLES_PATH . 'form.css',
         ],
     ];
     ?>
