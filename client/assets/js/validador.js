@@ -1,4 +1,4 @@
-window.onload = ()=>{
+
 function valida(input){
     const typeInput = input.dataset.type
 
@@ -180,4 +180,4 @@ inputs.forEach(input => {
         })
     }
 })
-}
+

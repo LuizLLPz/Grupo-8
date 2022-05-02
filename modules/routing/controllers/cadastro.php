@@ -2,8 +2,7 @@
     $context = [
         'title' => 'Registrar - Update Donate',
         'scripts' => [
-            SCRIPTS_PATH . 'mascaraCPF.js',
-            SCRIPTS_PATH . 'validador.js',
+            SCRIPTS_PATH.'validador.js',
         ]
     ];
 ?>  <style>
