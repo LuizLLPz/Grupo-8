@@ -17,6 +17,9 @@
             echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
         }
     } else {
-        echo 'Usuário não encontrado';
+        $resposta = [
+            "error" => "Usuário não encontrado"
+        ];
+        echo json_encode($resposta);
     }
 ?>
