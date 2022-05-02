@@ -11,13 +11,14 @@ html {
 body {
     margin: 0px;
     background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
 }
+
+
 header + * {
     margin-top: 82px;
 }
-
-
-
 
 /* Utility classes */
 .center {
@@ -25,7 +26,6 @@ header + * {
     justify-content: center;
     align-items: center;
 }
-
 
 .hidden {
     display: none;

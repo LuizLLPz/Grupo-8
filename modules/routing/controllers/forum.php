@@ -3,7 +3,7 @@
 $context = [
     'title' => 'Fórum - Update Donate',
     'styles' => [
-        'css/form.css',
+        STYLES_PATH . 'form.css',
     ],
 ];
 require COMPONENTS_PATH . 'head.php';

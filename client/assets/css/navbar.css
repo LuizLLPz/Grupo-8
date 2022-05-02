@@ -10,6 +10,7 @@
     width: 100vw;
     height: 80px;
     top: 4px;
+    z-index: 1000;
 }
 
 .cabecalho_logo{
@@ -78,7 +79,9 @@
 .cabecalho_btn  {
     margin: 10px;
     margin-bottom: 25px;
-    
+}
+.link_btn{
+   margin: 0px auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -116,7 +119,7 @@
         padding: 0px;
         margin-left: 10px;
     }
-    .cabecalho_btn{
+    .link_btn{
         order: 1;
     }
 }
