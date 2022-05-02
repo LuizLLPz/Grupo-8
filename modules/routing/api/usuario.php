@@ -24,7 +24,7 @@ switch($_SERVER['REQUEST_METHOD']) {
 
     case 'PUT':
         $usuario = new Usuario(false);
-        $usuario->update($qb);
+        //$usuario->update($qb);
         echo json_encode($usuario->data);
         break;
 
