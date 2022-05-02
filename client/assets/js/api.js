@@ -26,7 +26,8 @@ function resLogin() {
         {
             type: 'GET',
             url: 'api/login',
-            success: function (resp) {
+            contentType: "application/json",
+            complete: async function (resp) {
                 console.log(resp)
             }
         }

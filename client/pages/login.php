@@ -3,7 +3,7 @@
         overflow: hidden;
     }
 </style>
-<form action="api/login" method="POST" class="form">
+<form method="POST" class="form">
     <div class="center">
         <h1 class="form__heading">Login</h1>
     </div>
@@ -14,7 +14,7 @@
     </div>
     <span class="form_span">Esqueceu sua senha?</span>
     <div class="center form_buttons">
-        <input type="submit" value="Enviar" class="form__button">
+        <input type="submit" onclick="resLogin()" value="Enviar" class="form__button">
         <h3 class="form__subTxt-login">Não possui uma conta?</h3>
     </div>
 </form>
