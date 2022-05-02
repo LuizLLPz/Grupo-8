@@ -20,3 +20,16 @@ function setUser() {
         }
     );
 }
+
+function resLogin() {
+    $.ajax(
+        {
+            type: 'GET',
+            url: 'api/login',
+            success: function (resp) {
+                console.log(resp)
+            }
+        }
+    );
+}
+

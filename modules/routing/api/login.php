@@ -1,5 +1,6 @@
 <?php 
     $usr = new Usuario(false);
+    header('Content-type: application/json');
     $usrResult = $usr->selectUnique($qb, 'email', $_POST['email']);
     if (!empty($usrResult)) {
         if (password_verify($_POST['password'], $usrResult['senha'])) {
@@ -10,7 +11,10 @@
             </script>
             <?php
         } else {
-            echo 'Senha incorreta';
+            $resposta = [
+                "error" => "Usuário não encontrado"
+            ];
+            echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
         }
     } else {
         $resposta = [
