@@ -4,7 +4,9 @@
         $context = [
             'title' => "UPDATE - {$_SESSION['user']['nome']} {$_SESSION['user']['sobrenome']}",
             'scripts' => [
-                SCRIPTS_PATH . 'perfil.js',
+                // SCRIPTS_PATH . 'perfil.js',
+                SCRIPTS_PATH . 'validador.js',
+                SCRIPTS_PATH . 'buttonConfgcloseopen.js',
                 
             ],
             'styles' => [

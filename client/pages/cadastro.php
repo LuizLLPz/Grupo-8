@@ -1,5 +1,3 @@
-
-</head>
 <body>
     <form action="./api/registrar" method="POST" class="form">
         <div class="center">
