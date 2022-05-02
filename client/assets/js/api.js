@@ -21,16 +21,25 @@ function setUser() {
     );
 }
 
-function resLogin() {
+$('.form_login').submit(function (e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target).entries());
     $.ajax(
         {
-            type: 'GET',
-            url: 'api/login',
-            contentType: "application/json",
-            complete: async function (resp) {
-                console.log(resp)
+            type: 'POST',
+            url: 'api/sessao',
+            data,
+            success: function (resp) {
+                if(resp.error) {
+                    alert("Erro: " + resp.error);
+                } else {
+                    window.location.href = '/grupo/perfil';
+                }
             }
         }
     );
-}
+});
+
+
+
 
