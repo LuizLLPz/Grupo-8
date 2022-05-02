@@ -4,17 +4,17 @@ header("Access-Control-Allow-Origin: *");
 
 switch($_SERVER['REQUEST_METHOD']) {
     case 'GET':
-        //if(isset($_GET['id'])) {
-       ///     $usuario = new Usuario(false);
-          ///  $usuario->selectUnique($qb, 'id', $_GET['id']);
-         //   echo json_encode($usuario->data);
-       /// } else {
-        //    $usuario = new Usuario();
+        if(isset($_GET['id'])) {
+            $usuario = new Usuario(false);
+            $usuario->selectUnique($qb, 'id', $_GET['id']);
+            echo json_encode($usuario->data);
+        } else {
+            $usuario = new Usuario();
             $resposta = [
                 "error" => "Usuário não encontrado"
             ];
             echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
-        //}
+            }
         break;
 
 
