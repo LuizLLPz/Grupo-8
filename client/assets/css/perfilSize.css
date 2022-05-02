@@ -70,6 +70,11 @@
 }
 
 
+.press{
+    background-color: #9189b8;
+}
+
+
 .perfil_config{
     display: flex;
     flex-direction: column;
@@ -128,13 +133,13 @@
 
 }
 
-.perfil_config-dados div {
+.config_div-inputs {
     display: flex;
     width: auto;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
 
 
 .perfil_config-list{
@@ -163,6 +168,10 @@
     border-radius: 10px;
 }
 
+.config_btn {
+    margin-bottom: 20px;
+}
+
 @media screen and (min-width: 1024px) {
     .perfil_config {
         flex-direction: row;
@@ -175,6 +184,10 @@
     }
     .perfil_config-dados .form {
         height: 50vh;
+    }
+
+    .perfil_config-dados .form__input{
+        width: 100%;
     }
 
 }

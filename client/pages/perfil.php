@@ -34,7 +34,8 @@
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="config_fechar">
     <div class="perfil_config-list">
         <ul>
-            <li>Conta</li>
+            <li class="">Dados da conta</li>
+            <li class="press">Editar dados</li>
         </ul>
     </div>
     <div class="perfil_config-dados">
@@ -42,7 +43,7 @@
         <div class="center">
             <h1 class="form__heading">Dados</h1>
         </div>
-        <div>
+        <div class="config_div-inputs">
             <input type="text" name="nome" placeholder="Nome" 
             required class="form__input" data-type="nome">
             <div class="form_erro-cont">
@@ -51,7 +52,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="config_div-inputs">
             <input type="text" name="sobrenome" placeholder="Sobrenome"
             value=<?= $context['user']['sobrenome']?>
             required class="form__input" data-type="sobrenome">
@@ -61,7 +62,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="config_div-inputs">
             <input type="email" name="email" placeholder="Email"
             value=<?= $context['user']['email']?>
             required class="form__input" data-type="email">
@@ -71,7 +72,7 @@
             </div>
         </div>    
 
-        <div>
+        <div class="config_div-inputs">
             <input type="text" name="cpf" placeholder="CPF"
             value=<?= $context['user']['cpf']?>
             required class="form__input" id="cpf" data-type="cpf">
@@ -81,14 +82,9 @@
             </div>
         </div>
 
-        <div>
+        <div class="center">
             <button class="config_btn">EDITAR SENHA</button>
-            <div class="form_erro-cont">
-                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-                <span class='span-erro'>Campo inválido - preencha o campo</span>
-            </div>
-        </div>   
-
+        </div>
         
         <div class="center">
             <input type="submit"class="form__button" value="EDITAR">
