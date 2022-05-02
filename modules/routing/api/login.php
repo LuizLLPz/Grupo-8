@@ -13,6 +13,9 @@
             echo 'Senha incorreta';
         }
     } else {
-        echo 'Usuário não encontrado';
+        $resposta = [
+            "error" => "Usuário não encontrado"
+        ];
+        echo json_encode($resposta);
     }
 ?>

@@ -5,8 +5,9 @@
             $this->conn = $conn;
         }
         public function insert($table, $data) {
+           echo('<pre>'.var_dump($data).'</pre>');
            $base = 'INSERT INTO '.$table.' (';
-           $keys =  ($data);
+           $keys =  array_keys($data);
            foreach ($keys as $key) {
              if ($key != end($keys)) {
                  $base .= $key.', ';
@@ -14,6 +15,8 @@
                  $base .= $key.') VALUES (';
              }
            }
+           $last = end($keys);
+           echo '<pre>'.var_dump($last).'</pre>';
 
            foreach($keys as $key) {
                if ($data[$key] == 'DEFAULT') {
@@ -21,15 +24,17 @@
                } else {
                    $base.=':'.$key;
                }
-                if ($key != end($keys)) {
+
+                if ($key != $last) {
                      $base.=', ';
                 } else {
+                    echo "mierda";
                      $base.=')';
                 }
-           }
-           $query = $this->conn->prepare($base);
-           $query->execute($data);
-           return $query->fetchAll(PDO::FETCH_ASSOC);
+            }
+            $query = $this->conn->prepare($base);
+            $query->execute($data);
+            return $data;
         }
         
         public function selectAll($table) {
