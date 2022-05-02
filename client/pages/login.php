@@ -3,7 +3,7 @@
         overflow: hidden;
     }
 </style>
-<form action="api/login" method="POST" class="form">
+<form action="api/login" method="POST" class="form form_login">
     <div class="center">
         <h1 class="form__heading">Login</h1>
     </div>
