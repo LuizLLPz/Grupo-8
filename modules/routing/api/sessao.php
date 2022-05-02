@@ -5,9 +5,14 @@ header('Content-Type: application/json');
 switch($_SERVER['REQUEST_METHOD']) {
     case 'POST':
         $usr = new Usuario(false);
-        $result = $usr->selectUnique($qb, 'email', $_POST['email']);
+        $data = json_decode(file_get_contents('php://input'), true);
+        if(!$data) {
+            $data['email'] = $_POST['email'];
+            $data['password'] = $_POST['password'];
+        }
+        $result = $usr->selectUnique($qb, 'email', $data['email']);
         if (!empty($result)) {
-            if(password_verify($_POST['password'], $result['senha'])) {
+            if(password_verify($data['password'], $result['senha'])) {
                 $_SESSION['user'] = $result;
                 $resposta = [
                    

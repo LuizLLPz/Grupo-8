@@ -4,9 +4,8 @@
     ?>
 </style>
 
-
 <div class=".modal_editar">
-    <h1>Editar editar ediiiiiiiiiitar</h1>
+    <h1>Editar editar editar</h1>
 </div>
 <div class="perfil_baner">
     <div class="perfil_img-cont">
@@ -45,7 +44,6 @@
         </div>
         <div>
             <input type="text" name="nome" placeholder="Nome" 
-            value="<?= $context['user']['nome']?>"
             required class="form__input" data-type="nome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -55,7 +53,7 @@
 
         <div>
             <input type="text" name="sobrenome" placeholder="Sobrenome"
-            value="<?= $context['user']['sobrenome']?>"
+            value=<?= $context['user']['sobrenome']?>
             required class="form__input" data-type="sobrenome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -65,7 +63,7 @@
 
         <div>
             <input type="email" name="email" placeholder="Email"
-            value="<?= $context['user']['email']?>"
+            value=<?= $context['user']['email']?>
             required class="form__input" data-type="email">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -75,7 +73,7 @@
 
         <div>
             <input type="text" name="cpf" placeholder="CPF"
-            value="<?= $context['user']['cpf']?>"
+            value=<?= $context['user']['cpf']?>
             required class="form__input" id="cpf" data-type="cpf">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
