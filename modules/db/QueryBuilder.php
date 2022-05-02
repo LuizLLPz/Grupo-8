@@ -28,7 +28,6 @@
                 if ($key != $last) {
                      $base.=', ';
                 } else {
-                    echo "mierda";
                      $base.=')';
                 }
             }
