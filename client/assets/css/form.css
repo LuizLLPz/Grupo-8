@@ -104,6 +104,13 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
     left: -10px;
 }
 
+.login_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .form_span-erro > .form_erro-cont{
     visibility: visible;
 }

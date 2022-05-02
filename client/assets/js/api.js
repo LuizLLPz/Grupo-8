@@ -31,7 +31,8 @@ $('.form_login').submit(function (e) {
             data,
             success: function (resp) {
                 if(resp.error) {
-                    alert("Erro: " + resp.error);
+                    const form_erro = document.getElementById('form_erro-cont')
+                    form_erro.parentElement.classList.toggle('form_span-erro')
                 } else {
                     window.location.href = '/grupo/perfil';
                 }

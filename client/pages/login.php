@@ -7,10 +7,13 @@
     <div class="center">
         <h1 class="form__heading">Login</h1>
     </div>
-    <input type="email" name="email" placeholder="email" class="form__input" required>
-    <input type="password" name="password" placeholder="password" class="form__input" required>
-    <div class="form_erro-cont">
-        <span class="span-erro"><img src=<?=IMAGES_PATH.'icon-erro.svg'?>>E-mail ou senha incorreta </span>
+    <div class="login_content">
+        <input type="email" name="email" placeholder="email" class="form__input" required>
+        <input type="password" name="password" placeholder="password" class="form__input" required>
+        <div class="form_erro-cont" id="form_erro-cont">
+            <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+            <span class="span-erro">E-mail ou senha incorreta</span>
+        </div>
     </div>
     <span class="form_span">Esqueceu sua senha?</span>
     <div class="center form_buttons">
