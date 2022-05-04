@@ -9,6 +9,16 @@
 </div> -->
 
 <div class= "perfil_fundo-branco" >
+    
+    <div id="open_config">Open config</div>
+    <button onclick="logout()">
+        Deslogar!!!
+    </button>
+    
+    <button onClick="setUser()">
+        Setar usuário
+    </button>
+
     <div class="perfil_baner">
         <div class="perfil_img-cont">
             <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="perfil_img">
@@ -105,6 +115,7 @@
 
     </div>
 
+    
 
 </div>
 
@@ -120,15 +131,6 @@
 
 
 
-
-<div id="open_config">Open config</div>
-<button onclick="logout()">
-    Deslogar!!!
-</button>
-
-<button onClick="setUser()">
-    Setar usuário
-</button>
 
 <div id="perfil_config" class="perfil_config perfil_config-dados-ativado"><!-- perfil_config-dados-ativado -->
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="config_fechar">
