@@ -11,7 +11,7 @@ class Router {
     }
 
     public function post($route, $callback) {
-      $this->POST[$route] = $callback;
+        $this->POST[$route] = $callback;
     }
 
     public function api ($route, $callback) {

@@ -26,6 +26,4 @@
         require COMPONENTS_PATH . 'navbar.php';
         require PAGES_PATH. '404.php';
     }
-
-    
 ?>
