@@ -1,5 +1,5 @@
 <body>
-    <form action="./api/usuario" method="POST" class="form">
+    <form method="POST" class="form form_cadastro">
         <div class="center">
             <h1 class="form__heading">Cadastro</h1>
         </div>

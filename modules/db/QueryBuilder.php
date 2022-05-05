@@ -5,7 +5,7 @@
             $this->conn = $conn;
         }
         public function insert($table, $data) {
-           echo('<pre>'.var_dump($data).'</pre>');
+           
            $base = 'INSERT INTO '.$table.' (';
            $keys =  array_keys($data);
            foreach ($keys as $key) {
@@ -16,7 +16,7 @@
              }
            }
            $last = end($keys);
-           echo '<pre>'.var_dump($last).'</pre>';
+           
 
            foreach($keys as $key) {
                if ($data[$key] == 'DEFAULT') {
