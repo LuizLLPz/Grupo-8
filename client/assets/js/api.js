@@ -19,6 +19,7 @@ $(".form_cadastro").submit(function (e){
             data: data,
         }
     );
+    
     window.location.href = '/grupo/login';
     alert('Cadastro concluido')
 })
