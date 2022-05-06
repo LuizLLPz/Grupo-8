@@ -3,36 +3,13 @@
         include STYLES_PATH.'perfilSize.css';
     ?>
 </style>
-<!-- 
-<div class=".modal_editar">
-    <h1>Editar editar editar</h1>
-</div> -->
 
 <div class= "perfil_fundo-branco" >
     
-    <div id="open_config">Open config</div>
-    <button onclick="logout()">
-        Deslogar!!!
-    </button>
-    
-    <button onClick="setUser()">
+    <!-- <div id="open_config">Open config</div> -->
+    <!-- <button onClick="setUser()">
         Setar usuário
-    </button>
-
-    <!-- <div class="perfil_baner">
-        <div class="perfil_img-cont">
-            <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="perfil_img">
-        </div>
-        
-        <div class="perfil_txt-cont">
-            <h3 class="perfil_nome"><?= $context['user']['nome'].' '.$context['user']['sobrenome']?></h3>
-            <h3 class="perfil_email"><?= $context['user']['email']?></h3>
-            <h3 class="perfil_status"><?= $context['user']['tipo']?></h3>
-        </div>
-        <div onClick="iniciarModoEditar()">
-            Editar Perfil!
-        </div>
-    </div> -->
+    </button> -->
 
 
     <div class="a">
@@ -48,11 +25,14 @@
             <p class="perfil_status"><?= $context['user']['tipo']?></p>
         </div>        
         
-        <img src=<?=IMAGES_PATH.'user.png'?> class="c">  
+        <div class="perfil_icones">
+            <img src=<?=IMAGES_PATH.'user.png'?> class="c" id="open_config">  
+            <img src=<?=IMAGES_PATH.'log-out.png'?> class="c" id="" onclick="logout()">  
+        </div>
         
     </div>
 
-    <!-- <div class="perfil_content-interreses">
+    <div class="perfil_content-interreses">
         <h1 class="perfil_content-titulo">Interesses</h1>
         <div class= "perfil_card-interesses">
             <div class= "perfil_card-exemplo">
@@ -135,7 +115,7 @@
 
     
 
-</div> -->
+</div>
 
 
 
@@ -154,11 +134,32 @@
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="config_fechar">
     <div class="perfil_config-list">
         <ul>
-            <li class="">Dados da conta</li>
-            <li class="press">Editar dados</li>
+            <li class="perfil_aba" data-type="dados_conta">Dados da conta</li>
+            <!-- <li class="perfil_aba press" data-type="editar_dados">Editar dados</li> -->
         </ul>
     </div>
-    <div class="perfil_config-dados">
+
+    <div class="perfil_config-dados" id="dados_conta">
+        <div class="pefil_dados-conta">
+            <h1>Dados da conta</h1>    
+            <div>
+                <h3>Nome:  <?= $context['user']['nome'].' '.$context['user']['sobrenome']?></h3>
+                <h3>Email: <?= $context['user']['email']?></h3>
+                <h3>Tipo:  <?= $context['user']['tipo']?></h3>
+
+            </div>
+            <button class="perfil_aba config_btn" data-type="editar_dados">Editar dados</button>
+            <br>
+            <h1>Senha</h1>
+            <button class="perfil_aba config_btn" data-type="editar_senha">Mudar senha</button>
+            <br>
+            <br>
+            <button class="config_btn config_btn-red">Deletar conta</button>    
+        </div>
+
+    </div>
+
+    <div class="perfil_config-dados none" id="editar_dados">
         <form action="" method="post" class="form">
         <div class="center">
             <h1 class="form__heading">Dados</h1>
@@ -201,14 +202,12 @@
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
             </div>
         </div>
-
-        <div class="center">
-            <button class="config_btn">EDITAR SENHA</button>
-        </div>
         
         <div class="center">
             <input type="submit"class="form__button" value="EDITAR">
         </div>
         </form>
     </div>
+
+
 </div>
