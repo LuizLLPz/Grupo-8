@@ -175,7 +175,6 @@ const inputs = document.querySelectorAll('input')
 inputs.forEach(input => {
     if(input.className != 'form__button'){
         input.addEventListener('blur', event => {
-            console.log(event.target)
             valida(event.target)
         })
     }
