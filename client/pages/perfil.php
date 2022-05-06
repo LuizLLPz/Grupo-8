@@ -23,7 +23,7 @@
             <h3 class="perfil_nome"><?= $context['user']['nome'].' '.$context['user']['sobrenome']?></h3>
             <p class="perfil_email"><?= $context['user']['email']?></p>
             <p class="perfil_status"><?= $context['user']['tipo']?></p>
-        </div>        
+        </div>     
         
         <div class="perfil_icones">
             <img src=<?=IMAGES_PATH.'user.png'?> class="c" id="open_config">  
