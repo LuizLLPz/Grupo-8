@@ -11,6 +11,7 @@
 <div class= "perfil_fundo-branco" >
     
     <div id="open_config">Open config</div>
+
     <button onclick="logout()">
         Deslogar!!!
     </button>
@@ -46,9 +47,11 @@
             <h3 class="perfil_nome"><?= $context['user']['nome'].' '.$context['user']['sobrenome']?></h3>
             <p class="perfil_email"><?= $context['user']['email']?></p>
             <p class="perfil_status"><?= $context['user']['tipo']?></p>
-        </div>        
+        </div>     
         
-        <img src=<?=IMAGES_PATH.'user.png'?> class="c">  
+        <!---->
+        <button class="perfil_botao-config" id="open_config"><img src=<?=IMAGES_PATH.'user.png'?> class="c"></button> 
+        <!----> 
         
     </div>
 
