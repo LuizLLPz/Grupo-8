@@ -19,7 +19,7 @@
         Setar usuário
     </button>
 
-    <div class="perfil_baner">
+    <!-- <div class="perfil_baner">
         <div class="perfil_img-cont">
             <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="perfil_img">
         </div>
@@ -32,9 +32,27 @@
         <div onClick="iniciarModoEditar()">
             Editar Perfil!
         </div>
+    </div> -->
+
+
+    <div class="a">
+        <div class="e">
+            <div class="d">
+                <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="profile_usr-pic">
+            </div>
+        </div>
+        
+        <div class="b">
+            <h3 class="perfil_nome"><?= $context['user']['nome'].' '.$context['user']['sobrenome']?></h3>
+            <p class="perfil_email"><?= $context['user']['email']?></p>
+            <p class="perfil_status"><?= $context['user']['tipo']?></p>
+        </div>        
+        
+        <img src=<?=IMAGES_PATH.'user.png'?> class="c">  
+        
     </div>
 
-    <div class="perfil_content-interreses">
+    <!-- <div class="perfil_content-interreses">
         <h1 class="perfil_content-titulo">Interesses</h1>
         <div class= "perfil_card-interesses">
             <div class= "perfil_card-exemplo">
@@ -117,7 +135,7 @@
 
     
 
-</div>
+</div> -->
 
 
 
