@@ -15,8 +15,8 @@
         Deslogar!!!
     </button>
     
-    <button onClick="setUser()">
-        Setar usuário
+    <button class="deletar_usuario">
+        Deletar usuario
     </button>
 
     <div class="perfil_baner">

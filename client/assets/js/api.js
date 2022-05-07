@@ -51,6 +51,23 @@ $('.form_login').submit(function (e) {
     );
 });
 
+$('.deletar_usuario').click( function(){
+    swal({
+        title: 'Você tem certeza?',
+        text: 'Essa ação não pode ser revertida!',
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true,
+    }).then((willDelete) => {
+        if (willDelete) {
+            swal('Que pena', 'texto', 'success');
+            $('.swal-text').html('Iremos sentir sua falta '+ $('.perfil_nome').text() +' <span>&#128557</span>');
+        } else {
+            swal('Você cancelou a exclusão');
+        }
+    });
+});
+
 
 
 
