@@ -16,7 +16,7 @@
     </button>
     
     <button class="deletar_usuario">
-        Deletar usuario
+        Deletar usário
     </button>
 
     <div class="perfil_baner">

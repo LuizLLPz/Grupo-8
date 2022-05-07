@@ -9,6 +9,23 @@ function logout() {
 
 }
 
+
+$(".form_cadastro").submit(function (e){
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    $.ajax(
+        {
+            type: 'POST',
+            url: 'api/usuario',
+            data: data,
+        }
+    );
+    
+    window.location.href = '/grupo/login';
+    alert('Cadastro concluido')
+})
+
+
 $('.form_atualizar').submit(function (e) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target).entries());
