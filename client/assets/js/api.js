@@ -80,11 +80,12 @@ $('.form_login').submit(function (e) {
 
 $('.deletar_usuario').click( function(){
     swal({
-        title: 'Você tem certeza?',
+        title: 'Você tem certeza em deletar a conta?',
         text: 'Essa ação não pode ser revertida!',
         icon: 'warning',
         buttons: true,
         dangerMode: true,
+
     }).then((willDelete) => {
         if (willDelete) {
             $.ajax(
@@ -93,7 +94,7 @@ $('.deletar_usuario').click( function(){
                     url: 'api/usuario',
                 }
             );
-            swal('Que pena', 'texto', 'success');
+            swal('Conta excluida com sucesso', 'texto', 'success');
             $('.swal-text').html('Iremos sentir sua falta '+ $('.perfil_nome').text() +' <span>&#128557</span>');
         } else {
             swal('Você cancelou a exclusão');
