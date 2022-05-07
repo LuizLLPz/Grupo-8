@@ -3,6 +3,7 @@ class Router {
     public function __construct() {
         $this->GET = [];
         $this->POST = [];
+        $this->PUT = [];
         $this->PATCH = [];
         $this->DELETE = [];
     }
@@ -17,6 +18,7 @@ class Router {
     public function api ($route, $callback) {
         $this->GET[$route] = $callback;
         $this->POST[$route] = $callback;
+        $this->PUT[$route] = $callback;
         $this->PATCH[$route] = $callback;
         $this->DELETE[$route] = $callback;
     }   

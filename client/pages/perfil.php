@@ -125,13 +125,6 @@
 
 
 
-
-
-
-
-
-
-
 <div id="perfil_config" class="perfil_config perfil_config-dados-ativado"><!-- perfil_config-dados-ativado -->
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="config_fechar">
     <div class="perfil_config-list">
@@ -141,12 +134,13 @@
         </ul>
     </div>
     <div class="perfil_config-dados">
-        <form action="" method="post" class="form">
+        <form class="form form_atualizar">
         <div class="center">
             <h1 class="form__heading">Dados</h1>
         </div>
         <div class="config_div-inputs">
             <input type="text" name="nome" placeholder="Nome" 
+            value=<?= $context['user']['nome']?>
             required class="form__input" data-type="nome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>

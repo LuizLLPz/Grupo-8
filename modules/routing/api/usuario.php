@@ -3,6 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
 
 switch($_SERVER['REQUEST_METHOD']) {
+
     case 'GET':
         if(isset($_GET['id'])) {
             $usuario = new Usuario(false);
@@ -23,10 +24,11 @@ switch($_SERVER['REQUEST_METHOD']) {
         echo json_encode($usuario->insert($qb), JSON_UNESCAPED_UNICODE);        
         break;
 
+
     case 'PUT':
         $usuario = new Usuario(false);
-        //$usuario->update($qb);
-        echo json_encode($usuario->data);
+        $usuario->bindData(array_merge((array) json_decode(file_get_contents("php://input", true)), ["id" => $_SESSION['user']['id']]));
+        $usuario->editUnique($qb);
         break;
 
 

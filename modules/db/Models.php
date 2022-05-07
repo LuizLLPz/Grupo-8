@@ -2,8 +2,9 @@
     class Models {
         protected $tableName;
         protected $data;
-        public function CreateTable($db_client) {
 
+        public function bindData($data) {
+            $this->data = $data;
         }
 
         public function insert($qb) {
@@ -20,6 +21,10 @@
 
         public function deleteUnique($qb, $field, $value) {
             $qb->deleteUnique($this->tableName, $field, $value);
+        }
+
+        public function editUnique($qb) {
+            $qb->editUnique($this->tableName, $this->data);
         }
         
 

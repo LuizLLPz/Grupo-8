@@ -41,6 +41,7 @@
             $query->execute();
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
+
         public function selectUnique($table, $field, $value) {
             $query = $this->conn->prepare("SELECT * FROM {$table} WHERE {$field} = :{$field}");
             $query->execute([$field => $value]);
@@ -51,6 +52,24 @@
             $query = $this->conn->prepare("DELETE FROM {$table} WHERE {$field} = :{$field}");
             $query->execute([$field => $value]);
             return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+
+        public function editUnique($table, $data) {
+            $base = 'UPDATE '.$table.' SET ';
+            $keys =  array_keys($data);
+            $end = end($keys);
+            foreach ($keys as $key) {
+                if ($key != $end) {
+                    $base .= $key.' = :'.$key.', ';
+                } else {
+                    $base .= $key.' = :'.$key;
+                }
+            }
+            $base .= ' WHERE id = :id';
+            echo $base;
+            $query = $this->conn->prepare($base);
+            $query->execute($data);
         }
     }
 ?>

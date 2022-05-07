@@ -18,16 +18,22 @@ switch($_SERVER['REQUEST_METHOD']) {
                    
                 ];
                 echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+                break;
             } else {
                 $resposta = [
                     "error" => "Informações Incorretas"
                 ];
                 echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+                break;
             }
         }   else {
             $resposta = [
                 "error" => "Informações Incorretas"
             ];
             echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+            break;
         }    
+    case 'DELETE':
+        unset ($_SESSION['user']);
+        break;
 }
