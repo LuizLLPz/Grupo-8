@@ -36,8 +36,9 @@ switch($_SERVER['REQUEST_METHOD']) {
 
     case 'DELETE':
         $usuario = new Usuario(false);
-        $usuario->deleteUnique($qb, 'id', $_GET['id']);
-        echo json_encode($usuario->data);
+        $usuario->deleteUnique($qb, 'id', $_SESSION['user']['id']);
+        unset($_SESSION['user']);
+        echo json_encode(["status" => "sucess"], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         break;
 
 

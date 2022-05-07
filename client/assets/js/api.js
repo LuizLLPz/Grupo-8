@@ -60,6 +60,12 @@ $('.deletar_usuario').click( function(){
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            $.ajax(
+                {
+                    type: 'DELETE',
+                    url: 'api/usuario',
+                }
+            );
             swal('Que pena', 'texto', 'success');
             $('.swal-text').html('Iremos sentir sua falta '+ $('.perfil_nome').text() +' <span>&#128557</span>');
         } else {
