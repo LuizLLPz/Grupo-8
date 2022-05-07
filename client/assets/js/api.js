@@ -19,7 +19,10 @@ $('.form_atualizar').submit(function (e) {
             data: JSON.stringify(data),
             success: function (data) {
                 if (data.status === 'success') {
-                    swal('Sucesso', data.message, 'success');
+                    swal('Sucesso', data.message, 'success').then(() => {
+                        location.reload();
+                    });
+                    
                 } else {
                     swal('Erro', data.message, 'error');
                 }
