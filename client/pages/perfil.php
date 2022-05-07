@@ -15,7 +15,7 @@
     <div class="a">
         <div class="e">
             <div class="d">
-                <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="profile_usr-pic">
+                <img src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> class="profile_usr-pic">
             </div>
         </div>
         
@@ -148,13 +148,19 @@
                 <h3>Tipo:  <?= $context['user']['tipo']?></h3>
 
             </div>
-            <button class="perfil_aba config_btn" data-type="editar_dados">Editar dados</button>
+            <div>
+                <button class="perfil_aba config_btn" data-type="editar_dados">Editar dados</button>
+            </div>
             <br>
             <h1>Senha</h1>
-            <button class="perfil_aba config_btn" data-type="editar_senha">Mudar senha</button>
+            <div>
+                <button class="perfil_aba config_btn" data-type="editar_senha">Mudar senha</button>
+            </div>
             <br>
             <br>
-            <button class="config_btn config_btn-red deletar_usuario">Deletar conta</button>    
+            <div>
+                <button class="config_btn config_btn-red deletar_usuario">Deletar conta</button>    
+            </div>
         </div>
 
     </div>
@@ -207,7 +213,10 @@
         <div class="center">
             <input type="submit"class="form__button" value="EDITAR">
         </div>
-        </form>
+    </form>
+    <div class="center">
+        <button type='submit' class="perfil_aba config_btn" data-type="dados_conta">Cancelar</button>
+    </div>
     </div>
 
 

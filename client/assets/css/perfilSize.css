@@ -17,6 +17,7 @@
     background: linear-gradient(92.17deg, #24135D -12.47%, #0A4399 120.03%);
     border: 1px solid #000000;
     border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     margin: 30px 0px;
     
@@ -40,6 +41,7 @@
     border-radius: 50%;
     border: solid 1px black;
     background: linear-gradient(92.17deg, #24135D -12.47%, #0A4399 120.03%);
+
     
 }
 
@@ -49,6 +51,7 @@
     
     border-radius: 50%;
     margin: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
 
@@ -61,7 +64,7 @@
     flex-direction: column;
     justify-content: center;
     
-    width: 70%;
+    width: 75%;
     max-width: 300px;
     height: 102px;
     
@@ -76,8 +79,9 @@
 }
 
 .perfil_nome, .perfil_status, .perfil_email {
+    text-overflow: ellipsis;
     position: relative;
-    left: 55px;
+    left: 60px;
     color: black;
     width: calc(100% - 70px);
     margin-bottom: 0px;
@@ -107,9 +111,10 @@
 
 .c{
     position: relative;
-    right: 15px;
+    right: 12px;
     top: 10px;
     width: 20px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
 /* Fundo do perfil */
@@ -124,7 +129,7 @@
     height: 80vh;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid black;
+    outline: 1px solid black;
     border-radius: 15px;
     
     position: fixed;
@@ -160,9 +165,9 @@
 .perfil_card-exemplo{
     padding: 100px;
     margin: 10px;
-    height: 250px;
+    height: 110px;
     width: 300px;
-    background-color: pink;
+    background-color: #E5E5E5;
 }
 
 .perfil_card-interesses::-webkit-scrollbar, .perfil_card-participacao::-webkit-scrollbar {
@@ -180,6 +185,24 @@
     border-radius: 15px;
     border: 10px solid #021d4600;
 }
+
+    
+.perfil_fundo-branco::-webkit-scrollbar{
+    width: 12px;
+    margin: 10px;
+}
+
+.perfil_fundo-branco::-webkit-scrollbar-track {
+    background: rgba(134, 134, 134, 0.216);
+    border-radius: 20px;
+    
+}
+.perfil_fundo-branco::-webkit-scrollbar-thumb {
+    background: #30217E;
+    border-radius: 30px;
+    border: 2px solid #E5E5E5;
+}
+
 
 /* Botão quando está pressionado na config */
 
@@ -287,6 +310,9 @@
 /* Edição da aba dados da conta */
 
 .pefil_dados-conta{
+    margin: 30px 0px;
+    height: 80%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,7 +339,7 @@
         border-right: 1px solid black;
         width: 30%;
     }
-    .perfil_config-dados .form {
+    .perfil_config-dados .form, .perfil_config-dados .pefil_dados-conta {
         height: 50vh;
     }
 
@@ -322,21 +348,6 @@
     }
 
     /* Scroll versão desktop */
-    
-    .perfil_fundo-branco::-webkit-scrollbar{
-        width: 12px;
-        margin: 10px;
-    }
 
-    .perfil_fundo-branco::-webkit-scrollbar-track {
-        background: rgba(134, 134, 134, 0.216);
-        border-radius: 20px;
-        
-    }
-    .perfil_fundo-branco::-webkit-scrollbar-thumb {
-        background: #30217E;
-        border-radius: 30px;
-        border: 2px solid #E5E5E5;
-    }
 
 }
