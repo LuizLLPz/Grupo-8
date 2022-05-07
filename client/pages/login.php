@@ -21,4 +21,6 @@
         <h3 class="form__subTxt-login">Não possui uma conta?</h3>
     </div>
 </form>
-<a href="./cadastro" class="link_btn"><button class="form__button">Cadastre-se</button></a
+<div class="center">
+    <a href="./cadastro" class="link_btn"><button class="form__button">Cadastre-se</button></a
+</div>
