@@ -69,6 +69,7 @@
             $base .= ' WHERE id = :id';
             $query = $this->conn->prepare($base);
             $query->execute($data);
+            $_SESSION['user'] = $this->selectUnique($table, 'id', $data['id']);
         }
     }
 ?>
