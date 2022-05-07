@@ -140,7 +140,7 @@
         </div>
         <div class="config_div-inputs">
             <input type="text" name="nome" placeholder="Nome" 
-            value=<?= $context['user']['nome']?>
+            value="<?= $context['user']['nome']?>"
             required class="form__input" data-type="nome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -150,7 +150,7 @@
 
         <div class="config_div-inputs">
             <input type="text" name="sobrenome" placeholder="Sobrenome"
-            value=<?= $context['user']['sobrenome']?>
+            value="<?= $context['user']['sobrenome']?>"
             required class="form__input" data-type="sobrenome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
