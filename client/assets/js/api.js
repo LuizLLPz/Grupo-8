@@ -18,7 +18,11 @@ $('.form_atualizar').submit(function (e) {
             url: 'api/usuario',
             data: JSON.stringify(data),
             success: function (data) {
-                alert('Atualizado com sucesso!');
+                if (data.status === 'success') {
+                    swal('Sucesso', data.message, 'success');
+                } else {
+                    swal('Erro', data.message, 'error');
+                }
             }
         }
     );
