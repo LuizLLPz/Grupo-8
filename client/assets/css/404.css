@@ -4,13 +4,14 @@
     --btn_text_color: #E9E9E9;
 }
 .details_container {
-    margin-left: 100px;
+    margin: 150px auto 0px auto;
     font-family: 'Quicksand', sans-serif;
-    width: 600px;
+    width: 80%;
+    max-width: 600px;
 }
 
 .details_container__heading {
-    font-size: 64px;
+    font-size: 2.3rem;
     font-weight: 700;
     color: rgb(4, 1, 35);
     margin-bottom: 10px;

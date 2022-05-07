@@ -1,3 +1,4 @@
+
 <?php
 
     /* Arquivo inicial do projeto PHP
@@ -19,4 +20,5 @@
     require './modules/routing/apiRoutes.php';
     require($router->redirect($url, $_SERVER['REQUEST_METHOD']));
 ?>
+
 

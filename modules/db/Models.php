@@ -2,21 +2,31 @@
     class Models {
         protected $tableName;
         protected $data;
-        public function CreateTable($db_client) {
 
+        public function bindData($data) {
+            $this->data = $data;
+        }
+
+        public function insert($qb) {
+            return $qb->insert($this->tableName, $this->data);
         }
 
         public function selectAll($qb) {
             return $qb->selectAll($this-> tableName);
         }
 
-        public function selectUnique($qb, $id) {
-            return $qb->selectUnique($this->tableName, $id);
+        public function selectUnique($qb, $field, $value) {
+            return $qb->selectUnique($this->tableName, $field, $value);
         }
 
-        public function insert($qb) {
-            $qb->insert($this->tableName, $this->data);
+        public function deleteUnique($qb, $field, $value) {
+            $qb->deleteUnique($this->tableName, $field, $value);
         }
+
+        public function editUnique($qb) {
+            $qb->editUnique($this->tableName, $this->data);
+        }
+        
 
     }
 
@@ -32,8 +42,8 @@
                     'sobrenome' => $_POST['sobrenome'],
                     'email' => $_POST['email'],
                     'cpf' => $_POST['cpf'],
-                    'password' => password_hash($_POST['password'], PASSWORD_ARGON2I),
-                    'foto_perfil' => '  '
+                    'senha' => password_hash($_POST['senha'], PASSWORD_BCRYPT),
+                    'fotoPerfil' => '  '
                 ];
             }
         }

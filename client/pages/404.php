@@ -11,7 +11,7 @@
     <p class="details_container__message">
         O documento que você está procurando não foi encontrado. Caso você ache que isso é um erro contate o suporte.
     </p>
-    <a href="/" class="details_container__link">
+    <a href="./" class="details_container__link">
         VOLTAR
     </a>
 </div>
