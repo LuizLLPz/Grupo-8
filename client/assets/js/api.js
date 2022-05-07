@@ -21,10 +21,12 @@ $(".form_cadastro").submit(function (e){
         }
     );
     
-    window.location.href = '/grupo/login';
-    alert('Cadastro concluido')
+    swal("Concluído!", "Cadastro realizado com sucesso!", "success").then(
+        function () {
+            window.location.href = '/grupo/login';
+        }
+    );
 })
-
 
 $('.form_atualizar').submit(function (e) {
     e.preventDefault();

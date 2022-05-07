@@ -190,7 +190,6 @@
 /* Css da configuração do perfil */
 
 .perfil_config{
-    z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
