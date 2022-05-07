@@ -18,8 +18,7 @@ $('.form_atualizar').submit(function (e) {
             url: 'api/usuario',
             data: JSON.stringify(data),
             success: function (data) {
-                console.log("resultado "+ JSON.stringify(data));
-                $('#user').text(data.nome);
+                alert('Atualizado com sucesso!');
             }
         }
     );

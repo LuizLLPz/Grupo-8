@@ -67,7 +67,6 @@
                 }
             }
             $base .= ' WHERE id = :id';
-            echo $base;
             $query = $this->conn->prepare($base);
             $query->execute($data);
         }

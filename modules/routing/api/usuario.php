@@ -29,6 +29,8 @@ switch($_SERVER['REQUEST_METHOD']) {
         $usuario = new Usuario(false);
         $usuario->bindData(array_merge((array) json_decode(file_get_contents("php://input", true)), ["id" => $_SESSION['user']['id']]));
         $usuario->editUnique($qb);
+        echo json_encode(["status" => "sucess", "message" => "Usuário atualizado com sucesso!"], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
+        | JSON_UNESCAPED_SLASHES);
         break;
 
 
