@@ -21,7 +21,7 @@ switch($_SERVER['REQUEST_METHOD']) {
 
     case 'POST':
         $usuario = new Usuario();
-        echo json_encode($usuario->insert($qb), JSON_UNESCAPED_UNICODE);        
+        echo json_encode($usuario->insert($qb), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
         break;
 
 
@@ -29,8 +29,7 @@ switch($_SERVER['REQUEST_METHOD']) {
         $usuario = new Usuario(false);
         $usuario->bindData(array_merge((array) json_decode(file_get_contents("php://input", true)), ["id" => $_SESSION['user']['id']]));
         $usuario->editUnique($qb);
-        echo json_encode(["status" => "success", "message" => "Usuário atualizado com sucesso!"], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
-        | JSON_UNESCAPED_SLASHES);
+        echo json_encode(["status" => "success", "message" => "Usuário atualizado com sucesso!"], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
         break;
 
 

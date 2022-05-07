@@ -8,7 +8,7 @@
         }
 
         public function insert($qb) {
-            $qb->insert($this->tableName, $this->data);
+            return $qb->insert($this->tableName, $this->data);
         }
 
         public function selectAll($qb) {

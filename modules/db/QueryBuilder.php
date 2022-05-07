@@ -32,8 +32,16 @@
                 }
             }
             $query = $this->conn->prepare($base);
-            $query->execute($data);
-            return $data;
+            try {
+                $query->execute($data);
+            } catch (PDOException $e) {
+                $message = ["message" => "Erro ao realizar cadastro"];
+                if ($e->getCode() == 23000) {
+                    $message = ["message" => "Dados indisponíveis"];
+                }
+                return array_merge(["status" => "error"], $message);
+            }
+            return array_merge($data, ['status' => "sucess"]);
         }
         
         public function selectAll($table) {
