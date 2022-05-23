@@ -10,3 +10,11 @@ create table if not Exists Usuario (
     fotoPerfil varchar(320),
     tipo enum('Donatário', 'Doador') default 'Donatário'
 );
+
+create table if not Exists Anuncio( 
+    cod varchar(100) primary key,
+    titulo varchar(100) not null,
+    descricao varchar(280) not null,
+    foto blob,
+    data_publicacao date not null
+);

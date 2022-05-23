@@ -1,4 +1,5 @@
 <?php
+    require 'App.php';
     require 'modules/db/Connection.php';
     require 'modules/db/QueryBuilder.php';
     require 'modules/db/Models.php';
