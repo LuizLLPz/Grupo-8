@@ -47,5 +47,19 @@
                 ];
             }
         }
+
+        public function bindData($data)
+        {
+            $this->data = [
+                'id' => uniqid($data['nome']),
+                'nome' => $data['nome'],
+                'sobrenome' => $data['sobrenome'],
+                'email' => $data['email'],
+                'cpf' => $data['cpf'],
+                'senha' => password_hash($data['senha'], PASSWORD_BCRYPT),
+                'fotoPerfil' => '  '
+            ];
+        }
     }
+    
 ?>

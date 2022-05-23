@@ -1,11 +1,9 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header('Content-Type: application/json');
+$data = App::apiServe();
 
 switch($_SERVER['REQUEST_METHOD']) {
     case 'POST':
         $usr = new Usuario(false);
-        $data = json_decode(file_get_contents('php://input'), true);
         if(!$data) {
             $data['email'] = $_POST['email'];
             $data['password'] = $_POST['password'];
@@ -15,22 +13,23 @@ switch($_SERVER['REQUEST_METHOD']) {
             if(password_verify($data['password'], $result['senha'])) {
                 $_SESSION['user'] = $result;
                 $resposta = [
-                   
+                   "status" => "success",
+                   "message" => "Usuário logado com sucesso!"
                 ];
-                echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+                App::apiResponse($resposta);
                 break;
             } else {
                 $resposta = [
                     "error" => "Informações Incorretas"
                 ];
-                echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+                App::apiResponse($resposta);
                 break;
             }
         }   else {
             $resposta = [
                 "error" => "Informações Incorretas"
             ];
-            echo json_encode($resposta, JSON_UNESCAPED_UNICODE);
+            App::apiResponse($resposta);
             break;
         }    
     case 'DELETE':
