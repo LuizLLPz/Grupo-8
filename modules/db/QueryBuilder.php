@@ -31,6 +31,7 @@
                      $base.=')';
                 }
             }
+            
             $query = $this->conn->prepare($base);
             try {
                 $query->execute($data);

@@ -61,5 +61,32 @@
             ];
         }
     }
+
+    class Anuncio extends Models {
+        public function __construct($form=true) {
+            $this->tableName = 'Anuncio';
+            if($form) {
+                $this->data = [
+                    'id' => uniqid($_POST['titulo']),
+                    'titulo' => $_POST['titulo'],
+                    'descricao' => $_POST['conteudo'],
+                    'data' => date('Y-m-d H:i:s'),
+                    'usuario_id' => $_SESSION['user']['id']
+                ];
+            }
+        }
+
+        public function bindData($data)
+        {
+           
+            $this->data = [
+                'cod' => uniqid($data['titulo']),
+                'titulo' => $data['titulo'],
+                'descricao' => $data['descricao'],
+                'foto' => NULL,
+                'data_publicacao' => date('Y-m-d H:i:s'),
+            ];
+        }
+    }
     
 ?>
