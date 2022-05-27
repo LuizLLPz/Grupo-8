@@ -5,7 +5,7 @@
             $this->conn = $conn;
         }
         public function insert($table, $data) {
-           echo "testw";
+           
            $base = 'INSERT INTO '.$table.' (';
            $keys =  array_keys($data);
            foreach ($keys as $key) {
