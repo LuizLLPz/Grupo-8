@@ -94,7 +94,9 @@ $('.deletar_usuario').click( function(){
                     url: 'api/usuario',
                 }
             );
-            swal('Conta excluida com sucesso', 'texto', 'success');
+            swal('Conta excluida com sucesso', 'texto', 'success').then(()=>{
+                window.location.href = '/grupo/'
+            })
             $('.swal-text').html('Iremos sentir sua falta '+ $('.perfil_nome').text() +' <span>&#128557</span>');
         } else {
             swal('Você cancelou a exclusão');

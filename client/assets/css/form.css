@@ -29,12 +29,12 @@
     flex-direction: column;
 }
 
-.form__input[type = 'text'], .form__input[type = 'email'], .form__input[type = 'password']  {
+.form__input[type = 'text'], .form__input[type = 'email'], .form__input[type = 'password'], textarea  {
     border: 1px solid black;
     font: 16px 'Noto Sans', sans-serif;
     background-color: #E9E9E9;
     height: 35px;
-    width: 80vw;
+    width: 70vw;
     max-width: 400px;
     border-radius: 20px;
     padding: 5px 0px;
@@ -42,6 +42,12 @@
     margin-bottom: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
+}
+
+textarea{
+
+    height: 300px;
+
 }
 
 button, .form__button, .form__button[type='submit'], .cabecalho_btn {
@@ -133,4 +139,10 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
     font-size: 18px;
     margin-top: 30px;
     margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .form__input[type = 'text'], .form__input[type = 'email'], .form__input[type = 'password'], textarea {
+        width: 80vw;
+    }
 }
