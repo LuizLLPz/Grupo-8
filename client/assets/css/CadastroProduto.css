@@ -1,0 +1,16 @@
+hr{
+    width:97%; 
+    border-style: inset; 
+    border: 1px dashed rgb(147, 147, 147); 
+    margin: auto; 
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+}
+
+.info-geral{
+    display:flex;
+}
+
+.localizacao{
+    margin-top:10px;
+}
