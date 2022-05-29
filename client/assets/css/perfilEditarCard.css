@@ -1,0 +1,54 @@
+.editar_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+    background-color: #E9E9E9;
+    border-radius: 15px;
+    position: fixed;
+    top: 100px;
+    left: calc(100vw - 95vw);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.editar_card-dados-ativado{
+    display:none;
+}
+
+.editar_form{
+    overflow-y: auto;
+    width: 100%;
+
+}
+
+.editar_form::-webkit-scrollbar{
+    width: 12px;
+    margin: 10px;
+}
+
+.editar_form::-webkit-scrollbar-track {
+    background: rgba(134, 134, 134, 0.216);
+    border-radius: 20px;
+    
+}
+.editar_form::-webkit-scrollbar-thumb {
+    background: #30217E;
+    border-radius: 30px;
+    border: 2px solid #E5E5E5;
+}
+
+.editar_form > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.editar_form > .editarCar_contener-btn{
+    position: relative;
+    left: 6px;
+}
+
+.editarCar_contener-btn{
+    margin: 10px;
+}

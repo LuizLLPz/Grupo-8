@@ -1,9 +1,3 @@
-<style>
-    <?php 
-        include STYLES_PATH.'perfilSize.css';
-    ?>
-</style>
-
 <div class= "perfil_fundo-branco" >
     
     <!-- <div id="open_config">Open config</div> -->
@@ -15,7 +9,7 @@
     <div class="a">
         <div class="e">
             <div class="d">
-                <img src=<?=IMAGES_PATH.'pfpadrao.png'?> class="profile_usr-pic">
+                <img src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> class="profile_usr-pic">
             </div>
         </div>
         
@@ -32,40 +26,23 @@
         
     </div>
 
+    <div>
+        <button id="adicionarAnuncio">Adicionar Anúncio de doação</button>
+    </div>
+
     <div class="perfil_content-interreses">
         <h1 class="perfil_content-titulo">Interesses</h1>
         <div class= "perfil_card-interesses">
             <div class= "perfil_card-exemplo">
+                <button id="editarAnuncio">editar</button>
                 card
             </div>
             <div class= "perfil_card-exemplo">
+                <button id="editarAnuncio">editar</button>
                 card
             </div>
             <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
+                <button id="editarAnuncio">editar</button>
                 card
             </div>
             
@@ -73,47 +50,87 @@
 
     </div>
 
-    <div class="perfil_content-participacao">
+    <!-- <div class="perfil_content-participacao">
         <h1 class="perfil_content-titulo">Participações do fórum</h1>
         <div class= "perfil_card-participacao">
             <div class= "perfil_card-exemplo">
                 card
             </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
+
         </div>
 
-    </div>
+    </div> -->
 
     
+
+</div>
+
+<!-- Editar card -->
+
+<div id="editar_card" class="editar_card editar_card-dados-ativado">
+    <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="editarCard_fechar">
+    <h2>Editar Anúncio de Doação</h2>
+    <form action="" class="editar_form">
+        <div>
+            <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="nome">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <div>
+            <textarea name="descricao" placeholder="Descrição" required class="form__input" data-type="descricao"></textarea>
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <div>
+            <!-- Mudar para option -->
+            <input type="text" name="categoria" placeholder="Categoria" required class="form__input" data-type="categoria">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="cep" placeholder="CEP" required class="form__input" data-type="cep">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="cidade" placeholder="Cidade" required class="form__input" data-type="cidade">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="estado" placeholder="Estado" required class="form__input" data-type="estado">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div>
+        <!-- 
+        Mudar caso tenha a imagem    
+        <div>
+            <input type="text" name="nome" placeholder="Nome" required class="form__input" data-type="nome">
+            <div class="form_erro-cont">
+                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class='span-erro'>Campo inválido - preencha o campo</span>
+            </div>
+        </div> 
+        -->
+        <div class="center editarCar_contener-btn">
+            <button>Editar</button>
+        </div>
+    </form>
+    <div class="center editarCar_contener-btn">
+        <button onclick="toogleEditarCard()">Sair</button>
+    </div>
 
 </div>
 
@@ -126,10 +143,7 @@
 
 
 
-
-
-
-
+<!-- Config -->
 <div id="perfil_config" class="perfil_config perfil_config-dados-ativado"><!-- perfil_config-dados-ativado -->
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="config_fechar">
     <div class="perfil_config-list">
@@ -148,13 +162,19 @@
                 <h3>Tipo:  <?= $context['user']['tipo']?></h3>
 
             </div>
-            <button class="perfil_aba config_btn" data-type="editar_dados">Editar dados</button>
+            <div>
+                <button class="perfil_aba config_btn" data-type="editar_dados">Editar dados</button>
+            </div>
             <br>
             <h1>Senha</h1>
-            <button class="perfil_aba config_btn" data-type="editar_senha">Mudar senha</button>
+            <div>
+                <button class="perfil_aba config_btn" data-type="editar_senha">Mudar senha</button>
+            </div>
             <br>
             <br>
-            <button class="config_btn config_btn-red deletar_usuario">Deletar conta</button>    
+            <div>
+                <button class="config_btn config_btn-red deletar_usuario">Deletar conta</button>    
+            </div>
         </div>
 
     </div>
@@ -207,8 +227,10 @@
         <div class="center">
             <input type="submit"class="form__button" value="EDITAR">
         </div>
-        </form>
+    </form>
+    <div class="center">
+        <button type='submit' class="perfil_aba config_btn" data-type="dados_conta">Cancelar</button>
     </div>
-
+    </div>
 
 </div>

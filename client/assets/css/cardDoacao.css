@@ -1,0 +1,16 @@
+.perfil_card-interesses, .perfil_card-participacao{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    flex: none;
+    overflow-y: hidden;
+}
+
+.perfil_card-exemplo{
+    padding: 100px;
+    margin: 10px;
+    height: 110px;
+    width: 300px;
+    background-color: #E5E5E5;
+}

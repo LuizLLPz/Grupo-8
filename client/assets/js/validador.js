@@ -6,7 +6,6 @@ function valida(input){
         validadores[typeInput](input)
     }
     if(input.validity.valid){
-        console.log(input.parentElement)
         input.parentElement.classList.remove('form_span-erro')
         input.parentElement.querySelector('.span-erro').innerHTML = ''
     }else {
@@ -62,7 +61,6 @@ const mostraMensagemDeErro = (typeInput, input) => {
     let mensagemErro = ''
     tiposDeErro.forEach(tipoDeErro => {
         if(input.validity[tipoDeErro]){
-            console.log(mensagensDeErro[typeInput][tipoDeErro])
             mensagemErro = mensagensDeErro[typeInput][tipoDeErro]
         }
     })
@@ -75,12 +73,11 @@ const senha = []
 const setSenha = (input) => {
     const senhaValor = input.value
     senha.splice(0, 1 , senhaValor)
-    console.log(senha)
+
 }
 
 const confirmaSenha = (input) => {
     const valorDigitado = input.value
-    console.log(valorDigitado)
     let erroMensagem = ''
     if(senha[0] != valorDigitado){
         erroMensagem = 'A senha não é igual à digitada anteriormente0'
@@ -144,12 +141,9 @@ function checaDigitoVerificador( cpf, multiplicador ){
     let multiplicadorInicial = multiplicador
     let soma = 0
     const cpfSemDigito = cpf.substr(0, multiplicador - 1).split('')
-    console.log(cpfSemDigito)
     const digitoVerificador = cpf.charAt(multiplicador - 1)
-    console.log(digitoVerificador)
     for(let i = 0; multiplicadorInicial > 1; multiplicadorInicial--){
         soma = soma + cpfSemDigito[i] * multiplicadorInicial
-        console.log(soma, cpfSemDigito[i], multiplicadorInicial)
         i ++
     }
 
