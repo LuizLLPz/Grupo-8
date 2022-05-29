@@ -50,9 +50,7 @@
 
         public function bindData($data, $edit = false)
         {
-            $id = $edit ? $data['id'] : uniqid($data['nome']);
             $this->data = [
-                'id' => $id,
                 'nome' => $data['nome'],
                 'sobrenome' => $data['sobrenome'],
                 'email' => $data['email'],
@@ -60,6 +58,7 @@
                 'senha' => password_hash($data['senha'], PASSWORD_BCRYPT),
                 'fotoPerfil' => '  '
             ];
+            $this->data = array_merge(["id" => $edit ? $data['id'] : uniqid($data['nome'])], $this->data);
         }
     }
 
