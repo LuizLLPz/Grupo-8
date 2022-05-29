@@ -27,7 +27,7 @@ switch($_SERVER['REQUEST_METHOD']) {
 
     case 'PUT':
         $usuario = new Usuario(false);
-        $usuario->bindData(array_merge((array) $data, ["id" => $_SESSION['user']['id']]));
+        $usuario->bindData(array_merge($data, ['senha' => $_SESSION['user']['senha'], 'id' => $_SESSION['user']['id']]));  
         $usuario->editUnique($qb);
         App::apiResponse(["status" => "success", "message" => "Usuário atualizado com sucesso!"]);
         break;
