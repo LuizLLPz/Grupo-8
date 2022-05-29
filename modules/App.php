@@ -8,7 +8,7 @@ class App {
     }
 
     public static function apiResponse($data) {
-        echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        die(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     }
 
     public static function formatVar($data, $changeDoc = false) {

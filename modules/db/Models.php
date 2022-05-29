@@ -48,10 +48,11 @@
             }
         }
 
-        public function bindData($data)
+        public function bindData($data, $edit = false)
         {
+            $id = $edit ? $data['id'] : uniqid($data['nome']);
             $this->data = [
-                'id' => uniqid($data['nome']),
+                'id' => $id,
                 'nome' => $data['nome'],
                 'sobrenome' => $data['sobrenome'],
                 'email' => $data['email'],
