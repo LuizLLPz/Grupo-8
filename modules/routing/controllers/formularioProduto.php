@@ -5,7 +5,10 @@ $context = [
         STYLES_PATH.'form.css',
         STYLES_PATH.'perfil.css',
         STYLES_PATH.'CadastroProduto.css'
-    ]
+    ],
+    'scripts' => [
+        SCRIPTS_PATH.'validador.js',
+    ],
 ];
 
 ?>
