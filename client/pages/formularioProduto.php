@@ -58,6 +58,7 @@
 
         </div>
 
+
     </div>
 <hr>
     <div > <!-- pessoal -->
@@ -72,7 +73,7 @@
             </div>
 
             <div> <!-- n° de telefone -->
-                <input type="text" name="telefone" placeholder="Telefone" required class="form__input" data-type="telefone">
+                <input type="tel" name="telefone" placeholder="Telefone" required class="form__input" data-type="telefone">
                 <div class="form_erro-cont">
                     <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                     <span class='span-erro'>Campo inválido - preencha o campo</span>
@@ -86,6 +87,11 @@
                     <span class='span-erro'>Campo inválido - preencha o campo</span>
                 </div>
             </div>
+
+            
+        </div>
+        <div class="center"> 
+                <input class="form__button" id="postarProduto" type="submit" value="Postar doação">
         </div>
     </div>
     
