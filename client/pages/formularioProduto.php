@@ -1,7 +1,7 @@
 <div class= "perfil_fundo-branco" >
     <div class="info-geral"> <!-- info do anuncio -->
         <h1 class="info-geral_titulo">Adicionar anúncio de doação</h1>
-        <form action="">
+        <form>
             <div class= 'informacao_produto'> 
                 <h3 class= 'info-geral_titulo'>Informações do anúncio</h3>
                 <div> <!-- Nome do anuncio -->
@@ -89,9 +89,12 @@
             <div class="center">
 
                 <button type='button'> Publicar </button>
-                <button type='button'> Cancelar </button>
+
             </div>
 
         </form>
+        <div class="center">
+                <button type='button'> Cancelar </button>
+        </div>
     </div>
 </div>
