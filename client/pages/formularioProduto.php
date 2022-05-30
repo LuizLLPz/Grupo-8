@@ -5,7 +5,7 @@
             <div class= 'informacao_produto'> 
                 <h3 class= 'info-geral_titulo'>Informações do anúncio</h3>
                 <div> <!-- Nome do anuncio -->
-                    <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="nome">
+                    <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="titulo">
                     <div class="form_erro-cont">
                         <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                         <span class='span-erro'>Campo inválido - preencha o campo</span>
