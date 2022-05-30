@@ -138,9 +138,9 @@
     overflow-y: auto;
 }
 
-/* Cards interrese e postagens do fórum */
+/* Cards interesses e postagens do fórum */
 
-.perfil_content-interreses, .perfil_content-participacao{
+.perfil_content-interesses, .perfil_content-participacao, .perfil_content-anuncios {
     background-color: #3D2066;
     width: 68vw;
     padding: 20px;
@@ -149,21 +149,28 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
+
 .perfil_content-titulo{
     color:white;
 }
 
-.perfil_card-interesses::-webkit-scrollbar, .perfil_card-participacao::-webkit-scrollbar {
+.perfil_card-anuncios, .perfil_card-participacao, .perfil_card-anuncios{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.perfil_card-interesses::-webkit-scrollbar, .perfil_card-participacao::-webkit-scrollbar, .perfil_card-anuncios::-webkit-scrollbar  {
     height: 10px;
 }
 
-.perfil_card-interesses::-webkit-scrollbar-track, .perfil_card-participacao::-webkit-scrollbar-track {
+.perfil_card-interesses::-webkit-scrollbar-track, .perfil_card-participacao::-webkit-scrollbar-track, .perfil_card-anuncios::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.398);
     border-radius: 15px;
     padding: 1px;
 }
 
-.perfil_card-interesses::-webkit-scrollbar-thumb, .perfil_card-participacao::-webkit-scrollbar-thumb {
+.perfil_card-interesses::-webkit-scrollbar-thumb, .perfil_card-participacao::-webkit-scrollbar-thumb, .perfil_card-anuncios::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.529);
     border-radius: 15px;
     border: 10px solid #021d4600;
@@ -189,7 +196,7 @@
 
 @media screen and (min-width: 1024px) {
     
-    .perfil_content-interreses, .perfil_content-participacao{
+    .perfil_content-interesses, .perfil_content-participacao{
         background-color: #3D2066;
         width: 80vw;
         padding: 20px;

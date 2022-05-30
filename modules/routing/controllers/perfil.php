@@ -8,6 +8,7 @@
                 SCRIPTS_PATH . 'validador.js',
                 SCRIPTS_PATH . 'buttonConfgcloseopen.js',
                 SCRIPTS_PATH . 'editarCardAlert.js',
+                SCRIPTS_PATH . 'carregarCards.js',
                 
             ],
             'styles' => [

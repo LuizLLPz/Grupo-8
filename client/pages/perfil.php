@@ -30,9 +30,9 @@
         <button id="adicionarAnuncio">Adicionar Anúncio de doação</button>
     </div>
 
-    <div class="perfil_content-interreses">
-        <h1 class="perfil_content-titulo">Interesses</h1>
-        <div class= "perfil_card-interesses">
+    <!-- <div class="perfil_content-interesses">
+        <h1 class="perfil_content-titulo">Anuncios</h1>
+        <div class= "perfil_card-anuncios">
             <div class= "perfil_card-exemplo">
                 <button id="editarAnuncio">editar</button>
                 card
@@ -46,6 +46,32 @@
                 card
             </div>
             
+        </div>
+
+    </div> -->
+
+    <div class="perfil_content-anuncios">
+        <h1 class="perfil_content-titulo">Publicações</h1>
+        <div class= "perfil_card-anuncios" id= 'perfil_card-anuncios'>
+            <div class="card_anuncio">
+
+                <div class= "card_anuncio-botoes">
+                    <img src= 'pencilpng'>
+                    <img src= 'trash-bin.png'>                    
+                </div>
+
+                <div class="card_anuncio-texto"> 
+                    <h1 class="texto_card titulo">Titulo</h1>
+                    <h3 class="texto_card categoria"  >Categoria</h3>
+                    <h3 class="texto_card data">xx/xx/xxxx</h3>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?</p>
+                </div>
+                <div class="card_anuncio-img">
+                    <div class="azul">
+                        <img class="imagem_doacao" src="">
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
