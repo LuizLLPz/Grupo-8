@@ -20,5 +20,5 @@
     require './modules/routing/apiRoutes.php';
     require($router->redirect($url, $_SERVER['REQUEST_METHOD']));
 ?>
-
-
+</body>
+</html>

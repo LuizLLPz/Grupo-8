@@ -1,0 +1,70 @@
+hr{
+    width:97%; 
+    border-style: inset; 
+    border: 1px dashed rgb(147, 147, 147); 
+    margin: auto; 
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+}
+
+.info-geral_titulo{
+    width: 90%;
+    text-align: center;
+}
+
+.info-geral{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+}
+
+
+.center{
+    flex-direction: column;
+}
+
+.center > button {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px){
+
+    .info-geral{
+        width: 100%;
+        
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "zona1 zona2"
+        "zona1 zona3"
+        "zona4 zona4";
+        
+    }
+
+    .informacao_produto{
+        grid-area: zona1;
+        margin-right: 30px;
+    }
+
+    .informacao_endereco{
+        grid-area: zona2;        
+    }
+
+    .informacao_pessoal{
+        grid-area: zona3;
+    }
+    .center{
+        grid-area: zona4;
+    }
+    .some{
+        display:none;
+    }
+    
+}
+    
+
+

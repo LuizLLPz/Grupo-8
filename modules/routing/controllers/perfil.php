@@ -7,10 +7,16 @@
                 // SCRIPTS_PATH . 'perfil.js',
                 SCRIPTS_PATH . 'validador.js',
                 SCRIPTS_PATH . 'buttonConfgcloseopen.js',
+                SCRIPTS_PATH . 'editarCardAlert.js',
                 
             ],
             'styles' => [
                 STYLES_PATH . 'form.css',
+                STYLES_PATH.'perfilConfig.css',
+                STYLES_PATH.'perfil.css',
+                STYLES_PATH.'perfilEditarCard.css',
+                STYLES_PATH.'cardDoacao.css',
+
             ],
             'user' => $_SESSION['user']
         ];
