@@ -7,6 +7,14 @@ window.onload = () => {
   b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
 
   limiteCaracteres = 12
+  b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
+
+  limiteCaracteres = 12
+  acimaLimite = c.innerText.length > limiteCaracteres
+  pontos = acimaLimite ? "..." : ''
+  c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
+
+
   acimaLimite = c.innerText.length > limiteCaracteres
   pontos = acimaLimite ? "..." : ''
   c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
@@ -30,11 +38,13 @@ iconFechar.addEventListener('click', () => {
   aba_principal.classList.toggle("none")
   abaAtual = aba_principal;
 
-})
+});
+
+
 open_config.addEventListener('click', () => {
   
   perfil_config.classList.toggle('perfil_config-dados-ativado')
-})
+});
 
 // Trocar abas
 
@@ -45,7 +55,7 @@ perfil_config_dados.forEach(e =>{
   if(e.classList.value != "perfil_config-dados none"){
     abaAtual = e
   }
-})
+});
 
 perfil_aba.forEach(item_lista => {
   
@@ -56,4 +66,9 @@ perfil_aba.forEach(item_lista => {
     abaAtual.classList.toggle("none")
     abaAtual = document.getElementById(event.target.dataset.type)
   })
-})
+});
+
+
+$('#adicionarAnuncio').click(function () {
+  window.location.href = '/grupo/formularioProduto';
+});

@@ -3,33 +3,42 @@
 }
 
 
-.form{    
-    display: flex;
-    padding-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px auto 40px auto;
-    width:  90vw;
+
+.form {    
+  display: flex;
+  padding-top: 50px; 
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto 40px auto;
+  width:  90vw;
 }
 
-
-.editavel:last-child {
-    margin-top: 500px;
-}
-
-.form__heading {
+  .form__heading {
     font-weight: semibold;
     text-align: center;
     margin-bottom: 20px;
-}
+  }
 
-.form_buttons{
+  .form_buttons {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
+  }
 
-.form__input[type = 'text'], .form__input[type = 'email'], .form__input[type = 'password'], textarea  {
+  .form__input[type = 'submit']{
+    outline: none;
+  }
+
+  .form__input:focus {
+    border: 1px solid #2B137A;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  textarea,
+  .form__input[type = 'text'], 
+  .form__input[type = 'email'], 
+  .form__input[type = 'password'] {
     border: 1px solid black;
     font: 16px 'Noto Sans', sans-serif;
     background-color: #E9E9E9;
@@ -42,15 +51,13 @@
     margin-bottom: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
-}
+  }
 
-textarea{
+  textarea{height: 300px;}
 
-    height: 300px;
-
-}
-
-button, .form__button, .form__button[type='submit'], .cabecalho_btn {
+  button, 
+  .form__button, .form__button[type='submit'],
+  .cabecalho_btn {
     transition: 0.4s;
     width: 170px;
     height: 36px;
@@ -64,7 +71,8 @@ button, .form__button, .form__button[type='submit'], .cabecalho_btn {
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
-}
+  }
+
 
 button:hover, .cabecalho_btn:hover,.form__button:hover {
     box-shadow: none;
@@ -72,16 +80,7 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
     transition: 1s;
 }
 
-.form__input[type = 'submit']{
-    outline: none;
-}
 
-
-.form__input:focus {
-    border: 1px solid #2B137A;
-    outline: none;
-    transition: 0.3s;
-}
 
 .form__input-erro::placeholder{
     transition: 0.3s;
@@ -135,7 +134,7 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
     text-decoration: underline;
 }
 
-.form__subTxt-login{
+.form__subTxt-login {
     font-size: 18px;
     margin-top: 30px;
     margin-bottom: 0px;

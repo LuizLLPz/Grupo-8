@@ -48,17 +48,17 @@
             }
         }
 
-        public function bindData($data)
+        public function bindData($data, $edit = false)
         {
             $this->data = [
-                'id' => uniqid($data['nome']),
                 'nome' => $data['nome'],
                 'sobrenome' => $data['sobrenome'],
                 'email' => $data['email'],
-                'cpf' => $data['cpf'],
-                'senha' => password_hash($data['senha'], PASSWORD_BCRYPT),
+                'cpf' => $data['cpf'],  
+                'senha' => $edit ? $data['senha'] : password_hash($data['senha'], PASSWORD_BCRYPT),
                 'fotoPerfil' => '  '
             ];
+            $this->data = array_merge(["id" => $edit ? $data['id'] : uniqid($data['nome'])], $this->data);
         }
     }
 

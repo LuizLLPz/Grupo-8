@@ -83,13 +83,6 @@
                             <span class='span-erro'>Campo inválido - preencha o campo</span>
                         </div>
                     </div>
-                    
-                    <div> <!-- redes sociais, outras formas de contato, etc -->
-                        <input type="text" name="adicional" placeholder="Adicional*" required class="form__input" data-type="adicional">
-                        <div class="form_erro-cont">
-                            <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-                            <span class='span-erro'>Campo inválido - preencha o campo</span>
-                        </div>
                     </div>
                 </div>
             </div>
