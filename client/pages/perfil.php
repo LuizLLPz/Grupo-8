@@ -28,6 +28,8 @@
 
     <div>
         <button id="adicionarAnuncio">Adicionar Anúncio de doação</button>
+        <br>
+        <br>
     </div>
 
     <!-- <div class="perfil_content-interesses">
