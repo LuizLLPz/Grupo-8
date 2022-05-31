@@ -80,21 +80,21 @@
 
 @media screen and (min-width: 1024px) { /*a partir desse valor de tela ela ira apliacar essa regra*/
     .card_anuncio{
+        margin-right: 20px;
         flex-direction: row;
-        width: 80vw;
+        width: 40vw;
         max-width: none;
 
     }
     .card_anuncio-texto{    
-        width: 70%;
+        width: 50%;
     }
     .card_anuncio-img{
-        width: 30%;
-    
+        width: 50%;
     }
     
     .azul{
-        margin: 10px;
+        
         width: 600px;
     }
     .titulo{
