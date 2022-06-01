@@ -1,28 +1,48 @@
+function voltaPerfil(){
+    window.location.href = '../grupo/perfil'
+}
+
+function btn_editar_card() {
+    const editar_card = document.getElementById('editar_card')
+
+    const cardConfig_editar = document.querySelectorAll(".card_config-editar");
+    const editarCard_fechar = document.getElementById('editarCard_fechar')
+
+    editarCard_fechar.addEventListener('click', () => {    
+        editar_card.classList.toggle('editar_card-dados-ativado')
+    })
+    
+    cardConfig_editar.forEach(anuncio => anuncio.addEventListener('click', () => {    
+        editar_card.classList.toggle('editar_card-dados-ativado')
+    }))
+    
+}
+
 const data = [{
     
     titulo: "Xto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Text", 
-    categoria: "Cards",
+    categoria: "1",
     data: "01/01/2019",
     descricao: "Ssumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
     imagem: "https://picsum.photos/200/100",
 },
 {
     titulo: "Titulo 2",
-    categoria: "Cards",
+    categoria: "2",
     data: "01/01/2019",
     descricao: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
     imagem: "https://picsum.photos/300/300",
 },
 {
     titulo: "Titulo 3",
-    categoria: "Cards",
+    categoria: "3",
     data: "01/01/2019",
     descricao: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
     imagem: "https://picsum.photos/600/300",
 },
 {
     titulo: "Titulo 4",
-    categoria: "Cards",
+    categoria: "4",
     data: "01/01/2019",
     descricao: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
     imagem: "https://picsum.photos/4000/4000",
@@ -37,7 +57,7 @@ window.onload = () => {
         perfil_card.innerHTML += `
         <div class="card">
             <div class="card_config">
-                <p class="card_config-editar">Editar</p>
+                <p class="card_config-editar" id ='editarAnuncio'>Editar</p>
                 <p class="card_config-excluir">Excluir</p>
             </div>
             <div class="card_anuncio">
@@ -57,8 +77,16 @@ window.onload = () => {
         `
     });
 
-    const card_anuncio = document.querySelectorAll(".card_anuncio-botoes")
 
-    console.log(card_anuncio)
+    btn_editar_card();
+
+    const cardConfig_excluir = document.querySelectorAll(".card_config-excluir");
+
+    cardConfig_excluir.forEach(element => {
+        element.addEventListener("click", () => {
+            console.log(element)
+        })
+    });
+
 }
 
