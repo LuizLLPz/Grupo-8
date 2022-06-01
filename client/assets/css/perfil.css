@@ -165,11 +165,12 @@
 
 .perfil_card-interesses::-webkit-scrollbar, .perfil_card-participacao::-webkit-scrollbar, .perfil_card-anuncios::-webkit-scrollbar  {
     width: 12px;
+    margin: 10px;
 }
 
 .perfil_card-interesses::-webkit-scrollbar-track, .perfil_card-participacao::-webkit-scrollbar-track, .perfil_card-anuncios::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.398);
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .perfil_card-interesses::-webkit-scrollbar-thumb, .perfil_card-participacao::-webkit-scrollbar-thumb, .perfil_card-anuncios::-webkit-scrollbar-thumb {
