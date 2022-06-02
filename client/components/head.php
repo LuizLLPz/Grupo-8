@@ -7,7 +7,7 @@
     <?php
         if (array_key_exists('scripts', $context)) {
             foreach ($context['scripts'] as $script) {
-                echo "<script src='$script' defer></script>";
+                echo "<script src='$script' type='module' defer></script>";
             }
         }
         if (array_key_exists('styles', $context)) {
