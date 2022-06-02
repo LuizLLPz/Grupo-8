@@ -4,7 +4,10 @@
     <h2></h2>
     <div class="doacao_pesquisa">
         <input class="doacao_input" type="text"> <!-- barra de pesquisa -->
-        <img class="doacao_img" src= <?=IMAGES_PATH.'search.png'?>>
+        <div class="doacao_imagem">
+            <img class="doacao_img" id='img' src= <?=IMAGES_PATH.'search.png'?>>
+        </div>
+
     </div>
     <p>Ordenar por: </p>
     <select>

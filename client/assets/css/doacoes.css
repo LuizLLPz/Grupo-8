@@ -23,10 +23,16 @@
     
 }
 
+.doacao_imagem{
+    width: 0px;
+}
+
 .doacao_img{
     left: 10px;
-    width: 32px;
-    height: 32px;
+    width: 27px;
+    height: 27px;
+    position: relative;
+    left: -45px;
 }
 
 .doacao_input:focus {

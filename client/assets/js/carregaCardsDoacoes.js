@@ -50,3 +50,7 @@ data.forEach(element => {
     </div>
     `
 });
+
+const img = document.getElementById("img")
+
+img.addEventListener('click', () => { console.log(img);})
