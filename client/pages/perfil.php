@@ -157,7 +157,7 @@
         </div>
     </form>
     <div class="center editarCar_contener-btn">
-        <button onclick="toogleEditarCard()">Sair</button>
+        <button id="btn_sair">Sair</button>
     </div>
 
 </div>

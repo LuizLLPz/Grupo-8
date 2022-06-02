@@ -20,6 +20,20 @@ header + * {
     margin-top: 82px;
 }
 
+h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
 /* Utility classes */
 .center {
     display: flex;

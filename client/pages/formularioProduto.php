@@ -92,7 +92,7 @@
         </div>
         </form>
         <div class="center-btn ">
-            <button onclick="voltaPerfil()" type='button'> Cancelar </button>
+            <button id='voltarPerfil' type='button'> Cancelar </button>
         </div>
     </div>
 </div>

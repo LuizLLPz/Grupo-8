@@ -9,9 +9,9 @@ use function PHPSTORM_META\type;
             'scripts' => [
                 // SCRIPTS_PATH . 'perfil.js',
                 SCRIPTS_PATH . 'validador.js',
-                SCRIPTS_PATH . 'buttonConfgcloseopen.js',
-                SCRIPTS_PATH . 'editarCardAlert.js',
-                SCRIPTS_PATH . 'carregarCards.js',
+                SCRIPTS_PATH . 'perfilFunc.js',
+                SCRIPTS_PATH . 'editarCardFunc.js',
+                SCRIPTS_PATH . 'carregarCardsPerfil.js',
                 
             ],
             'styles' => [
