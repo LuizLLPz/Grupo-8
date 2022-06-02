@@ -1,31 +1,25 @@
-window.onload = () => {
-  const b = document.querySelectorAll(".b p")
-  const c = document.querySelector(".b h3")
-  var limiteCaracteres = 10;
-  var acimaLimite = b[0].innerText.length > limiteCaracteres
-  var pontos = acimaLimite ? "..." : ''
-  b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
 
-  limiteCaracteres = 12
-  b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
-
-  limiteCaracteres = 12
-  acimaLimite = c.innerText.length > limiteCaracteres
-  pontos = acimaLimite ? "..." : ''
-  c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
-
-
-  acimaLimite = c.innerText.length > limiteCaracteres
-  pontos = acimaLimite ? "..." : ''
-  c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
+const b = document.querySelectorAll(".b p")
+const c = document.querySelector(".b h3")
+var limiteCaracteres = 10;
+var acimaLimite = b[0].innerText.length > limiteCaracteres
+var pontos = acimaLimite ? "..." : ''
+b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
+limiteCaracteres = 12
+b[0].innerText = b[0].innerText.substring(0, limiteCaracteres) + pontos
+limiteCaracteres = 12
+acimaLimite = c.innerText.length > limiteCaracteres
+pontos = acimaLimite ? "..." : ''
+c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
+acimaLimite = c.innerText.length > limiteCaracteres
+pontos = acimaLimite ? "..." : ''
+c.innerText = c.innerText.substring(0, limiteCaracteres) + pontos
 
 
-}
+// fechar e abrir o config
 
 let abaAtual = null 
 const perfil_aba = document.querySelectorAll(".perfil_aba")
-
-// fechar e abrir o config
 
 const iconFechar = document.getElementById("config_fechar")
 const open_config = document.getElementById("open_config")
