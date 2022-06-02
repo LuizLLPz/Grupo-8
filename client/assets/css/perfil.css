@@ -117,27 +117,6 @@
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
-/* Fundo do perfil */
-
-.perfil_fundo-branco{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: white;
-    width: 90vw;
-    height: 80vh;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline: 1px solid black;
-    border-radius: 15px;
-    
-    position: fixed;
-    top: 100px;
-    left: calc(100vw - 95vw);
-    overflow-y: auto;
-}
-
 /* Cards interesses e postagens do fórum */
 
 .perfil_content-interesses, .perfil_content-participacao, .perfil_content-anuncios {
@@ -177,23 +156,6 @@
     background: rgba(255, 255, 255, 0.529);
     border-radius: 30px;
     border: 2px solid #021d4600;
-}
-
-    
-.perfil_fundo-branco::-webkit-scrollbar{
-    width: 12px;
-    margin: 10px;
-}
-
-.perfil_fundo-branco::-webkit-scrollbar-track {
-    background: rgba(134, 134, 134, 0.216);
-    border-radius: 20px;
-    
-}
-.perfil_fundo-branco::-webkit-scrollbar-thumb {
-    background: #30217E;
-    border-radius: 30px;
-    border: 2px solid #E5E5E5;
 }
 
 

@@ -1,4 +1,4 @@
-<div class= "perfil_fundo-branco" >
+<div class= "fundo_branco" >
     
     <!-- <div id="open_config">Open config</div> -->
     <!-- <button onClick="setUser()">
