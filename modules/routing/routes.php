@@ -18,4 +18,5 @@ $router->get(BASE_URL.'perfil', fn() => CONTROLLERS_PATH.'perfil.php');
 
 $router->get(BASE_URL.'formularioProduto', fn() => CONTROLLERS_PATH.'formularioProduto.php');
 
+$router->get(BASE_URL.'doacoes', fn() => CONTROLLERS_PATH.'doacoes.php');
 ?>

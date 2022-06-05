@@ -7,8 +7,12 @@ $context = [
         STYLES_PATH.'CadastroProduto.css'
     ],
     'scripts' => [
+        // SCRIPTS_PATH.'arquivo.js',
         SCRIPTS_PATH.'validador.js',
-        SCRIPTS_PATH.'api.js',
+        SCRIPTS_PATH.'editarCardFunc.js',
+        SCRIPTS_PATH.'formDoacaoContador.js',
+        SCRIPTS_PATH.'formDoacaoViaCep.js'
+
     ],
 ];
 
