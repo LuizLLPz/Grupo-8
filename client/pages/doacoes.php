@@ -14,8 +14,6 @@
         <option>Sem filtro</option>
         <option>Categoria</option>
         <option>Endereço</option>
-        <option></option>
-        <option>Nome</option>
     </select>
 
     <div class="doacoes_cards">

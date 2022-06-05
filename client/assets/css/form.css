@@ -109,6 +109,11 @@ button:hover, .cabecalho_btn:hover,.form__button:hover {
     left: -10px;
 }
 
+.form_contador {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 .login_content{
     display: flex;
     flex-direction: column;
