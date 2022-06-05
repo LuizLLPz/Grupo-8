@@ -1,17 +1,29 @@
 <?php
 //switch for the request method
 $data = App::apiServe();
-$image = $_FILES['imagem'];
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'GET':
         $anuncio = new Anuncio(false);
+        
+        if (isset($data['modo'])){
+            die("aqui procura por anuncios do donatario");
+            $modo = $data['modo'];
+
+            if($modo == 'autor'){
+                App::apiResponse($anuncio->selectUnique($qb, 'usuario', $_SESSION['user']['id']));
+            }
+            
+        }
+
         App::apiResponse($anuncio->selectAll($qb));
         break;
 
 
     case 'POST':
+        $image = $_FILES['imagem'];
+
         if (!isset($_SESSION['user'])) {
             App::apiResponse(['error' => 'Para acessar esse recurso é necessário estar logado!'], 401);
         }

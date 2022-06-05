@@ -1,6 +1,15 @@
 import { btn_editar_card }  from './editarCardFunc.js';
 import { btn_excluir_card } from './deletarCardFunc.js';
 
+$.ajax({
+    type: "GET",
+    url: "api/doacao",
+    data: '{"modo" : "autor"}',
+    success: function (response) {
+        console.log(response);
+    }
+});
+
 const data = [{
     
     titulo: "Xto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Text", 
