@@ -107,28 +107,22 @@ $('.deletar_usuario').click( function(){
 
 
 
-$(".postar_produto").submit(function (e){
+$(".form_produto").submit(function (e){
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target).entries());
+    const data = new FormData(e.target);
+    //append file to data
+    data.append('imagem', $('#img_produto')[0].files[0]);
     $.ajax(
         {
             type: 'POST',
-            url: 'api/usuario',
+            url: 'api/doacao',
             data: data,
-            success: function (data) {
-                if (data.status === 'sucess') {
-                    swal("Concluído!", "Cadastro realizado com sucesso!", "success").then(
-                        function () {
-                            window.location.href = '/grupo/login';
-                        }
-                    );
-                } else {form_cadastro
-                    swal("Erro!", data.message, "error");
-                }
-            }
-
-        }
-    );
-    
-    
-})
+            processData: false,
+            contentType: false,                     
+            success: function () {
+                swal('Doação realizada com sucesso!', '', 'success').then(()=>{
+                    window.location.href = '/grupo/perfil'
+                });
+            } 
+        });
+});

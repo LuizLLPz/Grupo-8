@@ -1,11 +1,11 @@
 <div class= "perfil_fundo-branco" >
     <div class="info-geral"> <!-- info do anuncio -->
         <h1 class="info-geral_titulo">Adicionar anúncio de doação</h1>
-        <form action="">
+        <form class="form_produto" enctype="multipart/form-data">
             <div class= 'informacao_produto'> 
                 <h3 class= 'info-geral_titulo'>Informações do anúncio</h3>
                 <div> <!-- Nome do anuncio -->
-                    <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="nome">
+                    <input type="text" name="titulo" placeholder="Título" required class="form__input" data-type="nome">
                     <div class="form_erro-cont">
                         <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                         <span class='span-erro'>Campo inválido - preencha o campo</span>
@@ -29,7 +29,8 @@
                 </div>
 
                 <div>   <!-- Imagem -->
-                    <input type= 'file' src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name= 'imagem' placeholder= 'foto do produto' required    class= 'form__input' data_type = 'imagem' accept="image/png,image/jpeg">
+                    <input type= 'file' id="img_produto" src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name= 'imagem' placeholder='foto do produto' required
+                        class= 'form__input' data_type = 'imagem' accept="image/png,image/jpeg">
                     <div class='form_erro-cont'>
                         <img src= <?=IMAGES_PATH.'icon-erro.svg'?>>
                         <span class= 'span-erro'> campo inválido - Selecione uma imagem </span>
@@ -88,7 +89,7 @@
             </div>
             <div class="center">
 
-                <button type='button'> Publicar </button>
+                <button type='submit'> Publicar </button>
                 <button type='button'> Cancelar </button>
             </div>
 

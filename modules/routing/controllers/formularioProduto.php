@@ -8,6 +8,7 @@ $context = [
     ],
     'scripts' => [
         SCRIPTS_PATH.'validador.js',
+        SCRIPTS_PATH.'api.js',
     ],
 ];
 

@@ -59,8 +59,8 @@
   .form__button, .form__button[type='submit'],
   .cabecalho_btn {
     transition: 0.4s;
-    width: 170px;
     height: 36px;
+    min-width: 170px;
     color: #E9E9E9;
     text-transform: uppercase;
     font-weight: 550;
