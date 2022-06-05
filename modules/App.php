@@ -7,6 +7,7 @@ class App {
     }
 
     public static function apiResponse($data, $statusCode = 200) {
+        header("Content-type: application/json");
         if ($statusCode != 200) {
             http_response_code($statusCode);
         }
