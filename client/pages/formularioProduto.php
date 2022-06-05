@@ -1,7 +1,7 @@
 <div class= "fundo_branco">
     <div class="info-geral"> <!-- info do anuncio -->
         <h2 class="info-geral_titulo info-geral_titulo-principal">Adicionar anúncio de doação</h2>
-        <form>
+        <form class="form_produto" enctype="multipart/form-data">
         <div class= 'informacao_produto'> 
             <h3 class= 'info-geral_titulo'>Informações do anúncio</h3>
             <div> <!-- Nome do anuncio -->
@@ -28,13 +28,14 @@
             </div>
 
             <div>   <!-- Imagem -->
-                <input type= 'file' src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name='imagem' required class= 'form__input' data_type = 'imagem' accept="image/png,image/jpeg">
+                <input type= 'file' src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name='imagem' required class= 'form__input'
+                id="img_produto" data_type = 'imagem' accept="image/png,image/jpeg">
                 <div class='form_erro-cont'>
                     <img src= <?=IMAGES_PATH.'icon-erro.svg'?>>
                     <span class= 'span-erro'> campo inválido - Selecione uma imagem </span>
                 </div>
             </div>
-            </div>
+            </div>  
             <hr class="some">
             <div class="informacao_endereco">
                 <h3 class="info-geral_titulo">Informações de localização</h3>
@@ -86,12 +87,12 @@
             </div>
         </div>
         <div class="center">
-            <button type='button'> Publicar </button>
+            <input type='submit'> Publicar </button>
                 
         </div>
         </form>
         <div class="center-btn ">
-            <button id='voltarPerfil' type='button'> Cancelar </button>
+            <input id='voltarPerfil' type='reset'> Cancelar </button>
         </div>
     </div>
 </div>
