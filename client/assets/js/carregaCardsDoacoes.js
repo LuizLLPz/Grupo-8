@@ -8,6 +8,22 @@ const data = [{
     descricao: "Ssumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
     imagem: "https://picsum.photos/200/100",
 },
+{
+    
+    titulo: "Xto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Text", 
+    categoria: "1",
+    data: "01/01/2019",
+    descricao: "Ssumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
+    imagem: "https://picsum.photos/200/100",
+},
+{
+    
+    titulo: "Xto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Text", 
+    categoria: "1",
+    data: "01/01/2019",
+    descricao: "Ssumenda, illo ea impedit quaerat ab totam similique placeat excepturi nihil quo velit incidunt debitis saepe veritatis quos labore porro, dicta iste?",
+    imagem: "https://picsum.photos/200/100",
+},
 ]
 
 doacoes_cards.innerHTML = ""
@@ -25,20 +41,22 @@ data.forEach(element => {
             </div>
             
             <div class="card_anuncio-img">
+                <div class="img-card">
                 <div class="fundo_perfil">
                     <div class="foto_perfil_doacao">
-                    <img src="foto_perfil" src="images/perfil.jpg">
+                        <img src="foto_perfil" src="images/perfil.jpg">
+                    </div>
                 </div>
-            </div>
-        
+                </div>
                 <div class="azul">
+                    <p class="texto_doacao nome_usuario">Usuario</p>
+                    <p class="texto_doacao avaliacao">Avaliação</p>
                     <div class="foto_anuncio_daocao">
-                        <p class="texto_doacao nome_usuario">Usuario</p>
-                        <p class="texto_doacao avaliacao">Avaliação</p>
                         <img class="imagem_doacao" src="${element.imagem}">
                     </div>
                 </div>
             </div>
+        </div>
     </div>
     `
 });
