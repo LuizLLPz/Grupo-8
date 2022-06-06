@@ -59,11 +59,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
         App::apiResponse($anuncio->insert($qb));
         break;
 
+
     case 'DELETE':
         $anuncio = new Anuncio(false);
         $anuncio->deleteUnique($qb, 'id' ,$data['id']);
         App::apiResponse(["status" => "sucess"]);
         break;
-
 
 }
