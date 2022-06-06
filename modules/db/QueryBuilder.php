@@ -51,6 +51,19 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function selectJoin($table, $relations, $field = null, $value = null) {
+            //$relations = [["Anuncio", "foto", "foto", "cod"]] + $relations;
+            $query = "SELECT * FROM {$table}";
+            foreach ($relations as $relation) {
+                $query.= " JOIN {$relation[1]} ON {$relation[0]}.{$relation[2]} = {$relation[1]}.{$relation[3]} ";
+            }
+
+            $query = $this->conn->prepare($query);
+            $query->execute();
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+            
+        }
+
         public function selectUnique($table, $field, $value) {
             $query = $this->conn->prepare("SELECT * FROM {$table} WHERE {$field} = :{$field}");
             $query->execute([$field => $value]);
@@ -76,6 +89,7 @@
                 }
             }
             $base .= ' WHERE id = :id';
+            die($base);
             $query = $this->conn->prepare($base);
             $query->execute($data);
             $_SESSION['user'] = $this->selectUnique($table, 'id', $data['id']);

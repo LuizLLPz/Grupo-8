@@ -90,6 +90,21 @@
             }
         }
 
+        public function completeSelect($qb, $user= null) {
+            if ($user != null) {
+                return $qb->selectJoin($this->tableName, 
+                [
+                    ["Anuncio", "Usuario", "usuario", "id"],
+          //          ["Anuncio", "foto", "foto", "cod"],
+                ],  'Usuario.id',  $user);
+            }
+            return $qb->selectJoin($this->tableName, 
+                [
+                    ["Anuncio", "Usuario", "usuario", "id"],
+                    ["Anuncio", "foto", "foto", "cod"],
+                ],  );
+        }
+
         public function bindData($data){
            
             $this->data = [

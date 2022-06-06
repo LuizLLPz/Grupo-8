@@ -6,18 +6,20 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'GET':
         $anuncio = new Anuncio(false);
-        
-        if (isset($data['modo'])){
-            die("aqui procura por anuncios do donatario");
-            $modo = $data['modo'];
 
-            if($modo == 'autor'){
-                App::apiResponse($anuncio->selectUnique($qb, 'usuario', $_SESSION['user']['id']));
-            }
-            
+        App::formatVar($data);
+        if (isset($data['modo'])) {
+        }
+        $resp = ($anuncio->completeSelect($qb));
+
+        function encodeBlob($donation)
+        {
+            $donation['foto_arquivo'] = base64_encode($donation['foto_arquivo']);
+            return $donation;
         }
 
-        App::apiResponse($anuncio->selectAll($qb));
+        $resp = array_map('encodeBlob', $resp);
+        App::apiResponse($resp, 200);
         break;
 
 
@@ -33,11 +35,15 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $imgres = ImageUploader::upload($qb, $image);
             $imgres = ['foto' => $imgres['cod']];
         } else {
-            App::apiResponse(["status" => "error", 
-                              "message"=> "Por favor insira uma imagem para seu anúncio!"],
-            400);
+            App::apiResponse(
+                [
+                    "status" => "error",
+                    "message" => "Por favor insira uma imagem para seu anúncio!"
+                ],
+                400
+            );
         }
-        
+
         $data = App::apiServe();
         if (isset($imgres['foto'])) {
             $anuncio->bindData([
@@ -47,23 +53,32 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 'usuario' => $_SESSION['user']['id']
             ]);
         } else {
-            App::apiResponse(["status" => "error", 
-                              "message"=> "Ocorreu um erro ao tentar processar sua requisição!"],
-            500);
+            App::apiResponse(
+                [
+                    "status" => "error",
+                    "message" => "Ocorreu um erro ao tentar processar sua requisição!"
+                ],
+                500
+            );
         }
         if ($_SESSION['user']['tipo'] == 'Donatário') {
-            App::apiResponse(["status" => "error", 
-                              "message"=> "Para realizar essa ação você deve ser doador!"],
-            403);
+            App::apiResponse(
+                [
+                    "status" => "error",
+                    "message" => "Para realizar essa ação você deve ser doador!"
+                ],
+                403
+            );
         }
         App::apiResponse($anuncio->insert($qb));
         break;
 
 
+    case 'PUT':
+
     case 'DELETE':
         $anuncio = new Anuncio(false);
-        $anuncio->deleteUnique($qb, 'id' ,$data['id']);
+        $anuncio->deleteUnique($qb, 'id', $data['id']);
         App::apiResponse(["status" => "sucess"]);
         break;
-
 }
