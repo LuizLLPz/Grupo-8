@@ -23,6 +23,10 @@
     
 }
 
+.doacoes_cards {
+    margin-top: 30px;
+}
+
 .doacao_imagem{
     width: 0px;
 }
@@ -164,7 +168,6 @@
 
 @media screen and (min-width: 1024px) { /*a partir desse valor de tela ela ira apliacar essa regra*/
 
-   
     .titulo{
         margin-top: 10px;
     }

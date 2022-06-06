@@ -10,6 +10,7 @@ $context = [
     'scripts' => [
         // SCRIPTS_PATH.'arquivo.js',
         SCRIPTS_PATH.'carregaCardsDoacoes.js',
+        SCRIPTS_PATH.'filtroDoacoes.js',
 
     ],
 ];

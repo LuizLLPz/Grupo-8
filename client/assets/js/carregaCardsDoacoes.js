@@ -14,7 +14,7 @@ $.ajax({
                 <div class="card_anuncio">
                     <div class="card_anuncio-texto"> 
                         <h1 class="texto_card titulo">${element.titulo}</h1>
-                        <h3 class="texto_card categoria">${element.categoria}</h3>
+                        <h3 class="texto_card categoria">Categotia</h3>
                         <h3 class="texto_card data">${element.data_publicacao}</h3>
                         <p class="descricao">${element.descricao}</p>
                     </div>
@@ -39,11 +39,6 @@ $.ajax({
             </div>
             `
         });
-
-        const img = document.getElementById("img");
-
-        img.addEventListener('click', () => { console.log(img)});
-
     }
 });
 
