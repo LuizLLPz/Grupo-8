@@ -112,6 +112,7 @@
 
 .azul{
     width: 80%;
+    max-width: 300px;
     height: 350px;
     background: linear-gradient(119.83deg, #292F91 2.5%, #2F1776 96.32%);
     border-radius: 15px;
@@ -147,7 +148,7 @@
 
 }
 
-.nome_usuario, .avaliacao{
+.nome_usuario, .denunciar{
     
     height: 20px;
     
