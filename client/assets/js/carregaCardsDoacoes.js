@@ -30,7 +30,7 @@ $.ajax({
                             <div class="foto_anuncio_daocao">
                                 <p class="texto_doacao nome_usuario">${element.nome}</p>
                                 <p class="texto_doacao avaliacao">Avaliação</p>
-                                <img class="imagem_doacao" src="${element.imagem}">
+                                <img class="imagem_doacao" src="data:image/png;base64, ${element.foto_arquivo}">
                             </div>
                         </div>
                     </div>
