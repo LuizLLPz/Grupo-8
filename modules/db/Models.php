@@ -60,6 +60,20 @@
             ];
             $this->data = array_merge(["id" => $edit ? $data['id'] : uniqid($data['nome'])], $this->data);
         }
+
+        public function bindFew($data) {
+
+            $this->data = [
+                'id' => isset($data['id']) ? $data['id'] : $_SESSION['user']['id'],
+                'nome' => isset($data['nome']) ? $data['nome'] : $_SESSION['user']['nome'],
+                'sobrenome' => isset($data['sobrenome']) ? $data['sobrenome'] : $_SESSION['user']['sobrenome'],
+                'email' => isset($data['email']) ? $data['email'] : $_SESSION['user']['email'],
+                'cpf' => isset($data['cpf']) ? $data['cpf'] : $_SESSION['user']['cpf'],
+                'senha' => isset($data['senha']) ? $data['senha'] : $_SESSION['user']['senha'],
+                'fotoPerfil' => isset($data['fotoPerfil']) ? $data['fotoPerfil'] : $_SESSION['user']['fotoPerfil'],
+                'tipo' => isset($data['tipo']) ? $data['tipo'] : $_SESSION['user']['tipo']
+            ];
+        }
     }
 
     class Anuncio extends Models {
@@ -71,19 +85,19 @@
                     'titulo' => $_POST['titulo'],
                     'descricao' => $_POST['conteudo'],
                     'data' => date('Y-m-d H:i:s'),
-                    'usuario_id' => $_SESSION['user']['id']
+                    'usuario' => $_SESSION['user']['id']
                 ];
             }
         }
 
-        public function bindData($data)
-        {
+        public function bindData($data){
            
             $this->data = [
                 'cod' => uniqid($data['titulo']),
                 'titulo' => $data['titulo'],
                 'descricao' => $data['descricao'],
-                'foto' => NULL,
+                'foto' => $data['foto'],
+                'usuario' => $_SESSION['user']['id'],
                 'data_publicacao' => date('Y-m-d H:i:s'),
             ];
         }

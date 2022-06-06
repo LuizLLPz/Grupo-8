@@ -11,10 +11,18 @@ create table if not Exists Usuario (
     tipo enum('Donatário', 'Doador') default 'Donatário'
 );
 
+create table if not exists foto (
+    cod varchar(100) primary key,
+    foto_arquivo longblob not null
+);
+
 create table if not Exists Anuncio( 
     cod varchar(100) primary key,
     titulo varchar(100) not null,
     descricao varchar(280) not null,
-    foto blob,
+    foto varchar(100),
+    foreign key (foto) references Foto(cod),
+    usuario varchar(100) not null,
+    foreign key (usuario) references Usuario(id),
     data_publicacao date not null
 );

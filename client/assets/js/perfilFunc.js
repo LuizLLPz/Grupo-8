@@ -63,6 +63,24 @@ perfil_aba.forEach(item_lista => {
 });
 
 
+$('#seTornarDoador').click(function () {
+  $.ajax({
+    url: 'api/usuario',
+    type: 'PATCH',
+    accept: 'application/json',
+    data: '{"tipo": "Doador"}',
+    success: function () {
+      swal({
+        title: "Parabéns!",
+        text: "Você agora é um doador!",
+        icon: "success",
+        button: "Ok",
+    }).then(function(){
+      window.location.reload();
+    })}});
+});
+
+
 $('#adicionarAnuncio').click(function () {
   window.location.href = '/grupo/formularioProduto';
 });

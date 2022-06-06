@@ -2,24 +2,32 @@
 class App {
     public static function apiServe() {
         header ("Access-Control-Allow-Origin: *");
-        header('Content-Type: application/json');
         $data = !empty($_POST) ? $_POST : json_decode(file_get_contents('php://input'), true);
         return $data;
     }
 
-    public static function apiResponse($data) {
-        die(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+    public static function apiResponse($data, $statusCode = 200) {
+        header("Content-type: application/json");
+        if ($statusCode != 200) {
+            http_response_code($statusCode);
+        }
+        die(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)); //Short circuits the pipeline with a response
     }
 
-    public static function formatVar($data, $changeDoc = false) {
+    public static function formatVar($data, $changeDoc = false, $die =false) {
         if($changeDoc) {
             header('Content-Type: text/html');
         }
         //check if response header is defined to json
-        if(!isset($_SERVER['HTTP_ACCEPT']) || $_SERVER['HTTP_ACCEPT'] != 'application/json') {
-            echo '<pre> '. print_r($data, true) . '</pre>';
+        if((!isset($_SERVER['HTTP_ACCEPT']) || $_SERVER['HTTP_ACCEPT'] != 'application/json') && $changeDoc) {
+            $res = '<pre> '. print_r($data, true) . '</pre>';
         } else {
-            echo print_r($data, true);
+            $res = print_r($data, true);
+        }
+        if ($die) {
+            die($res);
+        } else {
+            echo $res;
         }
     }
 }

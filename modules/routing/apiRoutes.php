@@ -12,4 +12,4 @@ $router->api(BASE_URL.'api/sessao', fn() => API_CONTROLLERS_PATH.'sessao.php');
 
 $router->api(BASE_URL.'api/usuario', fn() => API_CONTROLLERS_PATH.'usuario.php');
 
-$router->api(BASE_URL.'api/doacoes', fn() => API_CONTROLLERS_PATH.'doacoes.php');
+$router->api(BASE_URL.'api/doacao', fn() => API_CONTROLLERS_PATH.'doacao.php');
