@@ -56,8 +56,13 @@
             foreach ($relations as $relation) {
                 $query.= " JOIN {$relation[1]} ON {$relation[0]}.{$relation[2]} = {$relation[1]}.{$relation[3]} ";
             }
-            #die($query);
+            if ($field != null && $value != null) {
+                $query.= " WHERE {$field} = :{$field}";
+            }
             $query = $this->conn->prepare($query);
+            if ($field != null && $value != null) {
+                $query->bindParam(":{$field}", $value);
+            }
             $query->execute();
             return $query->fetchAll(PDO::FETCH_ASSOC);
             
