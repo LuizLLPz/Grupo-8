@@ -92,11 +92,14 @@
 
         public function completeSelect($qb, $user= null) {
             if ($user != null) {
-                return $qb->selectJoin($this->tableName, 
-                [
-                    ["Anuncio", "Usuario", "usuario", "id"],
-          //          ["Anuncio", "foto", "foto", "cod"],
-                ],  'Usuario.id',  $user);
+                return $qb->completeSelect(
+                    'Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
+                     Usuario.nome as usuario, foto.foto_arquivo as foto' ,
+                     $this->tableName, 
+                    [
+                        ["Anuncio", "Usuario", "usuario", "id"],
+                        ["Anuncio", "foto", "foto", "cod"],
+                    ],  "usuario", $user);
             }
             return $qb->completeSelect(
                 'Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
