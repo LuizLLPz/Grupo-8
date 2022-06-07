@@ -26,6 +26,9 @@
 .doacoes_cards {
     margin-top: 30px;
 }
+.card_anuncio-texto > h1, h2, h3 {
+    margin: 10px;
+}
 
 .doacao_imagem{
     width: 0px;
@@ -68,7 +71,7 @@
     flex-direction: column;
 
     width: 70%;
-    height: 350px;
+    height: 300px;
     align-items: center;
 }
 
