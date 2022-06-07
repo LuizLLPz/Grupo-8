@@ -14,7 +14,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         function encodeBlob($donation)
         {
-            $donation['foto_arquivo'] = base64_encode($donation['foto_arquivo']);
+            $donation['foto'] = base64_encode($donation['foto']);
             return $donation;
         }
 
