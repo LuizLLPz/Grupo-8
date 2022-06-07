@@ -14,7 +14,7 @@ $.ajax({
                 <div class="card_anuncio">
                     <div class="card_anuncio-texto"> 
                         <h1 class="texto_card titulo">${titulo}</h1>
-                        <h3 class="texto_card categoria">Categoria</h3>
+                        <h3 class="texto_card categoria">Hardware</h3>
                         <h3 class="texto_card data">${data}</h3>
                         <p class="descricao">${descricao}</p>
                     </div>
