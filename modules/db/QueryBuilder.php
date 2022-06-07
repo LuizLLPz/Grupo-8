@@ -31,6 +31,7 @@
                      $base.=')';
                 }
             }
+            
             $query = $this->conn->prepare($base);
             try {
                 $query->execute($data);
@@ -48,6 +49,23 @@
             $query = $this->conn->prepare("SELECT * FROM {$table}");
             $query->execute();
             return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function completeSelect($fields = "all", $table, $relations, $field = null, $value = null) {
+            $query = $fields == "all" ? "SELECT * FROM {$table}" : "SELECT {$fields} FROM {$table}";
+            foreach ($relations as $relation) {
+                $query.= " JOIN {$relation[1]} ON {$relation[0]}.{$relation[2]} = {$relation[1]}.{$relation[3]} ";
+            }
+            if ($field != null && $value != null) {
+                $query.= " WHERE {$field} = :{$field}";
+            }
+            $query = $this->conn->prepare($query);
+            if ($field != null && $value != null) {
+                $query->bindParam(":{$field}", $value);
+            }
+            $query->execute();
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+            
         }
 
         public function selectUnique($table, $field, $value) {
@@ -75,6 +93,7 @@
                 }
             }
             $base .= ' WHERE id = :id';
+            die($base);
             $query = $this->conn->prepare($base);
             $query->execute($data);
             $_SESSION['user'] = $this->selectUnique($table, 'id', $data['id']);

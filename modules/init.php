@@ -1,32 +1,34 @@
 <?php
-    require 'modules/db/Connection.php';
-    require 'modules/db/QueryBuilder.php';
-    require 'modules/db/Models.php';
-    $env = '';
-    if (file_exists('.env')) {
-        $env = parse_ini_file('.env');
-    } else {
-        $env = [
-            'DB_HOST' => 'localhost:3306',
-            'DB_USER' => 'root',
-            'DB_PASSWORD' => '',
-            'DB_NAME' => 'update_donate',
-            'FIRST_RUN' => 'true',
-        ];
-    }
-    session_start();
-    
-    define('CONTROLLERS_PATH', './modules/routing/controllers/');
-    define('API_CONTROLLERS_PATH', './modules/routing/api/');
-    define('PAGES_PATH', './client/pages/');
-    define('STYLES_PATH', './client/assets/css/');
-    define('IMAGES_PATH', './client/assets/images/');
-    define('SCRIPTS_PATH', './client/assets/js/');
-    define('COMPONENTS_PATH', './client/components/');
-    define('BASE_URL', $env['BASE_URL']);
+require 'App.php';
+require 'modules/db/Connection.php';
+require 'modules/db/QueryBuilder.php';
+require 'modules/db/Models.php';
+require 'modules/db/ImageUploader.php';
+$env = '';
+if (file_exists('.env')) {
+    $env = parse_ini_file('.env');
+} else {
+    $env = [
+        'DB_HOST' => 'localhost:3306',
+        'DB_USER' => 'root',
+        'DB_PASSWORD' => '',
+        'DB_NAME' => 'update_donate',
+        'FIRST_RUN' => 'true',
+    ];
+}
+session_start();
 
-    
-    return new QueryBuilder(Connection::connect(
+define('CONTROLLERS_PATH', './modules/routing/controllers/');
+define('API_CONTROLLERS_PATH', './modules/routing/api/');
+define('PAGES_PATH', './client/pages/');
+define('STYLES_PATH', './client/assets/css/');
+define('IMAGES_PATH', './client/assets/images/');
+define('SCRIPTS_PATH', './client/assets/js/');
+define('COMPONENTS_PATH', './client/components/');
+define('BASE_URL', $env['BASE_URL']);
+
+
+return new QueryBuilder(Connection::connect(
     [
         'tipo' => "mysql:host={$env['DB_HOST']};",
         'database' => "dbname={$env['DB_NAME']};",
@@ -34,8 +36,6 @@
         'password' => $env['DB_PASSWORD'],
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        ],  
+        ],
     ]
-    ));
-
-?>
+));

@@ -20,6 +20,20 @@ header + * {
     margin-top: 82px;
 }
 
+h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
 /* Utility classes */
 .center {
     display: flex;
@@ -29,4 +43,39 @@ header + * {
 
 .hidden {
     display: none;
+}
+
+.fundo_branco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+    width: 90vw;
+    height: 80vh;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: 1px solid black;
+    border-radius: 15px;
+    
+    position: fixed;
+    top: 100px;
+    left: calc(100vw - 95vw);
+    overflow-y: auto;
+}
+
+.fundo_branco::-webkit-scrollbar{
+    width: 12px;
+    margin: 10px;
+}
+
+.fundo_branco::-webkit-scrollbar-track {
+    background: rgba(134, 134, 134, 0.216);
+    border-radius: 20px;
+    
+}
+.fundo_branco::-webkit-scrollbar-thumb {
+    background: #30217E;
+    border-radius: 30px;
+    border: 2px solid #E5E5E5;
 }

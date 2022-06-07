@@ -24,17 +24,21 @@ const tiposDeErro = [
 
 const mensagensDeErro = {
     nome: {
-        valueMissing: 'Campo inválido - nome não deve estar vazio'
+        valueMissing: 'Campo inválido - Nome não deve estar vazio'
+    },
+    titulo: {
+        valueMissing: 'Campo inválido - Título não deve estar vazio'
+
     },
     sobrenome: {
-        valueMissing: 'Campo inválido - de sobrenome não deve estar vazio'
+        valueMissing: 'Campo inválido - Sobrenome não deve estar vazio'
     },
     email: {
-        valueMissing: 'Campo inválido - email não deve estar vazio',
+        valueMissing: 'Campo inválido - Email não deve estar vazio',
         typeMismatch: 'O campo digitado não é válido, tente outro e-mail'
     },
     senha: {
-        valueMissing: 'Campo inválido - senha não deve estar vazio',
+        valueMissing: 'Campo inválido - Senha não deve estar vazio',
         patternMismatch: 'A senha deve ter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos'
     },
     cpf: {

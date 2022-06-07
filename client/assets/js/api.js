@@ -36,6 +36,7 @@ $(".form_cadastro").submit(function (e){
     
 })
 
+
 $('.form_atualizar').submit(function (e) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target).entries());
@@ -106,4 +107,28 @@ $('.deletar_usuario').click( function(){
 
 
 
+$(".form_produto").submit(function (e){
+    e.preventDefault();
+    const data = new FormData(e.target);
+    //append file to data
+    data.append('imagem', $('#img_produto')[0].files[0]);
+    $.ajax(
+        {
+            type: 'POST',
+            url: 'api/doacao',
+            data: data,
+            processData: false,
+            contentType: false,                     
+            success: function () {
+                swal('Doação realizada com sucesso!', '', 'success').then(()=>{
+                    window.location.href = '/grupo/perfil'
+                });
+            },
+            error: function ({ responseJSON:  { message }} ) {
+                swal('Erro', message, 'error').then(()=>{
+                    window.location.href = '/grupo/cadastro';
+                });
+            }
 
+        });
+});
