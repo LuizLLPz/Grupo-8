@@ -32,4 +32,9 @@ class App {
             echo $res;
         }
     }
+
+    public static function encodeBlob($donation) {
+            $donation['foto'] = base64_encode($donation['foto']);
+            return $donation;
+    }
 }
