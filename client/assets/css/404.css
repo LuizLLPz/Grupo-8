@@ -3,28 +3,30 @@
 :root {
     --btn_text_color: #E9E9E9;
 }
+
+
 .details_container {
-    margin: 10px auto 0px auto;
-    font-family: 'Quicksand', sans-serif;
-    width: 80%;
-    max-width: 600px;
+  margin: 10px auto 0px auto;
+  font-family: 'Quicksand', sans-serif;
+  width: 80%;
+  max-width: 600px;
 }
 
-.details_container__heading {
+  .details_container__heading {
     font-family: sans-serif;
     font-size: 3.8rem;
     font-weight: bolder;
     color: rgb(4, 1, 35);
     margin-bottom: 10px;
-}
+  }
 
-.details_container__message {
+  .details_container__message {
     font-size: 28px;
     font-weight: 300;
     margin-bottom: 10px;
-}
+  }
 
-.details_container__link {
+  .details_container__link {
     display: flex;
     width: 120px;
     height: 40px;
@@ -37,14 +39,14 @@
     border-radius: 12px;
     font-weight: 300;
     margin: 0 auto;
-}
-
+  }
 
 
 @media screen and (min-width: 768px) {
 
-
-    .details_container__link {
-      margin: 20px 0 0 200px;
+  .details_container__link {
+    margin: 20px 0 0 200px;
   }
+
+
 }
