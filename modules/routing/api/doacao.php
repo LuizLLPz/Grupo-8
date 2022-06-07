@@ -2,23 +2,15 @@
 //switch for the request method
 $data = App::apiServe();
 
+
 switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'GET':
         $anuncio = new Anuncio(false);
-
-        App::formatVar($data);
         if (isset($data['modo'])) {
-        }
-        $resp = ($anuncio->completeSelect($qb));
-
-        function encodeBlob($donation)
-        {
-            $donation['foto'] = base64_encode($donation['foto']);
-            return $donation;
-        }
-
-        $resp = array_map('encodeBlob', $resp);
+            $resp = $anuncio->completeSelect($qb, $_SESSION['user']['id']);
+        } else $resp = ($anuncio->completeSelect($qb));
+        $resp = array_map("App::encodeBlob", $resp);
         App::apiResponse($resp, 200);
         break;
 
