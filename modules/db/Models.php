@@ -99,7 +99,7 @@
                     [
                         ["Anuncio", "Usuario", "usuario", "id"],
                         ["Anuncio", "foto", "foto", "cod"],
-                    ],  "usuario", $user);
+                    ],  "usuario", $user, 'data desc');
             }
             return $qb->completeSelect(
                 'Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
@@ -108,7 +108,7 @@
                 [
                     ["Anuncio", "Usuario", "usuario", "id"],
                     ["Anuncio", "foto", "foto", "cod"],
-                ],  );
+                ],  null, null, 'data desc');
         }
 
         public function bindData($data){
