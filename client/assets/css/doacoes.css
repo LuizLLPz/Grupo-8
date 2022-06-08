@@ -91,7 +91,7 @@
         justify-content: center;
         background: linear-gradient(129.81deg, #441E57 -1.36%, #2F1776 49.66%, #292F91 91.06%)
       }
-        .foto_perfil_doacao{
+        .foto_perfil_doacao {
           width: 65px;
           height: 65px;
           border-radius: 50%;
@@ -101,6 +101,12 @@
           align-items: center;
           justify-content: center;
         }
+          .foto_perfil_doacao > img {
+            max-width: 100%;
+            max-height: 100%;
+            transform: scale(0.9);
+            filter: invert(100%);
+          }
 
         .azul {
           width: 80%;
