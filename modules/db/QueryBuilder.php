@@ -57,9 +57,9 @@
                 $query.= " JOIN {$relation[1]} ON {$relation[0]}.{$relation[2]} = {$relation[1]}.{$relation[3]} ";
             }
             if ($field != null && $value != null) {
-                $query.= " WHERE {$field} = :{$field}";
+                $query.= " WHERE {$field} = :{$field} ";
             }
-            $query .= $order != null ? "ORDER BY {$order}" : ""; 
+            $query.= !$order ?  "ORDER BY {$order}": "";
             $query = $this->conn->prepare($query);
             if ($field != null && $value != null) {
                 $query->bindParam(":{$field}", $value);
