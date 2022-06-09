@@ -1,183 +1,205 @@
-.doações_titulo {
-    margin-top: 50px;
+
+.doacao_pesquisa {
+  display: flex;
+  align-items: center;
 }
 
-.doacao_pesquisa{
-    display: flex;
-    align-items: center;
-}
-
-.doacao_input{
-    border: 1px solid black;
-    font: 16px 'Noto Sans', sans-serif;
-    background-color: #E9E9E9;
-    height: 35px;
-    width: 70vw;
-    max-width: 400px;
-    border-radius: 20px;
-    padding: 5px 0px;
-    padding-left: 20px;
-    margin-bottom: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: 0.3s;
-    
-}
-
-.doacoes_cards {
-    margin-top: 30px;
-}
-
-.doacao_imagem{
-    width: 0px;
-}
-
-.doacao_img{
-    width: 27px;
-    height: 27px;
-    position: relative;
-    left: -45px;
+.doacao_input {
+  border: 1px solid black;
+  font: 16px 'Noto Sans', sans-serif;
+  background-color: #E9E9E9;
+  height: 35px;
+  width: 70vw;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 5px 0px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;  
 }
 
 .doacao_input:focus {
-    border: 1px solid #2B137A;
-    outline: none;
-    transition: 0.3s;
+  border: 1px solid #2B137A;
+  outline: none;
+  transition: 0.3s;
 }
 
-.card {
-    margin-bottom: 20px;
+.doacoes_cards { margin-top: 30px; }
+
+.texto_card, 
+.descricao { 
+  margin: 10px; 
+  font-weight: 400;
 }
 
-.card_anuncio{
-    box-sizing: border-box;
+.doacao_imagem { width: 0px; }
+
+.doacao_img {
+  width: 27px;
+  height: 27px;
+  position: relative;
+  left: -45px;
+}
+
+
+
+.card { margin-bottom: 20px; }
+
+.card_anuncio {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  max-width: 400px;
+  background: #E9E9E9;
+  border: 1px solid #363636;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+  .card_anuncio-texto {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    width: 80vw;
-    max-width: 400px;
-
-    background: #E9E9E9;
-    border: 1px solid #363636;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-.card_anuncio-texto{
-    display: flex;
-    flex-direction: column;
-
-    width: 70%;
-    height: 390px;
-    align-items: center;
-}
-
-.card_anuncio-img{
-    display: flex;
-
-    margin: 10px;
-}
-
-.img-card{
-    width: 40px;
-    z-index: 1;
-}
-
-.fundo_perfil{
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-
-
-    position: relative;
-    top: -15px;
-    left: 15px;
-    border: 1px solid #363636;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(129.81deg, #441E57 -1.36%, #2F1776 49.66%, #292F91 91.06%)
-}
-
-.foto_perfil_doacao{
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background-color: white;
-
-    border: 1px solid #363636;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.azul{
     width: 80%;
-    max-width: 300px;
-    height: 350px;
-    background: linear-gradient(119.83deg, #292F91 2.5%, #2F1776 96.32%);
-    border-radius: 15px;
+    height: 300px;
+    align-items: center;
+  }
+    .titulo {
+      font-size: 1.2rem;
+    }
 
+  .card_anuncio-img {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    margin: 10px;
+    min-width: 45%;
+  }
+    .img-card {
+      width: 40px;
+      z-index: 1;
+    }
+      .fundo_perfil {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        position: relative;
+        top: -15px;
+        left: 15px;
+        border: 1px solid #363636;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(129.81deg, #441E57 -1.36%, #2F1776 49.66%, #292F91 91.06%)
+      }
+        .foto_perfil_doacao {
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+          background-color: white;
+          border: 1px solid #363636;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+          .foto_perfil_doacao > img {
+            max-width: 100%;
+            max-height: 100%;
+            transform: scale(0.9);
+            filter: invert(100%);
+          }
 
-    border: 1px solid #363636;
+        .azul {
+          width: 80%;
+          max-width: 300px;
+          height: 350px;
+          background: linear-gradient(119.83deg, #292F91 2.5%, #2F1776 96.32%);
+          border-radius: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          border: 1px solid #0c0c0c;
+          margin-bottom: 20px;
+        }
+          .foto_anuncio_daocao {
+            width: 92%;
+            height: 290px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+            .imagem_doacao {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+              margin-left: 10px;
+              border: 1px solid #363636;
+            }
 
-    margin-bottom: 20px;
-
-}
-
-.foto_anuncio_daocao{
-    width: 92%;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.imagem_doacao{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-left: 10px;
-
-    border: 1px solid #363636;
+          .nome_usuario, 
+          .denunciar {  
+             height: 20px; 
+             margin-top: 0px;
+             margin-bottom: 0px;
+             margin-left: 60px;
+             color: #E9E9E9;
+             display: flex;
+             justify-content: flex-start;
+          }
 
 
-}
-
-.nome_usuario, .denunciar{
-    
-    height: 20px;
-    
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 60px;
-
-    color: #E9E9E9;
-
-    display: flex;
-    justify-content: flex-start;
-}
-
+          
 @media screen and (min-width: 1024px) { /*a partir desse valor de tela ela ira apliacar essa regra*/
 
-    .titulo{
-        margin-top: 10px;
+
+
+  .titulo {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .texto_card:not(.titulo){
+    font-weight: 100;
+    margin: 5px;
+  }
+
+  .descricao {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .doacoes_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    gap: 20px;
+  }
+
+  .card_anuncio {
+    width: 95%;
+    max-width: 100%;
+    padding-top: 50px;
+    flex-direction: row;
+    height: 300px;
+  }
+    .card_anuncio-texto {
+      width: 50%;
     }
 
-    .doacoes_cards{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .card_anuncio-img {
+      height: 300px;
     }
 
-    .card{
-        margin: 20px;
+    .azul {
+      height: 85%;
+      width: 8512%;
     }
+
+      .foto_anuncio_daocao {
+        height: 75%;
+      }
+
 }

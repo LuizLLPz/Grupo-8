@@ -28,7 +28,7 @@
 
     <div>
         <?= $_SESSION['user']['tipo'] == 'Donatário' ? '<button id="seTornarDoador">Se tornar doador</button>' : '' ?>
-        <button id="adicionarAnuncio">Adicionar Anúncio de doação</button>
+        <?= $_SESSION['user']['tipo'] == 'Doador' ? '<button id="adicionarAnuncio">Adicionar Anúncio de doação</button>': '' ?>
         <br>
         <br>
     </div>
