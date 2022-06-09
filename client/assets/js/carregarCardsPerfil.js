@@ -57,6 +57,8 @@ data.forEach(element => {
                 <h3 class="texto_card categoria">${element.categoria}</h3>
                 <h3 class="texto_card data">${element.data}</h3>
                 <p class="descricao">${element.descricao}</p>
+                <p class="texto_card estado">Estado: EsttadoX</p>
+                <p class="texto_card cidade">Cidade: CidadeX</p>
             </div>
             <div class="card_anuncio-img">
                 <div class="azul">

@@ -4,7 +4,6 @@ $.ajax({
     type: "GET",
     url: "api/doacao",
     success: function (response) {
-        console.log(response);
         doacoes_cards.innerHTML = ""
 
         response.forEach(({titulo, data, descricao, usuario, foto_perfil, foto}) => {
