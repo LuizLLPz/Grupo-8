@@ -17,7 +17,11 @@ $.ajax({
                 <p class="card_config-editar" id ='editarAnuncio'>Editar</p>
                 <p class="card_config-excluir">Excluir</p>
             </div>
-            <div class="card_anuncio">
+            <div class="card_anuncio">Ricardo Torrado
+
+            Denunciar
+            
+            ￼
                 <div class="card_anuncio-texto"> 
                     <h1 class="texto_card titulo">${titulo}</h1>
                     <h3 class="texto_card categoria">Hardware</h3>
@@ -32,14 +36,13 @@ $.ajax({
         </div>
     </div>
     `
-});
+    });
 
+    // Prepara o card para os eventos de click, assim mostrando o formulário de edição
+    btn_editar_card();
+    // Prepara o card para os eventos de click, assim mostrando o formulário de edição
+    btn_excluir_card();
     }
 });
 
-// Prepara o card para os eventos de click, assim mostrando o formulário de edição
-btn_editar_card();
-
-// Prepara o card para os eventos de click, assim mostrando o formulário de edição
-btn_excluir_card();
 
