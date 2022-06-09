@@ -115,7 +115,6 @@
             </div>
         </div>
         <div>
-            <!-- Mudar para option -->
             <input type="text" name="categoria" placeholder="Categoria" required class="form__input" data-type="categoria">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -143,16 +142,16 @@
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
             </div>
         </div>
-        <!-- 
-        Mudar caso tenha a imagem    
-        <div>
-            <input type="text" name="nome" placeholder="Nome" required class="form__input" data-type="nome">
-            <div class="form_erro-cont">
-                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-                <span class='span-erro'>Campo inválido - preencha o campo</span>
+        
+        <div class = "form_doacao-input">   
+            <input type= 'file' src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name='imagem' required class= 'form__input'
+            id="img_produto" data_type = 'imagem' accept="image/png,image/jpeg">
+            <div class='form_erro-cont'>
+                <img src= <?=IMAGES_PATH.'icon-erro.svg'?>>
+                <span class= 'span-erro'> campo inválido - Selecione uma imagem </span>
             </div>
-        </div> 
-        -->
+        </div>
+
         <div class="center editarCar_contener-btn">
             <button>Editar</button>
         </div>
