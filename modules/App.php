@@ -3,6 +3,9 @@ class App {
     public static function apiServe() {
         header ("Access-Control-Allow-Origin: *");
         $data = !empty($_POST) ? $_POST : json_decode(file_get_contents('php://input'), true);
+        if (!$data) {
+            $data = ($_GET);
+        }
         return $data;
     }
 
@@ -18,7 +21,6 @@ class App {
         if($changeDoc) {
             header('Content-Type: text/html');
         }
-        //check if response header is defined to json
         if((!isset($_SERVER['HTTP_ACCEPT']) || $_SERVER['HTTP_ACCEPT'] != 'application/json') && $changeDoc) {
             $res = '<pre> '. print_r($data, true) . '</pre>';
         } else {
@@ -29,5 +31,10 @@ class App {
         } else {
             echo $res;
         }
+    }
+
+    public static function encodeBlob($donation) {
+            $donation['foto'] = base64_encode($donation['foto']);
+            return $donation;
     }
 }

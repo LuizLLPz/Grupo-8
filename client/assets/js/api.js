@@ -123,6 +123,12 @@ $(".form_produto").submit(function (e){
                 swal('Doação realizada com sucesso!', '', 'success').then(()=>{
                     window.location.href = '/grupo/perfil'
                 });
-            } 
+            },
+            error: function ({ responseJSON:  { message }} ) {
+                swal('Erro', message, 'error').then(()=>{
+                    window.location.href = '/grupo/cadastro';
+                });
+            }
+
         });
 });

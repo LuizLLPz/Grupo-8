@@ -1,10 +1,9 @@
-const editar_card = document.getElementById('editar_card')
+const editar_card = document.getElementById('editar_card');
 
 const btn_sair = document.querySelectorAll('#btn_sair');
 
 const voltarPerfil = document.querySelectorAll('#voltarPerfil');
 
-console.log(voltarPerfil)
 
 
 // Cancelar edição / sair
