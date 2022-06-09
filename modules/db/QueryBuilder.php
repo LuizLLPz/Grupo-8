@@ -51,6 +51,24 @@
             return $query->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function completeSelect($fields = "all", $table, $relations, $field = null, $value = null, $order = null) {
+            $query = $fields == "all" ? "SELECT * FROM {$table}" : "SELECT {$fields} FROM {$table}";
+            foreach ($relations as $relation) {
+                $query.= " JOIN {$relation[1]} ON {$relation[0]}.{$relation[2]} = {$relation[1]}.{$relation[3]} ";
+            }
+            if ($field != null && $value != null) {
+                $query.= " WHERE {$field} = :{$field} ";
+            }
+            $query.= !$order ?  "ORDER BY {$order}": "";
+            $query = $this->conn->prepare($query);
+            if ($field != null && $value != null) {
+                $query->bindParam(":{$field}", $value);
+            }
+            $query->execute();
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+            
+        }
+
         public function selectUnique($table, $field, $value) {
             $query = $this->conn->prepare("SELECT * FROM {$table} WHERE {$field} = :{$field}");
             $query->execute([$field => $value]);
