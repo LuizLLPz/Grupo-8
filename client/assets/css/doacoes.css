@@ -73,6 +73,7 @@
   .card_anuncio-img {
     display: flex;
     margin: 10px;
+    min-width: 45%;
   }
     .img-card {
       width: 40px;
@@ -172,7 +173,7 @@
 
   .doacoes_cards {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     width: 95%;
     gap: 20px;
   }
