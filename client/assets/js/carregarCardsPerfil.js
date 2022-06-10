@@ -10,18 +10,18 @@ $.ajax({
     data: 'modo=autor',
     success: function (response) {
         perfil_card.innerHTML = "";
-        response.forEach(({titulo, data, descricao, foto}) => {
+        response.forEach(({id, titulo, data, descricao, foto}) => {
         perfil_card.innerHTML += `
         <div class="card">
+            <div id="id_anuncio" hidden>
+
+
             <div class="card_config">
                 <p class="card_config-editar" id ='editarAnuncio'>Editar</p>
                 <p class="card_config-excluir">Excluir</p>
             </div>
             <div class="card_anuncio">Ricardo Torrado
-
-            Denunciar
-            
-            ￼
+                    Denunciar
                 <div class="card_anuncio-texto"> 
                     <h1 class="texto_card titulo">${titulo}</h1>
                     <h3 class="texto_card categoria">Hardware</h3>

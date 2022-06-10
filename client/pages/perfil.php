@@ -154,7 +154,7 @@
         </div> 
         -->
         <div class="center editarCar_contener-btn">
-            <button>Editar</button>
+            <input type="submit">Editar</input>
         </div>
     </form>
     <div class="center editarCar_contener-btn">

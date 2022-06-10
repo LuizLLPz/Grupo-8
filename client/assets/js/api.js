@@ -121,6 +121,31 @@ $(".form_produto").submit(function (e){
             contentType: false,                     
             success: function () {
                 swal('Doação realizada com sucesso!', '', 'success').then(()=>{
+                    //window.location.href = '/grupo/perfil'
+                });
+            },
+            error: function ({ responseJSON:  { message }} ) {
+                swal('Erro', message, 'error').then(()=>{
+                    window.location.href = '/grupo/cadastro';
+                });
+            }
+
+        });
+});
+
+$(".editar_form").submit(function (e){
+    e.preventDefault();
+    const data = new FormData(e.target);
+    //append file to data
+    $.ajax(
+        {
+            type: 'PUT',
+            url: 'api/doacao',
+            data: data,
+            processData: false,
+            contentType: false,                     
+            success: function () {
+                swal('Doação realizada com sucesso!', '', 'success').then(()=>{
                     window.location.href = '/grupo/perfil'
                 });
             },
@@ -132,3 +157,4 @@ $(".form_produto").submit(function (e){
 
         });
 });
+

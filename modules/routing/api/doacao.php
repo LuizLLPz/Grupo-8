@@ -8,8 +8,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         $anuncio = new Anuncio(false);
         if (isset($data['modo'])) {
-            $resp = $anuncio->completeSelect($qb, $_SESSION['user']['id']);
-        } else $resp = ($anuncio->completeSelect($qb));
+            $resp = $anuncio->obterAnuncios($qb, $_SESSION['user']['id']);
+        } else $resp = ($anuncio->obterAnuncios($qb));
         $resp = array_map("App::encodeBlob", $resp);
         App::apiResponse($resp, 200);
         break;
@@ -42,6 +42,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 'titulo' => $data['titulo'],
                 'descricao' => $data['descricao'],
                 'foto' => $imgres['foto'],
+                'categoria' => $data['categoria'],
+                'cidade' => $data['cidade'],
                 'usuario' => $_SESSION['user']['id']
             ]);
         } else {
@@ -67,6 +69,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
 
     case 'PUT':
+        $doacao = new Anuncio(false);
+        $usuario->bindData(array_merge($data, ['senha' => $_SESSION['user']['senha'], 'usuario' => $_SESSION['user']['id']]), true);  
+        $usuario->editUnique($qb);
+        App::apiResponse(["status" => "success", "message" => "Usuário atualizado com sucesso!"]);
+        break;
 
     case 'DELETE':
         $anuncio = new Anuncio(false);

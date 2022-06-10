@@ -2,7 +2,6 @@
 require 'App.php';
 require 'modules/db/Connection.php';
 require 'modules/db/QueryBuilder.php';
-require 'modules/db/Models.php';
 require 'modules/db/ImageUploader.php';
 $env = '';
 if (file_exists('.env')) {
@@ -20,13 +19,15 @@ session_start();
 
 define('CONTROLLERS_PATH', './modules/routing/controllers/');
 define('API_CONTROLLERS_PATH', './modules/routing/api/');
+define('MODELS_PATH', './modules/db/models/');
 define('PAGES_PATH', './client/pages/');
-define('STYLES_PATH', './client/assets/css/');
-define('IMAGES_PATH', './client/assets/images/');
-define('SCRIPTS_PATH', './client/assets/js/');
 define('COMPONENTS_PATH', './client/components/');
+define('STYLES_PATH', './client/assets/css/');
+define('SCRIPTS_PATH', './client/assets/js/');
+define('IMAGES_PATH', './client/assets/images/');
 define('BASE_URL', $env['BASE_URL']);
 
+require 'modules/db/Models.php';
 
 return new QueryBuilder(Connection::connect(
     [
