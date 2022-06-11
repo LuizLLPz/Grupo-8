@@ -78,6 +78,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'DELETE':
         $data['id'] = explode("=", file_get_contents('php://input'), 2)[1];
         $anuncio = new Anuncio(false);
+        ImageUploader::delete($qb, $data['id']);
         $anuncio->deleteUnique($qb, 'cod', $data['id']);
         App::apiResponse(["status" => "sucess"]);
         break;

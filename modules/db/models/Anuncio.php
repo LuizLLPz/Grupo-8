@@ -20,7 +20,7 @@ class Anuncio extends Models
     {
         if ($usuario != null) {
             return $qb->selecionaCompleto(
-                'Anuncio.cod as id, Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
+                'Anuncio.cod as id, Anuncio.titulo, Anuncio.categoria, Anuncio.descricao, Anuncio.data_publicacao as data, 
                      Usuario.nome as usuario, foto.foto_arquivo as foto',
                 $this->tableName,
                 [

@@ -10,7 +10,7 @@ $.ajax({
     data: 'modo=autor',
     success: function (response) {
         perfil_card.innerHTML = "";
-        response.forEach(({id, titulo, data, descricao, foto}) => {
+        response.forEach(({id, titulo, categoria, data, descricao, foto}) => {
         perfil_card.innerHTML += `
         <div class="card">
             <div class="card_config">
@@ -24,7 +24,7 @@ $.ajax({
             <div class="card_anuncio">
                 <div class="card_anuncio-texto"> 
                     <h1 class="texto_card titulo">${titulo}</h1>
-                    <h3 class="texto_card categoria">Hardware</h3>
+                    <h3 class="texto_card categoria">${categoria}</h3>
                     <h3 class="texto_card data">${data.split('-').reverse().join('/')}</h3>
                     <p class="descricao">${descricao}</p>
                 </div>
