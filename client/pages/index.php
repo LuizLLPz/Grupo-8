@@ -17,5 +17,4 @@
         <h2 class="inicio_parte-3-titulo">Cadastre-se e participe!</h2>
         <button onclick="window.location.href = '/grupo/cadastro'">Cadastre-se</button>
     </div>
-
 </main>

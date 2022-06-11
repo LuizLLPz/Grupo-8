@@ -13,7 +13,7 @@ $.ajax({
                 <div class="card_anuncio">
                     <div class="card_anuncio-texto"> 
                         <h1 class="texto_card titulo">${titulo}</h1>
-                        <h3 class="texto_card categoria">Sem categoria</h3>
+                        <h3 class="texto_card categoria">${categoria}</h3>
                         <h3 class="texto_card data">${data.split('-').reverse().join('/')}</h3>
                         <p class="descricao">${descricao}</p>
                     </div>
