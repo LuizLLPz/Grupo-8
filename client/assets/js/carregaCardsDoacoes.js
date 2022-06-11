@@ -17,7 +17,6 @@ $.ajax({
         //                 <h3 class="texto_card data">${data.split('-').reverse().join('/')}</h3>
         //                 <p class="descricao">${descricao}</p>
         //             </div>
-                    
         //             <div class="card_anuncio-img">
         //                 <div class="img-card">
         //                     <div class="fundo_perfil">

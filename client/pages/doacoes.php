@@ -9,9 +9,9 @@
         </div>
 
     </div>
-    <p>Ordenar por: </p>
+    <p>Pesquisar por: </p>
     <select id="doacao_select">
-        <option value="sem">Sem filtro</option>
+        <option value="sem">Título</option>
         <option value="categoria">Categoria</option>
         <option value="est">Estado</option>
         <option value="cit">Cidade</option>

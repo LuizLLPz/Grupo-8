@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300;500;600;700&display=swap');
+
+.inicio_parte, .inicio_parte-1, .inicio_parte-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio_parte {
+    height: 5px;
+}
+
+.inicio_parte-1 {
+    height: 50vh;
+    max-height: 530px;
+}
+
+.inicio_titulo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 7px;
+    background-image: linear-gradient(92.82deg, rgba(118, 47, 101, 0.9) -26.4%, #2B127A 31.85%, #2C3498 123.71%);;
+    color: black;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 60px;
+    z-index: -1;
+;
+}
+
+.inicio_img {
+    width: 95vw;
+    overflow-x: hidden;
+}
+
+.inicio_parte-2-texto{
+    width: 80vw;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.inicio_parte-3{
+    flex-direction: column;
+
+}
+
+.inicio_parte-3{
+    margin-bottom: 100px;
+}
+
+.inicio_parte-3-titulo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+/* @media screen and (max-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1024px) {
+    .inicio {
+        margin: 0px auto;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "img txt"
+        "cad cad";
+        grid-template-columns: 500px 500px;
+        grid-template-rows: auto auto auto;
+        overflow-x: hidden;
+        max-width: 1080px;
+    }
+    .inicio_parte{
+        grid-area: titulo;
+    }
+    .inicio_titulo{
+        text-align: center;
+        top: 0px;
+    }
+    .inicio_img {
+        height: 420px;
+        width: 600px;
+        object-fit: cover;
+        position: relative;
+        top: 10px;
+    }
+    .inicio_parte-2{
+        grid-area: txt;
+        height: 70%;
+        margin-top: 70px;
+    }
+    .inicio_parte-2-texto{
+        width: 70%;
+        font-size: 1.6rem;
+        top: 0px;
+    }
+    .inicio_parte-3{
+        grid-area: cad;
+    }
+}
