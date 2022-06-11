@@ -84,3 +84,14 @@ $('#seTornarDoador').click(function () {
 $('#adicionarAnuncio').click(function () {
   window.location.href = '/grupo/formularioProduto';
 });
+
+// Para quando for doador
+
+const statusUs = document.querySelector(".perfil_status")
+console.log(statusUs.innerText)
+
+if(statusUs.innerText != "Doador"){
+  document.querySelector(".perfil_content-anuncios").classList.add("none")
+}else{
+  document.querySelector(".perfil_content-anuncios").classList.remove("none")
+}

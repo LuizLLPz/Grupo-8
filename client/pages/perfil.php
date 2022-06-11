@@ -36,25 +36,13 @@
     <!-- <div class="perfil_content-interesses">
         <h1 class="perfil_content-titulo">Anuncios</h1>
         <div class= "perfil_card-anuncios">
-            <div class= "perfil_card-exemplo">
-                <button id="editarAnuncio">editar</button>
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                <button id="editarAnuncio">editar</button>
-                card
-            </div>
-            <div class= "perfil_card-exemplo">
-                <button id="editarAnuncio">editar</button>
-                card
-            </div>
             
         </div>
 
     </div> -->
 
     <div class="perfil_content-anuncios">
-        <h1 class="perfil_content-titulo">Publicações</h1>
+        <h1 class="perfil_content-titulo">Anúncios</h1>
         <div class= "perfil_card-anuncios" id= 'perfil_card-anuncios'>
             <div class="card_anuncio">
 
@@ -79,16 +67,14 @@
 
     </div>
 
-    <!-- <div class="perfil_content-participacao">
+    <div class="perfil_content-participacao">
         <h1 class="perfil_content-titulo">Participações do fórum</h1>
         <div class= "perfil_card-participacao">
-            <div class= "perfil_card-exemplo">
-                card
-            </div>
+
 
         </div>
 
-    </div> -->
+    </div>
 
     
 
