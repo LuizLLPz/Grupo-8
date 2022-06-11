@@ -1,3 +1,7 @@
+.fundo_branco{
+    overflow-x: hidden;
+}
+
 hr{
     width:97%; 
     border-style: inset; 
@@ -28,9 +32,15 @@ hr{
 
 }
 
+.form_doacao-input{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .center-btn{
     height: 10%;
-    width: 100%;
+    width: 95%;
     background-color: white;
     display: flex;
     justify-content: center;

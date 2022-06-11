@@ -10,6 +10,7 @@
         'usuarios' =>  $usr->selectAll($qb),
         'styles' => [
             STYLES_PATH . 'form.css',
+            STYLES_PATH . 'index.css',
         ],
     ];
     ?>

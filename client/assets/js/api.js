@@ -132,3 +132,29 @@ $(".form_produto").submit(function (e){
 
         });
 });
+
+
+
+$(".editar_form").submit(function (e){
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    data.cod = e.target.childNodes[1].ad;
+    $.ajax(
+        {
+            type: 'PUT',
+            url: 'api/doacao',
+            data: JSON.stringify(data),               
+            success: function () {
+                swal('Doação atualizada com sucesso!', '', 'success').then(()=>{
+                    window.location.href = '/grupo/perfil'
+                });
+            },
+            error: function ({ responseJSON:  { message }} ) {
+                swal('Erro', message, 'error').then(()=>{
+                    window.location.href = '/grupo/cadastro';
+                });
+            }
+
+        });
+});
+

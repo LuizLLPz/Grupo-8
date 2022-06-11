@@ -99,9 +99,11 @@
 <div id="editar_card" class="editar_card editar_card-dados-ativado">
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="editarCard_fechar">
     <h2>Editar Anúncio de Doação</h2>
-    <form action="" class="editar_form">
+    <form class="editar_form">
+        <div ad="">
+        </div>
         <div>
-            <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="nome">
+            <input type="text" name="titulo" placeholder="Título" required class="form__input" data-type="nome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
@@ -115,7 +117,6 @@
             </div>
         </div>
         <div>
-            <!-- Mudar para option -->
             <input type="text" name="categoria" placeholder="Categoria" required class="form__input" data-type="categoria">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
@@ -143,18 +144,9 @@
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
             </div>
         </div>
-        <!-- 
-        Mudar caso tenha a imagem    
-        <div>
-            <input type="text" name="nome" placeholder="Nome" required class="form__input" data-type="nome">
-            <div class="form_erro-cont">
-                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-                <span class='span-erro'>Campo inválido - preencha o campo</span>
-            </div>
-        </div> 
-        -->
+
         <div class="center editarCar_contener-btn">
-            <button>Editar</button>
+            <button type="submit">Editar</button>
         </div>
     </form>
     <div class="center editarCar_contener-btn">

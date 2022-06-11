@@ -8,8 +8,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         $anuncio = new Anuncio(false);
         if (isset($data['modo'])) {
-            $resp = $anuncio->completeSelect($qb, $_SESSION['user']['id']);
-        } else $resp = ($anuncio->completeSelect($qb));
+            $resp = $anuncio->obterAnuncios($qb, $_SESSION['user']['id']);
+        } else $resp = ($anuncio->obterAnuncios($qb));
         $resp = array_map("App::encodeBlob", $resp);
         App::apiResponse($resp, 200);
         break;
@@ -17,7 +17,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'POST':
         $image = $_FILES['imagem'];
-
         if (!isset($_SESSION['user'])) {
             App::apiResponse(['error' => 'Para acessar esse recurso é necessário estar logado!'], 401);
         }
@@ -42,6 +41,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 'titulo' => $data['titulo'],
                 'descricao' => $data['descricao'],
                 'foto' => $imgres['foto'],
+                'categoria' => $data['categoria'],
+                'cidade' => $data['cidade'],
                 'usuario' => $_SESSION['user']['id']
             ]);
         } else {
@@ -67,10 +68,18 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
 
     case 'PUT':
+        $doacao = new Anuncio(false);
+        $doacao->bindData($data, true);
+        $doacao->editUnique($qb);
+        App::apiResponse(["status" => "success", "message" => "Doação atualizada com sucesso!"]);
+        break;
+
 
     case 'DELETE':
+        $data['id'] = explode("=", file_get_contents('php://input'), 2)[1];
         $anuncio = new Anuncio(false);
-        $anuncio->deleteUnique($qb, 'id', $data['id']);
+        ImageUploader::delete($qb, $data['id']);
+        $anuncio->deleteUnique($qb, 'cod', $data['id']);
         App::apiResponse(["status" => "sucess"]);
         break;
 }

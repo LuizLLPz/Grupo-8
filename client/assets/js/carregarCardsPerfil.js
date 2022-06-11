@@ -10,18 +10,22 @@ $.ajax({
     data: 'modo=autor',
     success: function (response) {
         perfil_card.innerHTML = "";
-        response.forEach(({titulo, categoria, data, descricao, foto}) => {
+        response.forEach(({id, titulo, categoria, data, descricao, foto}) => {
         perfil_card.innerHTML += `
         <div class="card">
             <div class="card_config">
-                <p class="card_config-editar" id ='editarAnuncio'>Editar</p>
-                <p class="card_config-excluir">Excluir</p>
+                <p class="card_config-editar" id ='editarAnuncio'>Editar
+                    <span hidden>${id}</span>
+                </p>
+                <p class="card_config-excluir">Excluir
+                    <span hidden>${id}</span>
+                </p>
             </div>
             <div class="card_anuncio">
                 <div class="card_anuncio-texto"> 
                     <h1 class="texto_card titulo">${titulo}</h1>
-                    <h3 class="texto_card categoria">Hardware</h3>
-                    <h3 class="texto_card data">${data}</h3>
+                    <h3 class="texto_card categoria">${categoria}</h3>
+                    <h3 class="texto_card data">${data.split('-').reverse().join('/')}</h3>
                     <p class="descricao">${descricao}</p>
                 </div>
             <div class="card_anuncio-img">
@@ -32,14 +36,13 @@ $.ajax({
         </div>
     </div>
     `
-});
+    });
 
+    // Prepara o card para os eventos de click, assim mostrando o formulário de edição
+    btn_editar_card();
+    // Prepara o card para os eventos de click, assim mostrando o formulário de edição
+    btn_excluir_card();
     }
 });
 
-// Prepara o card para os eventos de click, assim mostrando o formulário de edição
-btn_editar_card();
-
-// Prepara o card para os eventos de click, assim mostrando o formulário de edição
-btn_excluir_card();
 

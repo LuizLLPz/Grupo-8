@@ -2,7 +2,7 @@
 $data = App::apiServe();
 
 switch($_SERVER['REQUEST_METHOD']) {
-
+    
     case 'GET':
         if(isset($_GET['id'])) {
             $usuario = new Usuario(false);
@@ -32,12 +32,14 @@ switch($_SERVER['REQUEST_METHOD']) {
         App::apiResponse(["status" => "success", "message" => "Usuário atualizado com sucesso!"]);
         break;
 
+ 
     case 'PATCH':
         $usuario = new Usuario(false);
         $usuario->bindFew($data);  
         $usuario->editUnique($qb);
         App::apiResponse(["status" => "success", "message" => "Usuário atualizado com sucesso!"]);
         break;
+
 
     case 'DELETE':
         $usuario = new Usuario(false);
