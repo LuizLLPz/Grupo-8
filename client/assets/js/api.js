@@ -121,7 +121,7 @@ $(".form_produto").submit(function (e){
             contentType: false,                     
             success: function () {
                 swal('Doação realizada com sucesso!', '', 'success').then(()=>{
-                    //window.location.href = '/grupo/perfil'
+                    window.location.href = '/grupo/perfil'
                 });
             },
             error: function ({ responseJSON:  { message }} ) {

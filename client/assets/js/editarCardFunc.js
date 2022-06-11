@@ -32,7 +32,6 @@ export function btn_editar_card() {
     })
     
     cardConfig_editar.forEach(anuncio => anuncio.addEventListener('click', ({target}) => {   
-        console.log(editar_card.childNodes[5].childNodes);
         editar_card.childNodes[5].childNodes[1].ad = target.childNodes[1].textContent;
         editar_card.classList.toggle('editar_card-dados-ativado')
     }))

@@ -146,7 +146,7 @@
         </div>
 
         <div class="center editarCar_contener-btn">
-            <input type="submit">Editar</input>
+            <button type="submit">Editar</button>
         </div>
     </form>
     <div class="center editarCar_contener-btn">

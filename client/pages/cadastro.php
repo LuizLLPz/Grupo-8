@@ -25,12 +25,6 @@
             <span class='span-erro'>Campo inválido - preencha o campo</span>
         </div>
     </div>    
-    <input type="email" name="email" placeholder="Email" required class="form__input" data-type="email">
-        <div class="form_erro-cont">
-            <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-            <span class='span-erro'>Campo inválido - preencha o campo</span>
-        </div>
-    </div>   
 
     <div>
         <input type="text" name="cpf" placeholder="CPF" required class="form__input" id="cpf" data-type="cpf">

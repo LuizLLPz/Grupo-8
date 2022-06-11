@@ -21,7 +21,7 @@ export const btn_excluir_card = () => {
                         }
                     );
                     swal('Anuncio excluído com sucesso', 'texto', 'success').then(()=>{
-                        //window.location.href = '/grupo/'
+                        window.location. reload();
                     })
                     $('.swal-text').html(''+ $('.perfil_nome').text() +' <span>&#128557</span>');
                 } else {
