@@ -7,6 +7,6 @@ class ImageUploader {
     }
 
     static function delete($qb, $anuncio) {
-        return ($qb->deleteUnique('cod', $anuncio));
+        return ($qb->deleteUnique('foto', 'cod', $anuncio));
     }
 }
