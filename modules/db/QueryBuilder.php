@@ -98,7 +98,7 @@ class QueryBuilder {
     }
 
 
-    public function editUnique($table, $data) {
+    public function editUnique($table, $data, $idname = 'id') {
         $stmt = 'UPDATE '.$table.' SET ';
         $keys =  array_keys($data);
         $end = end($keys);
@@ -109,9 +109,11 @@ class QueryBuilder {
                 $stmt .= $key.' = :'.$key;
             }
         }
-        $stmt .= ' WHERE id = :id';
+        $stmt .= ' WHERE ' .$idname.' = :'.$idname;
         $query = $this->conn->prepare($stmt);
         $query->execute($data);
-        $_SESSION['user'] = $this->selecionaUnico($table, 'id', $data['id']);
+        if (array_key_exists('id', $data)) {
+            $_SESSION['user'] = $this->selecionaUnico($table, 'id', $data['id']);
+        }
     }
 }

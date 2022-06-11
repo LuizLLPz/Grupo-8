@@ -133,19 +133,19 @@ $(".form_produto").submit(function (e){
         });
 });
 
+
+
 $(".editar_form").submit(function (e){
     e.preventDefault();
-    const data = new FormData(e.target);
-    //append file to data
+    const data = Object.fromEntries(new FormData(e.target).entries());
+    data.cod = e.target.childNodes[1].ad;
     $.ajax(
         {
             type: 'PUT',
             url: 'api/doacao',
-            data: data,
-            processData: false,
-            contentType: false,                     
+            data: JSON.stringify(data),               
             success: function () {
-                swal('Doação realizada com sucesso!', '', 'success').then(()=>{
+                swal('Doação atualizada com sucesso!', '', 'success').then(()=>{
                     window.location.href = '/grupo/perfil'
                 });
             },

@@ -13,12 +13,13 @@ $.ajax({
         response.forEach(({id, titulo, data, descricao, foto}) => {
         perfil_card.innerHTML += `
         <div class="card">
-            <div id="id_anuncio" hidden>
-
-
             <div class="card_config">
-                <p class="card_config-editar" id ='editarAnuncio'>Editar</p>
-                <p class="card_config-excluir">Excluir</p>
+                <p class="card_config-editar" id ='editarAnuncio'>Editar
+                    <span hidden>${id}</span>
+                </p>
+                <p class="card_config-excluir">Excluir
+                    <span hidden>${id}</span>
+                </p>
             </div>
             <div class="card_anuncio">
                 <div class="card_anuncio-texto"> 

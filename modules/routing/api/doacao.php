@@ -17,7 +17,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'POST':
         $image = $_FILES['imagem'];
-
         if (!isset($_SESSION['user'])) {
             App::apiResponse(['error' => 'Para acessar esse recurso é necessário estar logado!'], 401);
         }
@@ -70,14 +69,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     case 'PUT':
         $doacao = new Anuncio(false);
-        $usuario->bindData(array_merge($data, ['senha' => $_SESSION['user']['senha'], 'usuario' => $_SESSION['user']['id']]), true);  
-        $usuario->editUnique($qb);
-        App::apiResponse(["status" => "success", "message" => "Usuário atualizado com sucesso!"]);
+        $doacao->bindData($data, true);
+        $doacao->editUnique($qb);
+        App::apiResponse(["status" => "success", "message" => "Doação atualizada com sucesso!"]);
         break;
 
+
     case 'DELETE':
+        $data['id'] = explode("=", file_get_contents('php://input'), 2)[1];
         $anuncio = new Anuncio(false);
-        $anuncio->deleteUnique($qb, 'id', $data['id']);
+        $anuncio->deleteUnique($qb, 'cod', $data['id']);
         App::apiResponse(["status" => "sucess"]);
         break;
 }

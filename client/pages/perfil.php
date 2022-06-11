@@ -99,9 +99,11 @@
 <div id="editar_card" class="editar_card editar_card-dados-ativado">
     <img src=<?= IMAGES_PATH.'close.png' ?> alt="fechar" class="config_fechar" id="editarCard_fechar">
     <h2>Editar Anúncio de Doação</h2>
-    <form action="" class="editar_form">
+    <form class="editar_form">
+        <div ad="">
+        </div>
         <div>
-            <input type="text" name="nome" placeholder="Título" required class="form__input" data-type="nome">
+            <input type="text" name="titulo" placeholder="Título" required class="form__input" data-type="nome">
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
@@ -140,15 +142,6 @@
             <div class="form_erro-cont">
                 <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
-            </div>
-        </div>
-        
-        <div class = "form_doacao-input">   
-            <input type= 'file' src=<?=IMAGES_PATH.'perfil-de-usuario.png'?> name='imagem' required class= 'form__input'
-            id="img_produto" data_type = 'imagem' accept="image/png,image/jpeg">
-            <div class='form_erro-cont'>
-                <img src= <?=IMAGES_PATH.'icon-erro.svg'?>>
-                <span class= 'span-erro'> campo inválido - Selecione uma imagem </span>
             </div>
         </div>
 

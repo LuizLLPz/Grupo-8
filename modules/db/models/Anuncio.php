@@ -20,7 +20,7 @@ class Anuncio extends Models
     {
         if ($usuario != null) {
             return $qb->selecionaCompleto(
-                'Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
+                'Anuncio.cod as id, Anuncio.titulo, Anuncio.descricao, Anuncio.data_publicacao as data, 
                      Usuario.nome as usuario, foto.foto_arquivo as foto',
                 $this->tableName,
                 [
@@ -33,7 +33,7 @@ class Anuncio extends Models
             );
         }
         return $qb->selecionaCompleto(
-            'Anuncio.titulo, Anuncio.categoria, Anuncio.descricao, Anuncio.data_publicacao as data, 
+            'Anuncio.id, Anuncio.titulo, Anuncio.categoria, Anuncio.descricao, Anuncio.data_publicacao as data, 
                  Usuario.nome as usuario, foto.foto_arquivo as foto',
             $this->tableName,
             [
@@ -46,10 +46,12 @@ class Anuncio extends Models
         );
     }
 
-    public function bindData($data)
-    {
-        App::formatVar($data);
-        $this->data = [
+    public function editUnique($qb) {
+        return $qb->editUnique($this->tableName, $this->data, 'cod');
+    }
+
+    public function bindData($data, $edit = false) {
+        $this->data = !$edit ? [
             'cod' => uniqid($data['titulo']),
             'titulo' => $data['titulo'],
             'descricao' => $data['descricao'],
@@ -58,6 +60,15 @@ class Anuncio extends Models
             'usuario' => $_SESSION['user']['id'],
             'data_publicacao' => date('Y-m-d H:i:s'),
             'cidade' => $data['cidade']
+        ] : [
+            'cod' => ($data['cod']),
+            'titulo' => $data['titulo'],
+            'descricao' => $data['descricao'],
+            'categoria' => $data['categoria'],
+            'cidade' => $data['cidade']
+
         ];
+        //die(App::formatVar($this->data));
     }
+
 }

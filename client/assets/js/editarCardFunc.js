@@ -4,8 +4,6 @@ const btn_sair = document.querySelectorAll('#btn_sair');
 
 const voltarPerfil = document.querySelectorAll('#voltarPerfil');
 
-
-
 // Cancelar edição / sair
 voltarPerfil.forEach(element => { 
 
@@ -33,7 +31,9 @@ export function btn_editar_card() {
         editar_card.classList.toggle('editar_card-dados-ativado')
     })
     
-    cardConfig_editar.forEach(anuncio => anuncio.addEventListener('click', () => {    
+    cardConfig_editar.forEach(anuncio => anuncio.addEventListener('click', ({target}) => {   
+        console.log(editar_card.childNodes[5].childNodes);
+        editar_card.childNodes[5].childNodes[1].ad = target.childNodes[1].textContent;
         editar_card.classList.toggle('editar_card-dados-ativado')
     }))
 }
