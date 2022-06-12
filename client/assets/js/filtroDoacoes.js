@@ -34,18 +34,9 @@ doacao_input.addEventListener('input', e => {
                 }
             });
             break;
-        case 'est':
+        case 'cid':
             listaCrds.filter(element => {
                 if (element.children[0].children[0].children[4].textContent.toLowerCase().includes(pesquisa)) {
-                    element.style.display = "block";
-                } else {
-                    element.style.display = "none";
-                }
-            });
-            break;
-        case 'cit':
-            listaCrds.filter(element => {
-                if (element.children[0].children[0].children[5].textContent.toLowerCase().includes(pesquisa)) {
                     element.style.display = "block";
                 } else {
                     element.style.display = "none";

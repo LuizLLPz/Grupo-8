@@ -13,7 +13,6 @@
     <select id="doacao_select">
         <option value="sem">Título</option>
         <option value="categoria">Categoria</option>
-        <option value="est">Estado</option>
         <option value="cit">Cidade</option>
     </select>
 

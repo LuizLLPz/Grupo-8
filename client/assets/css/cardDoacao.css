@@ -11,7 +11,6 @@
     width: 180px;
     position: relative;
     top: -15px;
-    
 }
 
 .card_config-editar, .card_config-excluir{
@@ -22,6 +21,7 @@
     text-align: center;
     cursor: pointer;
     color: #E9E9E9;
+    line-height: 2;
 }
 .card_anuncio{
     box-sizing: border-box;

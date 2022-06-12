@@ -95,13 +95,9 @@
                 <span class='span-erro'>Campo inválido - preencha o campo</span>
             </div>
         </div>
-        <div>
-            <textarea name="descricao" placeholder="Descrição" required class="form__input" data-type="descricao"></textarea>
-            <div class="form_erro-cont">
-                <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
-                <span class='span-erro'>Campo inválido - preencha o campo</span>
-            </div>
-        </div>
+        <div class = "form_doacao-input"> <!-- Descrição -->
+                <textarea name="descricao" placeholder="Descrição" class="form__input" data-type="descricao" id="descricao" maxlength="150"></textarea>
+                <p id="descricaoContador">0/150</p>
         <div>
             <input type="text" name="categoria" placeholder="Categoria" required class="form__input" data-type="categoria">
             <div class="form_erro-cont">

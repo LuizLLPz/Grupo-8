@@ -5,7 +5,7 @@
         <div class= 'informacao_produto'> 
             <h3 class= 'info-geral_titulo'>Informações do anúncio</h3>
             <div class = "form_doacao-input"> <!-- Nome do anuncio -->
-                <input type="text" name="titulo" placeholder="Título" required class="form__input" data-type="titulo">
+                <input type="text" name="titulo" placeholder="Título" required class="form__input" data-type="titulo" maxlength="80">
                 <div class="form_erro-cont">
                     <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                     <span class='span-erro'>Campo inválido - preencha o campo</span>
@@ -73,7 +73,7 @@
             </div>
                 
             <div class = "form_doacao-input"> <!-- n° de telefone -->
-                <input type="text" name="telefone" placeholder="Telefone" required class="form__input" data-type="telefone">
+                <input type="text" name="telefone" placeholder="Telefone" required class="form__input" data-type="telefone" maxlength="11" onkeypress="return ((event.charCode >= 48 && event.charCode <= 57))">
                 <div class="form_erro-cont">
                         <img src=<?=IMAGES_PATH.'icon-erro.svg'?>>
                         <span class='span-erro'>Campo inválido - preencha o campo</span>

@@ -12,6 +12,8 @@ use function PHPSTORM_META\type;
                 SCRIPTS_PATH . 'perfilFunc.js',
                 SCRIPTS_PATH . 'editarCardFunc.js',
                 SCRIPTS_PATH . 'carregarCardsPerfil.js',
+                SCRIPTS_PATH . 'formDoacaoContador.js',
+
                 
             ],
             'styles' => [

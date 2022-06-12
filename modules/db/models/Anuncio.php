@@ -33,8 +33,8 @@ class Anuncio extends Models
             );
         }
         return $qb->selecionaCompleto(
-            'Anuncio.id, Anuncio.titulo, Anuncio.categoria, Anuncio.descricao, Anuncio.data_publicacao as data, 
-                 Usuario.nome as usuario, foto.foto_arquivo as foto',
+            'Anuncio.cod as id, Anuncio.titulo, Anuncio.categoria, Anuncio.descricao, Anuncio.data_publicacao as data, 
+                 Usuario.nome as usuario, foto.foto_arquivo as foto, Anuncio.cidade',
             $this->tableName,
             [
                 ["Anuncio", "Usuario", "usuario", "id"],
